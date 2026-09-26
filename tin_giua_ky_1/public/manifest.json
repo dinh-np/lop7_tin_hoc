@@ -1,0 +1,16 @@
+{
+  "short_name": "Tin Hoc 7",
+  "name": "Luyện Thi Tin Học 7 - Giữa Kỳ I",
+  "description": "Ứng dụng luyện thi Tin học 7",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#0066AB"
+}

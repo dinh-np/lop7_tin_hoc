@@ -1,0 +1,240 @@
+/* Krones-Inspired Light Theme */
+:root {
+  --primary-color: #0066AB;
+  --primary-hover: #004d80;
+  --bg-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --border-color: #e2e8f0;
+  --success-color: #22c55e;
+  --danger-color: #ef4444;
+  --radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', Georgia, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.install-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.install-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  flex: 1;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-align: center;
+  min-width: 150px;
+}
+
+.nav-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.nav-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Card */
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Typography */
+h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Button variants */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.btn-outline:hover {
+  background-color: #f0f7fb;
+}
+
+/* Options */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.option-btn {
+  text-align: left;
+  padding: 12px 15px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.option-btn.correct {
+  background-color: #f0fdf4;
+  border-color: var(--success-color);
+  color: #166534;
+}
+
+.option-btn.incorrect {
+  background-color: #fef2f2;
+  border-color: var(--danger-color);
+  color: #991b1b;
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+/* Explanation */
+.explanation {
+  background-color: #f8fafc;
+  border-left: 4px solid var(--primary-color);
+  padding: 15px;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Grid for Exam Palette */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.palette-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+.palette-btn.active {
+  border: 2px solid var(--primary-color);
+}
+.palette-btn.answered {
+  background-color: #e2e8f0;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  outline: none;
+}
+select:focus {
+  border-color: var(--primary-color);
+}
