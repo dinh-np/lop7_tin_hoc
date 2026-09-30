@@ -1,16 +1,21 @@
 import { useState, useMemo } from 'react';
-import { questionBank } from '../data/questionBank';
+import { getQuestionsForSubject } from '../data/questionBank';
 
-export default function Quiz() {
-  const topics = ['Tất cả', ...new Set(questionBank.map(q => q.topic))];
+export default function Quiz({ subjectId }) {
+  const questions = getQuestionsForSubject(subjectId);
+  const topics = useMemo(
+    () => ['Tất cả', ...new Set(questions.map((q) => q.topic))],
+    [questions]
+  );
+
   const [selectedTopic, setSelectedTopic] = useState('Tất cả');
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const filteredQuestions = useMemo(() => {
-    if (selectedTopic === 'Tất cả') return questionBank;
-    return questionBank.filter(q => q.topic === selectedTopic);
-  }, [selectedTopic]);
+    if (selectedTopic === 'Tất cả') return questions;
+    return questions.filter((q) => q.topic === selectedTopic);
+  }, [selectedTopic, questions]);
 
   const currentQuestion = filteredQuestions[currentIdx];
 
@@ -21,14 +26,14 @@ export default function Quiz() {
   };
 
   const handleAnswer = (idx) => {
-    if (selectedAnswer !== null) return; // prevent changing answer
+    if (selectedAnswer !== null) return;
     setSelectedAnswer(idx);
-    
-    // Save to incorrect storage if wrong
+
     if (idx !== currentQuestion.answer) {
-      const stored = JSON.parse(localStorage.getItem('incorrectQuestions') || '[]');
+      const key = `wrongQ_${subjectId}`;
+      const stored = JSON.parse(localStorage.getItem(key) || '[]');
       if (!stored.includes(currentQuestion.id)) {
-        localStorage.setItem('incorrectQuestions', JSON.stringify([...stored, currentQuestion.id]));
+        localStorage.setItem(key, JSON.stringify([...stored, currentQuestion.id]));
       }
     }
   };
@@ -47,35 +52,65 @@ export default function Quiz() {
     }
   };
 
-  if (!currentQuestion) return <div>Không có câu hỏi nào.</div>;
+  if (questions.length === 0) {
+    return (
+      <div className="card empty-state">
+        <div className="empty-icon">🚧</div>
+        <div className="empty-title">Chưa có câu hỏi</div>
+        <div className="empty-desc">Ngân hàng câu hỏi cho môn này đang được chuẩn bị.</div>
+      </div>
+    );
+  }
+
+  if (!currentQuestion) return null;
+
+  const progress = ((currentIdx + 1) / filteredQuestions.length) * 100;
 
   return (
     <div className="card">
-      <div className="flex-between">
-        <h2>Luyện Tập</h2>
+      {/* Header */}
+      <div className="card-title">
+        <span>Luyện Tập</span>
         <select value={selectedTopic} onChange={handleTopicChange}>
-          {topics.map(t => <option key={t} value={t}>{t}</option>)}
+          {topics.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
         </select>
       </div>
 
-      <div style={{ marginBottom: '10px', fontWeight: 'bold' }}>
-        Câu {currentIdx + 1} / {filteredQuestions.length}: {currentQuestion.topic}
+      {/* Progress */}
+      <div className="progress-bar-wrap">
+        <div className="progress-bar-fill" style={{ width: `${progress}%` }} />
       </div>
-      
-      <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>{currentQuestion.question}</p>
 
+      {/* Question meta */}
+      <div className="question-meta">
+        <span style={{ fontWeight: 600, color: 'var(--text-2)', fontSize: '0.88rem' }}>
+          Câu {currentIdx + 1} / {filteredQuestions.length}
+        </span>
+        <span className="tag topic">{currentQuestion.topic}</span>
+        {currentQuestion.skill && (
+          <span className="tag skill">{currentQuestion.skill}</span>
+        )}
+      </div>
+
+      {/* Question */}
+      <p className="question-text">{currentQuestion.question}</p>
+
+      {/* Options */}
       <div className="options-list">
         {currentQuestion.options.map((opt, idx) => {
-          let btnClass = 'option-btn';
+          let cls = 'option-btn';
           if (selectedAnswer !== null) {
-            if (idx === currentQuestion.answer) btnClass += ' correct';
-            else if (idx === selectedAnswer) btnClass += ' incorrect';
+            if (idx === currentQuestion.answer) cls += ' correct';
+            else if (idx === selectedAnswer) cls += ' incorrect';
           }
-
           return (
-            <button 
-              key={idx} 
-              className={btnClass} 
+            <button
+              key={idx}
+              className={cls}
               onClick={() => handleAnswer(idx)}
               disabled={selectedAnswer !== null}
             >
@@ -85,18 +120,28 @@ export default function Quiz() {
         })}
       </div>
 
+      {/* Explanation */}
       {selectedAnswer !== null && (
         <div className="explanation">
           <strong>Giải thích:</strong> {currentQuestion.explanation}
         </div>
       )}
 
+      {/* Navigation */}
       <div className="flex-between" style={{ marginTop: '20px' }}>
-        <button className="btn-outline" onClick={prevQuestion} disabled={currentIdx === 0}>
-          Câu trước
+        <button
+          className="btn-outline"
+          onClick={prevQuestion}
+          disabled={currentIdx === 0}
+        >
+          ← Câu trước
         </button>
-        <button className="btn-primary" onClick={nextQuestion} disabled={currentIdx === filteredQuestions.length - 1}>
-          Câu tiếp theo
+        <button
+          className="btn-primary"
+          onClick={nextQuestion}
+          disabled={currentIdx === filteredQuestions.length - 1}
+        >
+          Câu tiếp →
         </button>
       </div>
     </div>

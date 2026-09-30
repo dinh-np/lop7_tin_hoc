@@ -1,16 +1,76 @@
-# React + Vite
+# 📚 Cổng Ôn Tập Lớp 7
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+PWA ôn thi đa môn cho học sinh lớp 7, với Gemini AI phân tích câu sai và Supabase giám sát từ xa.
 
-Currently, two official plugins are available:
+## Tính năng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Tính năng | Mô tả |
+|-----------|-------|
+| 📚 Đa môn | 10 môn học + PET B1 English |
+| ✏️ Luyện tập | Luyện theo chủ đề, từng câu một |
+| 📝 Thi thử | Thi ngẫu nhiên có đếm giờ |
+| 📖 Sổ tay sai | Theo dõi và ôn lại câu làm sai |
+| 🤖 Gemini AI | Phân tích nguyên nhân câu sai sau thi |
+| 📊 Supabase | Bố/mẹ giám sát kết quả từ xa |
+| 📲 PWA | Cài đặt như app trên điện thoại |
 
-## React Compiler
+## Môn học
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 💻 Tin học (70 câu)
+- 🎓 PET B1 English (20 câu mẫu)
+- 📐 Toán, 🔬 KHTN, 📖 Ngữ văn, 🇬🇧 Tiếng Anh, 🗺️ Lịch sử & Địa lí, 🏛️ GDCD, ⚙️ Công nghệ, 🏠 GD địa phương *(sắp có)*
 
-## Expanding the Oxlint configuration
+## Cài đặt & Chạy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Cấu hình API Keys
+
+Sao chép `.env.local` và điền:
+
+```env
+VITE_GEMINI_API_KEY=your_key_here   # https://aistudio.google.com/app/apikey
+VITE_SUPABASE_URL=your_url
+VITE_SUPABASE_ANON_KEY=your_key
+```
+
+## Supabase Setup (giám sát từ xa)
+
+Xem [`supabase/SETUP.md`](./supabase/SETUP.md) để biết hướng dẫn chi tiết.
+
+## Deploy Vercel
+
+```bash
+# Vercel CLI
+vercel --prod
+
+# Hoặc connect GitHub repo tại vercel.com
+# Framework: Vite | Output: dist | Build: npm run build
+```
+
+## Cấu trúc dự án
+
+```
+src/
+├── components/
+│   ├── SubjectPicker.jsx   # Màn hình chọn môn
+│   ├── Quiz.jsx            # Luyện tập
+│   ├── Exam.jsx            # Thi thử + AI analysis
+│   └── Review.jsx          # Sổ tay câu sai
+├── data/
+│   ├── subjects.js         # Cấu hình môn học
+│   ├── questionBank.js     # Index tổng hợp
+│   ├── tinHocQuestions.js  # Câu hỏi Tin học
+│   └── petB1Questions.js   # Câu hỏi PET B1
+├── lib/
+│   ├── gemini.js           # Gemini AI integration
+│   └── supabase.js         # Supabase client
+└── styles/
+    └── theme.css           # Design system
+supabase/
+├── schema.sql              # Tạo bảng Supabase
+└── SETUP.md                # Hướng dẫn cài đặt
+```

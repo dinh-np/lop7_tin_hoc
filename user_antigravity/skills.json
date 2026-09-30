@@ -1,0 +1,32 @@
+{
+  "skills": [
+    {
+      "name": "them-cau-hoi",
+      "path": "user_antigravity/skills/them-cau-hoi/SKILL.md"
+    },
+    {
+      "name": "supabase-local",
+      "path": "user_antigravity/skills/supabase-local/SKILL.md"
+    },
+    {
+      "name": "deploy-vercel",
+      "path": "user_antigravity/skills/deploy-vercel/SKILL.md"
+    },
+    {
+      "name": "gemini-ai",
+      "path": "user_antigravity/skills/gemini-ai/SKILL.md"
+    },
+    {
+      "name": "context_hub",
+      "path": "user_antigravity/skills/context_hub/SKILL.md"
+    },
+    {
+      "name": "continuity_skill",
+      "path": "user_antigravity/skills/continuity_skill/SKILL.md"
+    },
+    {
+      "name": "project_context",
+      "path": "user_antigravity/skills/project_context/SKILL.md"
+    }
+  ]
+}

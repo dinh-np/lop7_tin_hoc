@@ -1,47 +1,44 @@
 import { useState, useEffect, useMemo } from 'react';
-import { questionBank } from '../data/questionBank';
+import { getQuestionsForSubject } from '../data/questionBank';
 
-export default function Review() {
+export default function Review({ subjectId }) {
+  const allQuestions = getQuestionsForSubject(subjectId);
+  const storageKey = `wrongQ_${subjectId}`;
+
   const [incorrectIds, setIncorrectIds] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem('incorrectQuestions') || '[]');
+    const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
     setIncorrectIds(stored);
-  }, []);
+  }, [storageKey]);
 
-  const reviewQuestions = useMemo(() => {
-    return questionBank.filter(q => incorrectIds.includes(q.id));
-  }, [incorrectIds]);
+  const reviewQuestions = useMemo(
+    () => allQuestions.filter((q) => incorrectIds.includes(q.id)),
+    [incorrectIds, allQuestions]
+  );
 
   const currentQuestion = reviewQuestions[currentIdx];
 
   const handleAnswer = (idx) => {
     if (selectedAnswer !== null) return;
     setSelectedAnswer(idx);
-    
-    // If correct, remove from incorrect list after short delay or next click?
-    // Let's do it immediately in storage, but keep it in view until they move next
+
     if (idx === currentQuestion.answer) {
-      const newIds = incorrectIds.filter(id => id !== currentQuestion.id);
-      localStorage.setItem('incorrectQuestions', JSON.stringify(newIds));
-      // update state on next question? We'll let them see explanation first.
+      const newIds = incorrectIds.filter((id) => id !== currentQuestion.id);
+      localStorage.setItem(storageKey, JSON.stringify(newIds));
     }
   };
 
   const nextQuestion = () => {
     if (selectedAnswer !== null && selectedAnswer === currentQuestion.answer) {
-      // It was removed from storage. We need to reload the ids from storage to reflect state.
-      const stored = JSON.parse(localStorage.getItem('incorrectQuestions') || '[]');
+      const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
       setIncorrectIds(stored);
-      
-      // If the list shrunk, we might need to adjust currentIdx if it's out of bounds
       if (currentIdx >= stored.length) {
         setCurrentIdx(Math.max(0, stored.length - 1));
       }
     } else {
-      // Just move to next if not at end
       if (currentIdx < reviewQuestions.length - 1) {
         setCurrentIdx(currentIdx + 1);
       }
@@ -49,46 +46,70 @@ export default function Review() {
     setSelectedAnswer(null);
   };
 
+  const clearAll = () => {
+    if (window.confirm('Xóa toàn bộ danh sách câu hỏi cần ôn?')) {
+      localStorage.setItem(storageKey, '[]');
+      setIncorrectIds([]);
+    }
+  };
+
   if (incorrectIds.length === 0) {
     return (
-      <div className="card" style={{ textAlign: 'center' }}>
-        <h2>Sổ Tay Cần Ôn Lại</h2>
-        <p style={{ color: 'var(--success-color)', fontSize: '1.2rem', fontWeight: 'bold' }}>
-          Tuyệt vời! Bạn không có câu hỏi nào làm sai.
-        </p>
+      <div className="card empty-state">
+        <div className="empty-icon">🌟</div>
+        <div className="empty-title" style={{ color: 'var(--success)' }}>
+          Tuyệt vời! Không có câu cần ôn
+        </div>
+        <div className="empty-desc">
+          Hãy luyện tập hoặc thi thử để theo dõi câu làm sai.
+        </div>
       </div>
     );
   }
 
   if (!currentQuestion) return null;
 
+  const progress = ((currentIdx + 1) / reviewQuestions.length) * 100;
+
   return (
     <div className="card">
-      <div className="flex-between">
-        <h2>Sổ Tay Cần Ôn Lại</h2>
-        <span style={{ fontWeight: 'bold', color: 'var(--danger-color)' }}>
-          Còn lại {reviewQuestions.length} câu
-        </span>
+      {/* Header */}
+      <div className="card-title">
+        <span>📖 Sổ Tay Ôn Lại</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span className="wrong-count-badge">{reviewQuestions.length} câu</span>
+          <button className="btn-ghost" onClick={clearAll} style={{ padding: '5px 10px', fontSize: '0.78rem' }}>
+            Xóa tất cả
+          </button>
+        </div>
       </div>
 
-      <div style={{ marginBottom: '10px', fontWeight: 'bold' }}>
-        Câu hỏi (Chủ đề: {currentQuestion.topic}):
+      {/* Progress */}
+      <div className="progress-bar-wrap">
+        <div className="progress-bar-fill" style={{ width: `${progress}%`, background: 'linear-gradient(90deg, var(--danger), var(--warning))' }} />
       </div>
-      
-      <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>{currentQuestion.question}</p>
+
+      {/* Question meta */}
+      <div className="question-meta">
+        <span style={{ fontWeight: 600, color: 'var(--text-2)', fontSize: '0.88rem' }}>
+          Câu {currentIdx + 1} / {reviewQuestions.length}
+        </span>
+        <span className="tag topic">{currentQuestion.topic}</span>
+      </div>
+
+      <p className="question-text">{currentQuestion.question}</p>
 
       <div className="options-list">
         {currentQuestion.options.map((opt, idx) => {
-          let btnClass = 'option-btn';
+          let cls = 'option-btn';
           if (selectedAnswer !== null) {
-            if (idx === currentQuestion.answer) btnClass += ' correct';
-            else if (idx === selectedAnswer) btnClass += ' incorrect';
+            if (idx === currentQuestion.answer) cls += ' correct';
+            else if (idx === selectedAnswer) cls += ' incorrect';
           }
-
           return (
-            <button 
-              key={idx} 
-              className={btnClass} 
+            <button
+              key={idx}
+              className={cls}
               onClick={() => handleAnswer(idx)}
               disabled={selectedAnswer !== null}
             >
@@ -104,13 +125,9 @@ export default function Review() {
         </div>
       )}
 
-      <div style={{ marginTop: '20px', textAlign: 'right' }}>
-        <button 
-          className="btn-primary" 
-          onClick={nextQuestion} 
-          disabled={selectedAnswer === null}
-        >
-          {selectedAnswer === currentQuestion.answer ? 'Đã hiểu, sang câu khác' : 'Thử lại sau'}
+      <div style={{ marginTop: 20, textAlign: 'right' }}>
+        <button className="btn-primary" onClick={nextQuestion} disabled={selectedAnswer === null}>
+          {selectedAnswer === currentQuestion.answer ? '✅ Đã hiểu, sang câu tiếp' : '⏭ Ôn lại sau'}
         </button>
       </div>
     </div>

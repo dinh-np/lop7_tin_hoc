@@ -1,11 +1,7 @@
-Bạn hãy cập nhật lại toàn bộ mảng dữ liệu `questionBank` gồm 70 câu hỏi trong ứng dụng luyện thi Tin học 7 Giữa Kỳ 1. Dữ liệu cần phản ánh chính xác 100% câu chữ, các phương án lựa chọn A, B, C, D, đáp án đúng (chỉ số index 0 ứng với A, 1 ứng với B, 2 ứng với C, 3 ứng với D) và lời giải thích dựa theo đúng đề cương chính thức.
-
-Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn sau:
-
-```json
-[
+export const tinHocQuestions = [
   {
     "id": 1,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Thuật ngữ nào dùng để chỉ ra các thiết bị vào ra của hệ thống máy tính?",
     "options": ["A. Màn hình.", "B. Phần mềm.", "C. Phần cứng.", "D. Tài nguyên dùng chung."],
@@ -14,6 +10,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 2,
+    "subject": "tin_hoc",
     "topic": "An toàn thiết bị",
     "question": "Thao tác nào sau đây tắt máy tính một cách an toàn?",
     "options": ["A. Sử dụng nút lệnh Restart của Windows.", "B. Sử dụng nút lệnh Shut down của Windows.", "C. Nhấn giữ công tắc nguồn vài giây.", "D. Rút dây nguồn khỏi ổ cắm."],
@@ -22,6 +19,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 3,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Phương án nào sau đây chỉ gồm các thiết bị vào?",
     "options": ["A. Micro, máy in.", "B. Máy quét, màn hình.", "C. Máy ảnh kĩ thuật số, loa.", "D. Bàn phím, chuột."],
@@ -30,6 +28,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 4,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Đâu là chức năng của loa?",
     "options": [
@@ -43,6 +42,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 5,
+    "subject": "tin_hoc",
     "topic": "An toàn thiết bị",
     "question": "Máy tính của em đang làm việc với một tệp trên thẻ nhớ. Em hãy sắp xếp lại thứ tự các thao tác sau để tắt máy tính an toàn, không làm mất dữ liệu.\na) Chọn nút lệnh Shut down để tắt máy tính.\nb) Đóng tệp đang mở trên thẻ nhớ.\nc) Chọn \"Safe To Remove Hardware\" để ngắt kết nối với thẻ nhớ.\nd) Lưu lại nội dung của tệp.",
     "options": ["A. a - b - d - c", "B. d - b - c - a", "C. d - c - b - a", "D. c - d - a - b"],
@@ -51,6 +51,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 6,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Thiết bị nào dưới đây có thể làm thiết bị đầu ra?",
     "options": ["A. Màn hình.", "B. Micro.", "C. Bàn phím.", "D. Webcam."],
@@ -59,6 +60,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 7,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Em hãy cho biết máy ảnh nhập dữ liệu dạng nào vào máy tính?",
     "options": ["A. Con số", "B. Văn bản.", "C. Hình ảnh.", "D. Âm thanh."],
@@ -67,6 +69,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 8,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Đâu là chức năng của máy chiếu?",
     "options": [
@@ -80,6 +83,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 9,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Khi em đang gọi điện thoại có hình ảnh cho bạn, em không nghe thấy tiếng bạn, nhưng vẫn thấy hình bạn đang nói. Em chọn phương án nào sau đây để giải quyết vấn đề?",
     "options": [
@@ -93,6 +97,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 10,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Thiết bị nào dưới đây không thể làm thiết bị đầu vào?",
     "options": ["A. Máy quét.", "B. Màn hình cảm ứng.", "C. Máy in đa năng.", "D. Loa."],
@@ -101,6 +106,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 11,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Một bộ tai nghe có gắn micro sử dụng cho máy tính là loại thiết bị gì?",
     "options": ["A. Thiết bị vào.", "B. Thiết bị ra.", "C. Thiết bị vừa vào vừa ra.", "D. Không phải thiết bị vào - ra."],
@@ -109,6 +115,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 12,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Một máy tính để bàn có các cổng nối như hình vẽ. Em hãy lắp thiết bị a) bàn phím vào đúng cổng của nó bằng cách ghép chữ cái với số tương ứng:",
     "options": ["A. 1", "B. 2", "C. 5", "D. 7"],
@@ -117,6 +124,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 13,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Đâu là chức năng của tấm cảm ứng?",
     "options": [
@@ -130,6 +138,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 14,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Vai trò của thiết bị vào là:",
     "options": ["A. Để xử lý thông tin.", "B. Đưa thông tin ra ngoài.", "C. Để tiếp nhận thông tin vào.", "D. Thực hiện truyền thông tin giữa các bộ phận."],
@@ -138,6 +147,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 15,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Một máy tính để bàn có các cổng nối như hình vẽ. Em hãy lắp thiết bị b) Dây mạng vào đúng cổng của nó bằng cách ghép chữ cái với số tương ứng:",
     "options": ["A. 1", "B. 3", "C. 6", "D. 7"],
@@ -146,6 +156,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 16,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Máy quét ảnh trong hình vẽ là loại thiết bị nào?",
     "options": ["A. Thiết bị vào.", "B. Thiết bị ra.", "C. Thiết bị vừa vào vừa ra.", "D. Thiết bị lưu trữ."],
@@ -154,6 +165,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 17,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Vai trò của thiết bị ra là:",
     "options": ["A. Để xử lý thông tin.", "B. Đưa thông tin ra ngoài.", "C. Để tiếp nhận thông tin vào.", "D. Thực hiện truyền thông tin giữa các bộ phận."],
@@ -162,6 +174,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 18,
+    "subject": "tin_hoc",
     "topic": "An toàn thiết bị",
     "question": "Quy tắc nào không đảm bảo sử dụng máy tính an toàn?",
     "options": [
@@ -175,6 +188,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 19,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Đâu là chức năng của bộ điều khiển game?",
     "options": [
@@ -188,6 +202,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 20,
+    "subject": "tin_hoc",
     "topic": "Thiết bị vào - ra",
     "question": "Thiết bị phổ biến nhất được sử dụng để nhập dữ liệu số và văn bản vào máy tính là gì?",
     "options": ["A. Máy vẽ đề thị.", "B. Bàn phím.", "C. Máy in.", "D. Máy quét."],
@@ -196,6 +211,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 21,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Phương án nào là phần mở rộng của tệp trình chiếu?",
     "options": ["A. .docx.", "B. .pptx.", "C. .xlsx.", "D. .png."],
@@ -204,6 +220,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 22,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Phần mềm nào sau đây không phải là một hệ điều hành?",
     "options": ["A. Windows 7.", "B. Windows 10.", "C. Windows Explorer.", "D. Windows Phone."],
@@ -212,6 +229,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 23,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Việc nào sau đây là chức năng của hệ điều hành?",
     "options": [
@@ -225,6 +243,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 24,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Phương án nào sau đây là phần mở rộng của tệp chương trình máy tính?",
     "options": ["A. .docx .rtf .odt", "B. .pptx .ppt .odp", "C. .xlsx .csv .ods", "D. .com .exe .msi"],
@@ -233,6 +252,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 25,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Phương án nào sau đây là phần mở rộng của tệp dữ liệu âm thanh?",
     "options": ["A. .sb3.", "B. .mp3.", "C. .avi.", "D. .com."],
@@ -241,6 +261,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 26,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Phát biểu nào sau đây là sai?",
     "options": [
@@ -254,6 +275,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 27,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Việc nào sau đây không phải là chức năng của hệ điều hành?",
     "options": [
@@ -267,6 +289,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 28,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Hệ điều hành có chức năng?",
     "options": [
@@ -280,6 +303,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 29,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Loại tệp không sử dụng được với Windows Media Player là:",
     "options": ["A. .mp3", "B. .jpg", "C. .avi", "D. .mp4"],
@@ -288,6 +312,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 30,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Máy tính có thể cái đặt được mấy hệ điều hành?",
     "options": [
@@ -301,6 +326,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 31,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Chức năng nào dưới đây là phần mềm ứng dụng?",
     "options": [
@@ -314,6 +340,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 32,
+    "subject": "tin_hoc",
     "topic": "Phần mềm máy tính",
     "question": "Phần mềm cần cài đặt đầu tiên vào máy tính để máy tính hoạt động được có thể là:",
     "options": ["A. MS Word", "B. MS PowerPoint", "C. Window 10", "D. Google Chrome"],
@@ -322,6 +349,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 33,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Phương án nào sau đây không phải là biện pháp bảo vệ dữ liệu?",
     "options": [
@@ -335,6 +363,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 34,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Phương án nào dưới đây là tên chương trình máy tính giúp em quản lí tệp và thư mục?",
     "options": ["A. Internet Explorer.", "B. Help.", "C. Microsoft Word.", "D. File Explorer."],
@@ -343,6 +372,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 35,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Sao lưu dữ liệu gồm có mấy loại?",
     "options": ["A. 2", "B. 3", "C. 4", "D. 5"],
@@ -351,6 +381,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 36,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Tệp có phần mở rộng .exe thuộc loại tệp gì?",
     "options": ["A. Không có loại tệp này.", "B. Tệp chương trình máy tính.", "C. Tệp dữ liệu video.", "D. Tệp dữ liệu của phần mềm Microsoft Word."],
@@ -359,6 +390,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 37,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Phương án nào sau đây không phải là lợi ích của việc tổ chức lưu trữ tập trên máy tính một cách hợp lí?",
     "options": [
@@ -372,6 +404,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 38,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Nhược điểm của đĩa quang (CD, DVD) là gì?",
     "options": ["A. Khó bị nhiễm virus", "B. Dung lượng lớn", "C. Khó ghi dữ liệu vì phải có đầu ghi", "D. Chi phí thấp"],
@@ -380,6 +413,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 39,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Việc nào sau đây là không đúng khi quản lí tệp và thư mục trên máy tính",
     "options": [
@@ -393,6 +427,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 40,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Sao lưu từ xa là gì?",
     "options": [
@@ -406,6 +441,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 41,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Để việc tìm kiếm dữ liệu trong máy tính được dễ dàng và nhanh chóng, khi đặt tên thư mục và tệp em nên:",
     "options": [
@@ -419,6 +455,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 42,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Phát biểu nào sau đây là đúng?",
     "options": [
@@ -432,6 +469,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 43,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Các tệp chương trình thường có phần mở rộng là gì?",
     "options": ["A. .exe.", "B. .docx.", "C. .pptx.", "D. .txt."],
@@ -440,6 +478,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 44,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Nhược điểm của thẻ nhớ là gì?",
     "options": [
@@ -453,6 +492,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 45,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Phương án nào dưới đây là tên phần mềm có thể bảo vệ máy tính tránh được virus?",
     "options": ["A. Windows Defender.", "B. Mozilla Firefox.", "C. Microsoft Windows.", "D. Microsoft Word."],
@@ -461,6 +501,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 46,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Để đổi tên thư mục ta chọn bảng chọn nào?",
     "options": ["A. Rename", "B. Cut", "C. Copy", "D. Delete"],
@@ -469,6 +510,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 47,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Để bảo vệ dữ liệu em có thể sử dụng các cách nào sau đây?",
     "options": [
@@ -482,6 +524,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 48,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Ưu điểm của thẻ nhớ, USB là gì?",
     "options": ["A. Nhỏ gọn", "B. Tiện sử dụng", "C. Khá bền", "D. Tất cả các phương án trên"],
@@ -490,6 +533,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 49,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Hãy chọn những phát biểu sai trong những phát biểu dưới đây?",
     "options": [
@@ -503,6 +547,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 50,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Việc nào sau đây không phải là cách mở File Explorer?",
     "options": [
@@ -516,6 +561,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 51,
+    "subject": "tin_hoc",
     "topic": "Quản lí dữ liệu & Bảo mật",
     "question": "Sao lưu cục bộ là gì?",
     "options": [
@@ -529,6 +575,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 52,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Mạng xã hội là gì?",
     "options": ["A. Một cộng đồng cùng chung sở thích.", "B. Một cộng đồng trực tuyến.", "C. Một cộng đồng cùng chung mục đích.", "D. Đáp án khác."],
@@ -537,6 +584,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 53,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Chọn các phương án không đúng.",
     "options": [
@@ -550,6 +598,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 54,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Đâu không phải ưu điểm của mạng xã hội là:",
     "options": [
@@ -563,6 +612,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 55,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Những hạn chế của mạng xã hội đó là?",
     "options": [
@@ -576,6 +626,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 56,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Ưu điểm của mạng xã hội là",
     "options": [
@@ -589,6 +640,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 57,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Mạng xã hội là một cộng đồng trực tuyến để mọi người có thể làm gì?",
     "options": ["A. Mua hàng online", "B. Học trực tuyến", "C. Tương tác với nhau", "D. Cả A, B và C"],
@@ -597,6 +649,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 58,
+    "subject": "tin_hoc",
     "topic": "Ứng xử trên mạng",
     "question": "Muốn sử dụng Internet an toàn và hiệu quả, cũng như tránh những tác hại",
     "options": [
@@ -610,6 +663,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 59,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Mạng xã hội nào cho phép người sử dụng tải lên, sắp xếp và chia sẻ các hình ảnh của mình?",
     "options": ["A. Youtube", "B. Instagram", "C. Facebook", "D. Tiktok"],
@@ -618,6 +672,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 60,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Một số mạng xã hội quy định độ tuổi tối thiểu được phép tham gia tối thiểu là bao nhiêu?",
     "options": ["A. Từ 13 tuổi trở lên.", "B. Từ 15 tuổi trở lên", "C. Từ 18 tuổi trở lên", "D. Từ 10 tuổi trở lên"],
@@ -626,6 +681,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 61,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Ý kiến nào sau đây không phải là đặc điểm của mạng xã hội?",
     "options": [
@@ -639,6 +695,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 62,
+    "subject": "tin_hoc",
     "topic": "Ứng xử trên mạng",
     "question": "Là một học sinh, chúng ta nên làm gì trên mạng xã hội?",
     "options": [
@@ -652,6 +709,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 63,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Mục đích của mạng xã hội là gì?",
     "options": [
@@ -665,6 +723,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 64,
+    "subject": "tin_hoc",
     "topic": "Ứng xử trên mạng",
     "question": "Cách để giữ an toàn trên mạng xã hội?",
     "options": [
@@ -678,6 +737,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 65,
+    "subject": "tin_hoc",
     "topic": "Ứng xử trên mạng",
     "question": "Không nên dùng mạng xã hội cho mục đích nào sau đây?",
     "options": [
@@ -691,6 +751,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 66,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Một ứng dụng giúp kết nối mọi người ở bất cứ đâu, là bất kỳ ai thông qua dịch vụ internet, giúp người dùng có thể chia sẻ những sở thích và trao đổi những thông tin cần thiết với nhau là nội dung của khái niệm nào sau đây?",
     "options": ["A. Mạng xã hội", "B. Hệ điều hành windows.", "C. Phần mềm Zoom.", "D. Tất cả các ứng dụng trên web."],
@@ -699,6 +760,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 67,
+    "subject": "tin_hoc",
     "topic": "Ứng xử trên mạng",
     "question": "Học sinh chỉ nên chia sẻ những gì trên mạng xã hội?",
     "options": [
@@ -712,6 +774,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 68,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Phát biểu nào sau đây là đúng?",
     "options": [
@@ -725,6 +788,7 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 69,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Thông tin trao đổi trên kênh mạng xã hội có dạng?",
     "options": ["A. Văn bản.", "B. Hình ảnh.", "C. Video.", "D. Cả A, B và C."],
@@ -733,10 +797,11 @@ Hãy thay thế toàn bộ danh sách 70 câu hỏi bằng mảng JSON chuẩn s
   },
   {
     "id": 70,
+    "subject": "tin_hoc",
     "topic": "Mạng xã hội & Kênh trao đổi",
     "question": "Những kênh nào sau đây là kênh trao đổi thông tin trên Internet",
     "options": ["A. Thư điện tử.", "B. Diễn đàn.", "C. Mạng xã hội.", "D. Cả A, B và C."],
     "answer": 3,
     "explanation": "Đáp án D. Thư điện tử, diễn đàn thảo luận và mạng xã hội đều là những kênh trao đổi thông tin phổ biến trên Internet."
   }
-]
+];

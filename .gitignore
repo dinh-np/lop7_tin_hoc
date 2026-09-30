@@ -25,3 +25,10 @@ dist-ssr
 
 .vercel
 .env*
+
+# User data (private)
+user_data/
+
+# Supabase local volumes
+supabase/.branches
+supabase/.temp
