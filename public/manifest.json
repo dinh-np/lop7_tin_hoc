@@ -1,16 +1,34 @@
 {
-  "short_name": "Tin Hoc 7",
-  "name": "Luyện Thi Tin Học 7 - Giữa Kỳ I",
-  "description": "Ứng dụng luyện thi Tin học 7",
+  "short_name": "Ôn Tập 7",
+  "name": "Sổ Tay Ôn Tập Của Con",
+  "description": "PWA ôn thi đa môn cho học sinh lớp 7 – Offline-First, đa thiết bị",
   "icons": [
+    {
+      "src": "/icons/icon-180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
     {
       "src": "favicon.svg",
       "type": "image/svg+xml",
-      "sizes": "512x512"
+      "sizes": "any"
     }
   ],
   "start_url": "/",
-  "background_color": "#ffffff",
   "display": "standalone",
-  "theme_color": "#0066AB"
+  "orientation": "portrait-primary",
+  "theme_color": "#0066AB",
+  "background_color": "#f8f9fa"
 }

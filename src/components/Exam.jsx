@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
-import { saveSession } from '../lib/supabase';
+import { saveSubmission, saveWrongAnswers, isFirebaseConfigured } from '../lib/firebase';
 import { batchDiagnose, isGeminiConfigured } from '../lib/gemini';
 
 const shuffle = (array) => {
@@ -55,39 +55,49 @@ export default function Exam({ subjectId }) {
     setScore(finalScore);
     setWrongDetails(wrongs);
 
-    // Save to localStorage (per subject)
+    // Lưu vào localStorage (per subject)
     if (wrongIds.length > 0) {
       const key = `wrongQ_${subjectId}`;
       const stored = JSON.parse(localStorage.getItem(key) || '[]');
       localStorage.setItem(key, JSON.stringify([...new Set([...stored, ...wrongIds])]));
     }
 
-    // Save to Supabase (fire and forget)
+    // Lưu vào Firebase Firestore (fire and forget — offline-safe)
     const durationSeconds = Math.round((Date.now() - startTime) / 1000);
-    saveSession({
-      subject: subjectId,
-      mode: 'exam',
-      score: parseFloat(finalScore.toFixed(2)),
-      totalQuestions: examQuestions.length,
-      correctCount: correct,
-      wrongIds,
-      durationSeconds,
-    });
+    if (isFirebaseConfigured) {
+      try {
+        const submissionId = await saveSubmission({
+          subject: subjectId,
+          mode: 'exam',
+          score: parseFloat(finalScore.toFixed(2)),
+          correctCount: correct,
+          wrongCount: wrongs.length,
+          durationSeconds,
+        });
+        // Lưu chi tiết câu sai (tối đa 20 câu)
+        if (submissionId && wrongs.length > 0) {
+          await saveWrongAnswers(submissionId, wrongs.slice(0, 20));
+        }
+      } catch (e) {
+        console.error('[Exam] Firebase save error:', e);
+      }
+    }
 
-    // Load Gemini AI analysis
+    // Phân tích AI Gemini
     if (isGeminiConfigured && wrongs.length > 0) {
       setAiLoading(true);
       try {
-        const analyses = await batchDiagnose(wrongs.slice(0, 5)); // max 5 for speed
+        const analyses = await batchDiagnose(wrongs.slice(0, 5));
         setAiAnalyses(analyses);
       } catch (e) {
-        console.error('AI analysis failed:', e);
+        console.error('[Exam] AI analysis failed:', e);
       } finally {
         setAiLoading(false);
       }
     }
   }, [submitted, examQuestions, answers, subjectId, startTime]);
 
+  // Timer
   useEffect(() => {
     if (submitted || timeLeft <= 0) {
       if (timeLeft <= 0 && !submitted) handleSubmit();
@@ -96,6 +106,33 @@ export default function Exam({ subjectId }) {
     const timer = setInterval(() => setTimeLeft((t) => t - 1), 1000);
     return () => clearInterval(timer);
   }, [timeLeft, submitted, handleSubmit]);
+
+  // ─── Keyboard shortcuts: 1-4 hoặc A-D để chọn đáp án, ←→ để chuyển câu ──
+  useEffect(() => {
+    if (submitted) return;
+
+    const handleKey = (e) => {
+      const tag = e.target.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+      const keyMap = { '1': 0, 'a': 0, '2': 1, 'b': 1, '3': 2, 'c': 2, '4': 3, 'd': 3 };
+      const key = e.key.toLowerCase();
+
+      if (key in keyMap && examQuestions[currentIdx]) {
+        e.preventDefault();
+        setAnswers((prev) => ({ ...prev, [currentIdx]: keyMap[key] }));
+      } else if (key === 'arrowleft' || key === 'arrowup') {
+        e.preventDefault();
+        setCurrentIdx((i) => Math.max(0, i - 1));
+      } else if (key === 'arrowright' || key === 'arrowdown') {
+        e.preventDefault();
+        setCurrentIdx((i) => Math.min(examQuestions.length - 1, i + 1));
+      }
+    };
+
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [submitted, currentIdx, examQuestions]);
 
   const formatTime = (s) => {
     const m = Math.floor(s / 60).toString().padStart(2, '0');
@@ -161,12 +198,18 @@ export default function Exam({ subjectId }) {
             </div>
           </div>
 
+          {isFirebaseConfigured && (
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-3)', marginBottom: 8 }}>
+              ☁️ Kết quả đã được lưu lên Firebase
+            </p>
+          )}
+
           <button className="btn-primary" onClick={() => window.location.reload()} style={{ marginTop: 8 }}>
             🔄 Thi Lại
           </button>
         </div>
 
-        {/* AI Analysis of wrong answers */}
+        {/* AI Analysis */}
         {wrongDetails.length > 0 && (
           <div className="card">
             <div className="card-title">
@@ -189,11 +232,10 @@ export default function Exam({ subjectId }) {
                     ✓ {question.options[question.answer]}
                   </span>
                 </div>
-                <div className="explanation" style={{ marginTop: 0, marginBottom: 10 }}>
+                <div className="explanation">
                   <strong>Giải thích:</strong> {question.explanation}
                 </div>
 
-                {/* Gemini AI Analysis */}
                 {isGeminiConfigured && (
                   <div className="ai-panel">
                     <div className="ai-panel-header">✨ Gemini AI phân tích</div>
@@ -222,66 +264,114 @@ export default function Exam({ subjectId }) {
   const currentQuestion = examQuestions[currentIdx];
   const timerCls = timeLeft <= 60 ? 'timer danger' : timeLeft <= 300 ? 'timer warning' : 'timer';
 
-  return (
-    <div className="card">
-      {/* Header */}
-      <div className="card-title">
-        <span>Thi Thử ({Math.ceil(EXAM_DURATION / 60)} Phút)</span>
-        <div className={timerCls}>⏱ {formatTime(timeLeft)}</div>
-      </div>
-
-      {/* Answer palette */}
-      <div className="palette-grid">
-        {examQuestions.map((_, idx) => (
-          <button
-            key={idx}
-            className={`palette-btn ${currentIdx === idx ? 'active' : ''} ${answers[idx] !== undefined ? 'answered' : ''}`}
-            onClick={() => setCurrentIdx(idx)}
-          >
-            {idx + 1}
-          </button>
-        ))}
-      </div>
-
-      <hr />
-
-      {/* Question */}
-      <div className="question-meta" style={{ marginBottom: 10 }}>
-        <span style={{ fontWeight: 700, color: 'var(--text-2)', fontSize: '0.88rem' }}>
-          Câu {currentIdx + 1} / {examQuestions.length}
-        </span>
-        <span className="tag topic">{currentQuestion.topic}</span>
-      </div>
-
-      <p className="question-text">{currentQuestion.question}</p>
-
-      <div className="options-list">
-        {currentQuestion.options.map((opt, idx) => (
-          <button
-            key={idx}
-            className={`option-btn ${answers[currentIdx] === idx ? 'correct' : ''}`}
-            style={answers[currentIdx] === idx ? { background: 'var(--primary-light)', borderColor: 'var(--primary)', color: 'var(--primary-dark)' } : {}}
-            onClick={() => setAnswers((prev) => ({ ...prev, [currentIdx]: idx }))}
-          >
-            {opt}
-          </button>
-        ))}
-      </div>
-
-      {/* Navigation */}
-      <div className="flex-between" style={{ marginTop: 24 }}>
-        <button className="btn-outline" onClick={() => setCurrentIdx(Math.max(0, currentIdx - 1))} disabled={currentIdx === 0}>
-          ← Câu trước
+  // Palette component dùng chung
+  const PaletteButtons = () => (
+    <>
+      {examQuestions.map((_, idx) => (
+        <button
+          key={idx}
+          id={`palette-btn-${idx}`}
+          className={`palette-btn ${currentIdx === idx ? 'active' : ''} ${answers[idx] !== undefined ? 'answered' : ''}`}
+          onClick={() => setCurrentIdx(idx)}
+        >
+          {idx + 1}
         </button>
-        {currentIdx === examQuestions.length - 1 ? (
-          <button className="btn-danger" onClick={handleSubmit}>
-            📤 Nộp Bài
+      ))}
+    </>
+  );
+
+  return (
+    <div className="exam-split">
+      {/* ─── LEFT: Question panel ─── */}
+      <div className="card" style={{ marginBottom: 0 }}>
+        {/* Mobile: scrollable palette */}
+        <div className="palette-scroll no-select">
+          <PaletteButtons />
+        </div>
+
+        <div className="card-title">
+          <span>Thi Thử ({Math.ceil(EXAM_DURATION / 60)} Phút)</span>
+          {/* Timer visible on mobile */}
+          <div className={`${timerCls} md-hidden`} style={{ display: 'flex' }}>⏱ {formatTime(timeLeft)}</div>
+        </div>
+
+        {/* Desktop palette */}
+        <div className="palette-grid no-select">
+          <PaletteButtons />
+        </div>
+
+        <hr />
+
+        <div className="question-meta" style={{ marginBottom: 10 }}>
+          <span style={{ fontWeight: 700, color: 'var(--text-2)', fontSize: '0.88rem' }}>
+            Câu {currentIdx + 1} / {examQuestions.length}
+          </span>
+          <span className="tag topic">{currentQuestion.topic}</span>
+        </div>
+
+        <p className="question-text">{currentQuestion.question}</p>
+
+        <div className="options-list">
+          {currentQuestion.options.map((opt, idx) => (
+            <button
+              key={idx}
+              id={`option-${idx}`}
+              className={`option-btn ${answers[currentIdx] === idx ? 'correct' : ''}`}
+              style={answers[currentIdx] === idx ? { background: 'var(--primary-light)', borderColor: 'var(--primary)', color: 'var(--primary-dark)' } : {}}
+              onClick={() => setAnswers((prev) => ({ ...prev, [currentIdx]: idx }))}
+            >
+              <span style={{ fontWeight: 700, marginRight: 8, color: 'var(--text-3)' }}>
+                {['A', 'B', 'C', 'D'][idx]}.
+              </span>
+              {opt}
+            </button>
+          ))}
+        </div>
+
+        {/* Keyboard hint (desktop only) */}
+        <div className="kbd-hint">
+          <span>Phím tắt:</span>
+          {['A','B','C','D'].map((k) => <kbd key={k} className="kbd">{k}</kbd>)}
+          <span style={{ marginLeft: 8 }}>hoặc</span>
+          {['1','2','3','4'].map((k) => <kbd key={k} className="kbd">{k}</kbd>)}
+          <span style={{ marginLeft: 8 }}>|</span>
+          <kbd className="kbd">←</kbd><kbd className="kbd">→</kbd>
+          <span>chuyển câu</span>
+        </div>
+
+        <div className="flex-between" style={{ marginTop: 24 }}>
+          <button className="btn-outline" onClick={() => setCurrentIdx(Math.max(0, currentIdx - 1))} disabled={currentIdx === 0}>
+            ← Câu trước
           </button>
-        ) : (
-          <button className="btn-primary" onClick={() => setCurrentIdx(Math.min(examQuestions.length - 1, currentIdx + 1))}>
-            Câu tiếp →
-          </button>
-        )}
+          {currentIdx === examQuestions.length - 1 ? (
+            <button className="btn-danger" id="submit-exam-btn" onClick={handleSubmit}>
+              📤 Nộp Bài
+            </button>
+          ) : (
+            <button className="btn-primary" onClick={() => setCurrentIdx(Math.min(examQuestions.length - 1, currentIdx + 1))}>
+              Câu tiếp →
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* ─── RIGHT: Sidebar (timer + palette) – tablet/desktop only ─── */}
+      <div className="exam-sidebar">
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ fontSize: '0.75rem', color: 'var(--text-3)', fontWeight: 600, marginBottom: 4 }}>THỜI GIAN CÒN LẠI</div>
+          <div className={timerCls} style={{ fontSize: '1.8rem' }}>⏱ {formatTime(timeLeft)}</div>
+        </div>
+
+        <div style={{ fontSize: '0.75rem', color: 'var(--text-3)', fontWeight: 600, marginBottom: 8 }}>
+          BẢNG CÂU HỎI ({Object.keys(answers).length}/{examQuestions.length} đã trả lời)
+        </div>
+        <div className="palette-grid" style={{ marginBottom: 16 }}>
+          <PaletteButtons />
+        </div>
+
+        <button className="btn-danger" id="submit-exam-btn-sidebar" onClick={handleSubmit} style={{ width: '100%' }}>
+          📤 Nộp Bài
+        </button>
       </div>
     </div>
   );

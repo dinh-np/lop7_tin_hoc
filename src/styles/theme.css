@@ -37,12 +37,35 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ─── TOUCH OPTIMIZATION: Prevent 300ms delay & double-tap zoom ─────────── */
+html, body, button, input, select, textarea, .option-btn, .option-card, .palette-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ─── SAFE AREA INSETS: iPhone notch, Dynamic Island, iPad home bar ─────── */
 body {
   font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
+  /* Safe area padding */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* ─── FONT-SIZE >= 16px để tránh Safari auto-zoom khi focus input ────────── */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* ─── PREVENT text selection khi touch nhanh ────────────────────────────── */
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* ─── LAYOUT ────────────────────────────────────────────────────────────── */
@@ -53,6 +76,7 @@ body {
   margin: 0 auto;
   padding: 20px 16px 40px;
   flex: 1;
+  width: 100%;
 }
 
 /* ─── HEADER ────────────────────────────────────────────────────────────── */
@@ -60,9 +84,14 @@ body {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 0 20px;
-  height: 56px;
+  /* Thêm safe-area cho header sticky */
+  padding-top: max(0px, env(safe-area-inset-top));
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+  height: calc(56px + env(safe-area-inset-top, 0px));
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 8px;
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -87,6 +116,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 16px;
+  flex-shrink: 0;
 }
 
 .header-title {
@@ -153,9 +183,11 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* Tối thiểu 48px tap target theo Material/WCAG */
+  min-height: 100px;
 }
 
-.subject-card:hover {
+.subject-card:hover, .subject-card:focus {
   border-color: var(--primary);
   box-shadow: var(--shadow);
   transform: translateY(-2px);
@@ -216,7 +248,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* ─── SUBJECT HEADER (when inside a subject) ────────────────────────────── */
+/* ─── SUBJECT HEADER ────────────────────────────────────────────────────── */
 .subject-header {
   display: flex;
   align-items: center;
@@ -236,6 +268,8 @@ body {
   align-items: center;
   gap: 6px;
   transition: var(--transition);
+  /* Đảm bảo tap target >= 48px */
+  min-height: 48px;
 }
 .subject-back-btn:hover { border-color: var(--primary); color: var(--primary); }
 
@@ -268,6 +302,8 @@ body {
   transition: var(--transition);
   white-space: nowrap;
   text-align: center;
+  /* Đảm bảo tap target >= 48px */
+  min-height: 44px;
 }
 
 .nav-btn:hover { background: var(--bg); color: var(--text); }
@@ -319,6 +355,8 @@ body {
 
 .tag.skill { background: #f3e8ff; color: #7c3aed; }
 .tag.topic { background: var(--info-light); color: var(--info); }
+.tag.type-calc { background: #fef3c7; color: #92400e; }
+.tag.type-essay { background: #f0fdf4; color: #166534; }
 
 .question-text {
   font-size: 1.05rem;
@@ -329,6 +367,7 @@ body {
   white-space: pre-wrap;
 }
 
+/* ─── OPTIONS: tối thiểu 48px tap target ────────────────────────────────── */
 .options-list {
   display: flex;
   flex-direction: column;
@@ -349,12 +388,17 @@ body {
   font-family: inherit;
   font-weight: 500;
   white-space: pre-wrap;
+  /* Đảm bảo tap target >= 48px trên mobile */
+  min-height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 .option-btn:hover:not(:disabled) {
   background: var(--primary-light);
   border-color: var(--primary);
   color: var(--primary-dark);
+  transform: translateX(2px);
 }
 
 .option-btn.correct {
@@ -370,6 +414,112 @@ body {
 }
 
 .option-btn:disabled { cursor: default; }
+
+/* ─── CALCULATION QUESTION ──────────────────────────────────────────────── */
+.calc-solution-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--warning-light);
+  border: 1.5px solid var(--warning);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #92400e;
+  width: 100%;
+  text-align: left;
+  transition: var(--transition);
+  min-height: 48px;
+}
+.calc-solution-toggle:hover { background: #fde68a; }
+
+.calc-solution-content {
+  background: var(--surface2);
+  border-left: 4px solid var(--warning);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 16px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  font-family: 'Be Vietnam Pro', monospace;
+}
+
+/* ─── SHORT ESSAY QUESTION ──────────────────────────────────────────────── */
+.essay-input {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--surface2);
+  resize: vertical;
+  transition: var(--transition);
+  line-height: 1.6;
+}
+.essay-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.essay-reveal-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--info-light);
+  border: 1.5px solid var(--info);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--info);
+  transition: var(--transition);
+  min-height: 48px;
+}
+.essay-reveal-btn:hover { background: #a5f3fc; }
+
+.essay-self-eval {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-mastered {
+  flex: 1;
+  background: var(--success-light);
+  border: 1.5px solid var(--success);
+  color: #14532d;
+  border-radius: var(--radius);
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  min-height: 48px;
+}
+.btn-mastered:hover { background: #bbf7d0; }
+
+.btn-needs-review {
+  flex: 1;
+  background: var(--warning-light);
+  border: 1.5px solid var(--warning);
+  color: #92400e;
+  border-radius: var(--radius);
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  min-height: 48px;
+}
+.btn-needs-review:hover { background: #fde68a; }
 
 /* ─── EXPLANATION ───────────────────────────────────────────────────────── */
 .explanation {
@@ -423,6 +573,7 @@ body {
   border-top-color: #7c3aed;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -439,13 +590,14 @@ body {
   background: var(--primary);
   color: white;
   border: none;
-  padding: 11px 22px;
+  padding: 13px 22px;
   border-radius: var(--radius);
   cursor: pointer;
   font-weight: 700;
   font-size: 0.9rem;
   transition: var(--transition);
   font-family: inherit;
+  min-height: 48px;
 }
 .btn-primary:hover:not(:disabled) { background: var(--primary-dark); box-shadow: 0 4px 12px rgba(37,99,235,0.3); }
 .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -454,13 +606,14 @@ body {
   background: transparent;
   color: var(--primary);
   border: 1.5px solid var(--primary);
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: var(--radius);
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9rem;
   transition: var(--transition);
   font-family: inherit;
+  min-height: 48px;
 }
 .btn-outline:hover:not(:disabled) { background: var(--primary-light); }
 .btn-outline:disabled { opacity: 0.4; cursor: not-allowed; }
@@ -469,13 +622,14 @@ body {
   background: var(--danger);
   color: white;
   border: none;
-  padding: 11px 22px;
+  padding: 13px 22px;
   border-radius: var(--radius);
   cursor: pointer;
   font-weight: 700;
   font-size: 0.9rem;
   transition: var(--transition);
   font-family: inherit;
+  min-height: 48px;
 }
 .btn-danger:hover { background: #b91c1c; }
 
@@ -490,6 +644,7 @@ body {
   font-size: 0.88rem;
   transition: var(--transition);
   font-family: inherit;
+  min-height: 48px;
 }
 .btn-ghost:hover { border-color: var(--border-hover); background: var(--surface2); }
 
@@ -509,16 +664,33 @@ body {
   transition: width 0.35s ease;
 }
 
-/* ─── EXAM PALETTE ──────────────────────────────────────────────────────── */
+/* ─── EXAM PALETTE: horizontally scrollable on mobile ───────────────────── */
+.palette-wrapper {
+  margin-bottom: 16px;
+}
+
 .palette-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
   gap: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
+
+/* Mobile: scrollable palette drawer trigger */
+.palette-scroll {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.palette-scroll::-webkit-scrollbar { display: none; }
 
 .palette-btn {
   aspect-ratio: 1;
+  min-width: 38px;
+  min-height: 38px;
   border: 1.5px solid var(--border);
   background: var(--surface2);
   cursor: pointer;
@@ -528,6 +700,7 @@ body {
   color: var(--text-2);
   transition: var(--transition);
   font-family: inherit;
+  flex-shrink: 0;
 }
 .palette-btn:hover { border-color: var(--primary); color: var(--primary); }
 .palette-btn.active { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
@@ -587,11 +760,10 @@ body {
   justify-content: center;
   gap: 24px;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
-.stat-item {
-  text-align: center;
-}
+.stat-item { text-align: center; }
 
 .stat-value {
   font-size: 1.5rem;
@@ -620,13 +792,14 @@ select {
   padding: 8px 12px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 16px !important;
   outline: none;
   background: var(--surface);
   color: var(--text);
   font-family: inherit;
   cursor: pointer;
   transition: var(--transition);
+  min-height: 44px;
 }
 select:focus { border-color: var(--primary); }
 
@@ -634,19 +807,97 @@ select:focus { border-color: var(--primary); }
 hr { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
 
 /* ─── EMPTY STATE ───────────────────────────────────────────────────────── */
-.empty-state {
-  text-align: center;
-  padding: 40px 20px;
-}
+.empty-state { text-align: center; padding: 40px 20px; }
 .empty-icon { font-size: 3rem; margin-bottom: 12px; }
 .empty-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
 .empty-desc { font-size: 0.9rem; color: var(--text-2); }
 
-/* ─── RESPONSIVE ─────────────────────────────────────────────────────────── */
-@media (max-width: 600px) {
+/* ─── KEYBOARD SHORTCUT HINT (Desktop) ─────────────────────────────────── */
+.kbd-hint {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  margin-top: 8px;
+}
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+/* ─── RESPONSIVE: Mobile < 768px ────────────────────────────────────────── */
+@media (max-width: 767px) {
   .subject-grid { grid-template-columns: repeat(2, 1fr); }
   .result-stats { gap: 16px; }
   .nav-btn { font-size: 0.78rem; padding: 9px 6px; }
   .card { padding: 16px; }
   .home-hero h1 { font-size: 1.4rem; }
+
+  /* Palette thành scrollable row trên mobile */
+  .palette-grid {
+    display: none;
+  }
+  .palette-scroll {
+    display: flex;
+  }
+}
+
+/* ─── RESPONSIVE: Tablet 768px–1024px ───────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container { max-width: 100%; padding: 20px 20px 40px; }
+  .palette-scroll { display: none; }
+
+  /* Split-view layout khi thi: left = question, right = palette+timer */
+  .exam-split {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .exam-sidebar {
+    position: sticky;
+    top: calc(64px + env(safe-area-inset-top, 0px));
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/* ─── RESPONSIVE: Desktop > 1024px ──────────────────────────────────────── */
+@media (min-width: 1025px) {
+  .container { max-width: 960px; }
+  .palette-scroll { display: none; }
+
+  /* Keyboard shortcut hints visible on desktop */
+  .kbd-hint { display: flex; }
+
+  /* Split-view khi thi trên desktop */
+  .exam-split {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .exam-sidebar {
+    position: sticky;
+    top: calc(64px + env(safe-area-inset-top, 0px));
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+  }
 }
