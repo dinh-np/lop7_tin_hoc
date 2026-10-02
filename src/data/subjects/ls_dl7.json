@@ -1,0 +1,558 @@
+{
+  "test_id": "ls_dl_7_gki",
+  "title": "Lịch sử & Địa lí 7 - Ôn tập Giữa kỳ 1",
+  "subject": "lich_su_dia_li",
+  "subject_alias": "ls_dl",
+  "term": "HK1_GiuaKy",
+  "grade": 7,
+  "time_limit_minutes": 45,
+  "is_active": true,
+  "created_at": "2026-10-02T00:00:00Z",
+  "questions": [
+    {
+      "id": "ls7_01",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Tây Âu thời hậu kì trung đại",
+      "question": "Lãnh địa phong kiến được xem là",
+      "options": ["A. một khu tự trị", "B. một đơn vị hành chính", "C. một ngôi nhà", "D. một đất nước"],
+      "answer": 0,
+      "explanation": "Mỗi lãnh địa phong kiến là một đơn vị kinh tế và chính trị độc lập (khu tự trị) mang tính khép kín của lãnh chúa phong kiến."
+    },
+    {
+      "id": "ls7_02",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Tây Âu thời hậu kì trung đại",
+      "question": "Nền kinh tế trong lãnh địa mang tính chất gì?",
+      "options": ["A. Tư bản chủ nghĩa.", "B. Tự do.", "C. Tự cung tự cấp.", "D. Buôn bán ra thế giới."],
+      "answer": 2,
+      "explanation": "Kinh tế trong lãnh địa mang tính chất tự cung tự cấp, nông nô tự sản xuất mọi nhu yếu phẩm và hầu như không trao đổi với bên ngoài."
+    },
+    {
+      "id": "ls7_03",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Tây Âu thời hậu kì trung đại",
+      "question": "Cư dân sống trong thành thị chủ yếu là",
+      "options": ["A. nông dân", "B. công nhân", "C. địa chủ", "D. thương nhân và thợ thủ công"],
+      "answer": 3,
+      "explanation": "Cư dân thành thị trung đại Tây Âu chủ yếu gồm thợ thủ công và thương nhân tập hợp trong các phường hội, thương hội."
+    },
+    {
+      "id": "ls7_04",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Tây Âu thời hậu kì trung đại",
+      "question": "Xã hội phong kiến châu Âu hình thành dựa trên cơ sở của giai cấp nào?",
+      "options": ["A. Tầng lớp quý tộc và nông dân.", "B. Lãnh chúa phong kiến và nông nô.", "C. Chủ nô và nô lệ.", "D. Địa chủ và nông dân."],
+      "answer": 1,
+      "explanation": "Hai giai cấp cơ bản hình thành nên quan hệ sản xuất phong kiến ở Tây Âu là Lãnh chúa phong kiến và Nông nô."
+    },
+    {
+      "id": "ls7_05",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Cuộc phát kiến địa lý của các thương nhân châu Âu chủ yếu hướng về đâu?",
+      "options": ["A. Ấn Độ và các nước phương Đông", "B. Trung Quốc và các nước phương Đông", "C. Nhật Bản và các nước phương Đông", "D. Ấn Độ và các nước phương Tây"],
+      "answer": 0,
+      "explanation": "Mục tiêu tìm kiếm các con đường biển mới của thương nhân Tây Âu chủ yếu hướng về Ấn Độ và các nước phương Đông giàu có."
+    },
+    {
+      "id": "ls7_06",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Lần đầu tiên họ đi vòng quanh Trái Đất gần hết 3 năm, từ năm 1519 đến năm 1522, đó là đoàn thám hiểm nào?",
+      "options": ["A. Đoàn thám hiểm của Ph. Ma-gien-lăng.", "B. Đoàn thám hiểm của Đi-a-xơ.", "C. Đoàn thám hiểm của Va-xcơ đơ Ga ma.", "D. Đoàn thám hiểm của Cô-lôm-bô."],
+      "answer": 0,
+      "explanation": "Đoàn thám hiểm của Phéc-năng Ma-gien-lăng (F. Magellan) đã hoàn thành chuyến đi vòng quanh Trái Đất đầu tiên bằng đường biển (1519 - 1522)."
+    },
+    {
+      "id": "ls7_07",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Ai là người đầu tiên đã đến được Ấn Độ bằng đường biển?",
+      "options": ["A. B. Đi-a-xơ", "B. Va-xcô đơ Ga-ma", "C. Cô-lôm-bô", "D. Ph. Ma-gien-lăng."],
+      "answer": 1,
+      "explanation": "Năm 1498, Va-xcô đơ Ga-ma là nhà thám hiểm đầu tiên vượt qua Mũi Hảo Vọng và cập bến Ca-li-cút ở bờ biển Ấn Độ."
+    },
+    {
+      "id": "ls7_08",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Ai là người đến châu Mỹ đầu tiên nhưng lại cho rằng đó là Ấn Độ?",
+      "options": ["A. Ph. Ma-gien-lăng", "B. Cô-lôm-bô", "C. Đi-a-xơ", "D. Va-xcô đơ Ga-ma"],
+      "answer": 1,
+      "explanation": "Năm 1492, C. Cô-lôm-bô cập bến châu Mỹ nhưng nhầm tưởng đây là vùng 'Tây Ấn Độ'."
+    },
+    {
+      "id": "ls7_09",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Để kỉ niệm chuyến đi vòng quanh Trái Đất đầu tiên, hiện nay nơi nào trên thế giới được mang tên Ma-gien-lăng?",
+      "options": ["A. Mũi cực Nam của Nam Mĩ.", "B. Mũi cực Nam của châu Phi.", "C. Eo biển giữa châu Á và Bắc Mĩ.", "D. Eo biển giữa châu Âu và châu Á."],
+      "answer": 0,
+      "explanation": "Eo biển Ma-gien-lăng nằm tại mũi cực Nam của lục địa Nam Mỹ nối Đại Tây Dương sang Thái Bình Dương."
+    },
+    {
+      "id": "ls7_10",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Cuộc phát kiến địa lí đã mang lại sự giàu có cho các tầng lớp nào ở châu Âu?",
+      "options": ["A. Tăng lữ quý tộc", "B. Công nhân, quý tộc", "C. Tướng lĩnh quân sự, quý tộc", "D. Thương nhân, quý tộc."],
+      "answer": 3,
+      "explanation": "Giai cấp thương nhân và quý tộc Tây Âu tích lũy được nguồn của cải, kim loại quý khổng lồ."
+    },
+    {
+      "id": "ls7_11",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Văn hóa Phục hưng",
+      "question": "Phong trào văn hóa phục hưng diễn ra trong khoảng thời gian nào?",
+      "options": ["A. Thế kỉ XIV – XVII", "B. Giữa thế kỉ XIV – XVII", "C. Cuối thế kỉ XIV – XVII", "D. Đầu thế kỉ XIV – XVII"],
+      "answer": 0,
+      "explanation": "Phong trào Văn hóa Phục hưng bùng nổ và lan tỏa mạnh mẽ từ thế kỉ XIV đến thế kỉ XVII."
+    },
+    {
+      "id": "ls7_12",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Văn hóa Phục hưng",
+      "question": "Quê hương của phong trào Văn hóa Phục hưng là nước nào?",
+      "options": ["A. Nước Pháp", "B. Nước Bỉ", "C. Nước Ý", "D. Nước Anh."],
+      "answer": 2,
+      "explanation": "Nước Ý (I-ta-li-a) là nơi khởi nguồn của phong trào Văn hóa Phục hưng."
+    },
+    {
+      "id": "ls7_13",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Văn hóa Phục hưng",
+      "question": "Trong thời Phục hưng đã xuất hiện rất nhiều nhà văn nhà khoa học thiên tài mà người ta gọi là:",
+      "options": ["A. \"Những người vĩ đại\"", "B. \"Những người thông minh\"", "C. \"Những người xuất chúng\"", "D. \"Những người khổng lồ\""],
+      "answer": 3,
+      "explanation": "Ph. Ăng-ghen nhận định: Đây là thời đại sinh ra 'những người khổng lồ' về tư tưởng, kiến thức và sự uyên bác."
+    },
+    {
+      "id": "ls7_14",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Văn hóa Phục hưng",
+      "question": "\"Ông cho rằng Mặt Trời không phải là trung tâm của vũ trụ mà chỉ là một trong vô số thái dương hệ\". Ông là ai?",
+      "options": ["A. Cô-péc-ních", "B. Bru-nô", "C. Đê-các-tơ", "D. Ga-li-lê."],
+      "answer": 1,
+      "explanation": "G. Bru-nô phát triển học thuyết nhật tâm và khẳng định vũ trụ là vô tận, Mặt Trời chỉ là trung tâm của Thái dương hệ."
+    },
+    {
+      "id": "ls7_15",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Văn hóa Phục hưng",
+      "question": "Ai là người đã chứng minh được tính khoa học vững chắc của thuyết Nhật tâm của Cô-péc-ních?",
+      "options": ["A. Bru-nô.", "B. Ga-li-lê", "C. Đê-các-tơ", "D. Lê-ô-na đơ Vanh-xi."],
+      "answer": 1,
+      "explanation": "G. Ga-li-lê sử dụng kính thiên văn chứng minh thực nghiệm tính chính xác của thuyết Nhật tâm."
+    },
+    {
+      "id": "ls7_16",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Cải cách tôn giáo",
+      "question": "Sự kiện nào đã làm bùng lên phong trào Cải cách tôn giáo?",
+      "options": ["A. Giáo hội Thiên Chúa cho phép tự do bán \"thẻ miễn tội\".", "B. Giáo hội Thiên Chúa cho phép nhập cư.", "C. Giáo hội Thiên Chúa cho phép ngoại giao.", "D. Giáo hội Thiên Chúa cho phép phát triển du lịch."],
+      "answer": 0,
+      "explanation": "Năm 1517, việc Giáo hội Thiên Chúa phát hành và bán 'thẻ miễn tội' đã thổi bùng làn sóng phản kháng."
+    },
+    {
+      "id": "ls7_17",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Cải cách tôn giáo",
+      "question": "Ai là người khởi xướng phong trào Cải cách tôn giáo?",
+      "options": ["A. M. Lu-thơ", "B. Can-vanh", "C. Ga-li-lê", "D. Cô-péc-ních."],
+      "answer": 0,
+      "explanation": "Mác-tin Lu-thơ (Martin Luther) tại Đức là nhà cải cách khởi xướng với bản Luận văn 95 điều."
+    },
+    {
+      "id": "ls7_18",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Cải cách tôn giáo",
+      "question": "Tôn giáo mới nào được ra đời trong phong trào Cải cách tôn giáo?",
+      "options": ["A. Đạo Hồi.", "B. Đạo Tin Lành.", "C. Đạo Do Thái.", "D. Đạo Kitô."],
+      "answer": 1,
+      "explanation": "Phong trào Cải cách tôn giáo dẫn đến sự xuất hiện của Tân giáo (Đạo Tin Lành)."
+    },
+    {
+      "id": "ls7_19",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Cải cách tôn giáo",
+      "question": "Các nhà cải cách tôn giáo phủ nhận vai trò của ai?",
+      "options": ["A. mọi công dân", "B. nô lệ", "C. Giáo hội, Giáo hoàng", "D. Tư sản và vô sản"],
+      "answer": 2,
+      "explanation": "Các nhà cải cách chủ trương bãi bỏ nghi lễ phức tạp và bác bỏ vai trò thống trị trung gian của Giáo hội, Giáo hoàng."
+    },
+    {
+      "id": "ls7_20",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Phong trào Cải cách tôn giáo",
+      "question": "Sau Cải cách tôn giáo, Thiên Chúa giáo phân chia thành mấy giáo phái?",
+      "options": ["A. 2 giáo phái.", "B. 3 giáo phái.", "C. 4 giáo phái.", "D. 5 giáo phái."],
+      "answer": 0,
+      "explanation": "Thiên Chúa giáo bị chia đôi thành 2 nhánh: Cựu giáo (Công giáo) và Tân giáo (Tin Lành)."
+    },
+    {
+      "id": "ls7_21",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Lịch sử Trung Quốc phong kiến",
+      "question": "\"Vua chỉ biết đục khoét nhân dân để sống xa hoa, trụy lạc... xây dựng nhiều công trình đồ sộ, tốn kém như cố cung ở Kinh đô Bắc Kinh\". Đó là tình hình xã hội phong kiến Trung Quốc triều đại nào?",
+      "options": ["A. Cuối thời Tần – Hán.", "B. Cuối thời Đường.", "C. Cuối thời Tống – Nguyên.", "D. Cuối thời Minh - Thanh."],
+      "answer": 3,
+      "explanation": "Cố Cung (Tử Cấm Thành) tại Bắc Kinh được khởi công và xây dựng chủ yếu trong thời Minh - Thanh."
+    },
+    {
+      "id": "ls7_22",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Lịch sử Trung Quốc phong kiến",
+      "question": "Hãy kể tên một số nhà thơ nổi tiếng của Trung Quốc thời đại nhà Đường?",
+      "options": ["A. Tư Mã Thiên, Đổng Trọng Thư, Ngô Thừa Ân", "B. La Quán Trung, Tào Tuyết Cần, Bạch Cư Dị", "C. Đỗ Phủ, Lý Bạch, Ngô Thừa Ân", "D. Đỗ Phủ, Lý Bạch, Bạch Cư Dị"],
+      "answer": 3,
+      "explanation": "Đỗ Phủ, Lý Bạch và Bạch Cư Dị là ba đại thi hào kiệt xuất của thời kỳ thịnh Đường."
+    },
+    {
+      "id": "ls7_23",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Lịch sử Trung Quốc phong kiến",
+      "question": "Đến thời Tống người Trung Quốc đã có nhiều phát minh quan trọng, đó là gì?",
+      "options": ["A. Kĩ thuật luyện đồ kim loại.", "B. Đóng tàu chế tạo súng.", "C. Thuốc nhuộm, thuốc in.", "D. La bàn, thuốc súng, nghề in, giấy viết."],
+      "answer": 3,
+      "explanation": "Bốn phát minh vĩ đại (Tứ đại phát minh) của Trung Quốc bao gồm La bàn, thuốc súng, kỹ thuật in và nghề làm giấy."
+    },
+    {
+      "id": "ls7_24",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Lịch sử Trung Quốc phong kiến",
+      "question": "Triều đại phong kiến nhà Minh ở Trung Quốc do ai lập ra?",
+      "options": ["A. Lý Tự Thành.", "B. Chu Nguyên Chương", "C. Hốt Tất Liệt.", "D. Lưu Bang."],
+      "answer": 1,
+      "explanation": "Chu Nguyên Chương lật đổ ách thống trị của nhà Nguyên, lập ra triều Minh năm 1368."
+    },
+    {
+      "id": "ls7_25",
+      "subject_part": "Lịch sử",
+      "type": "multiple_choice",
+      "topic": "Lịch sử Trung Quốc phong kiến",
+      "question": "Chế độ ruộng đất nổi tiếng dưới thời nhà Đường được gọi là?",
+      "options": ["A. Chế độ Công điền.", "B. Chế độ Quân điền.", "C. Chế độ Tịch điền.", "D. Chế độ lĩnh canh."],
+      "answer": 1,
+      "explanation": "Chế độ Quân điền thời nhà Đường lấy ruộng đất công chia cho nông dân cày cấy để thu tô thuế."
+    },
+    {
+      "id": "dl7_01",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Môi trường châu Âu",
+      "question": "Yếu tố nào sau đây phù hợp để cải thiện tình trạng ô nhiễm nguồn nước châu Âu?",
+      "options": ["A. Đổi mới công nghệ xử lý nước thải.", "B. Làm sạch khí thải khu công nghiệp.", "C. Dùng hóa chất để xử lí.", "D. Giảm sử dụng than đá, dầu mỏ."],
+      "answer": 0,
+      "explanation": "Đổi mới công nghệ lọc và xử lý triệt để nước thải công nghiệp và sinh hoạt là biện pháp hàng đầu."
+    },
+    {
+      "id": "dl7_02",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Liên minh châu Âu",
+      "question": "Tiền thân của Liên minh châu Âu là",
+      "options": ["A. Cộng đồng châu Âu.", "B. Cộng đồng than đá châu Âu.", "C. Thị trường châu Âu.", "D. Cộng đồng kinh tế châu Âu."],
+      "answer": 3,
+      "explanation": "Tiền thân trực tiếp của Liên minh châu Âu (EU) là Cộng đồng kinh tế châu Âu (EEC), thành lập năm 1957."
+    },
+    {
+      "id": "dl7_03",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Thiên nhiên châu Âu",
+      "question": "Nguồn cung cấp nước chủ yếu cho sinh hoạt và sản xuất ở châu Âu là",
+      "options": ["A. nước sông, ao hồ.", "B. nước ngầm và băng hà.", "C. nước trong ao, hồ.", "D. nước sông và nước ngầm."],
+      "answer": 3,
+      "explanation": "Nước sông ngòi và nước ngầm là hai nguồn cung cấp nước ngọt chính cho sinh hoạt và sản xuất ở châu Âu."
+    },
+    {
+      "id": "dl7_04",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Dân cư & Xã hội châu Âu",
+      "question": "Khu vực nào sau đây có mật độ dân số cao nhất ở châu Âu?",
+      "options": ["A. Nam Âu", "B. Bắc Âu", "C. Đông Âu.", "D. Tây Âu"],
+      "answer": 3,
+      "explanation": "Tây Âu là khu vực kinh tế phát triển lâu đời, mạng lưới đô thị dày đặc và có mật độ dân số cao nhất."
+    },
+    {
+      "id": "dl7_05",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Dân cư & Xã hội châu Âu",
+      "question": "Khu vực nào sau đây có số lượng người nhập cư cao nhất vào châu Âu?",
+      "options": ["A. Châu Á và Bắc Mỹ.", "B. Châu Á và Nam Âu", "C. Châu Á và Bắc Phi.", "D. Châu Á và Nam Phi."],
+      "answer": 2,
+      "explanation": "Dòng người nhập cư vào châu Âu nhiều nhất xuất phát từ các quốc gia khu vực Châu Á và Bắc Phi."
+    },
+    {
+      "id": "dl7_06",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Thiên nhiên châu Âu",
+      "question": "Yếu tố nào sau đây giúp ven biển Tây Âu phát triển mạnh về kiểu rừng lá rộng?",
+      "options": ["A. Bờ biển bị cắt xẻ mạnh, biển lấn sâu vào đất liền.", "B. Địa hình đồng bằng, thấp, khí hậu nóng ẩm.", "C. Nằm trong đới khí hậu ôn đới.", "D. Dòng biển nóng chảy ven bờ, mưa nhiều."],
+      "answer": 3,
+      "explanation": "Dòng biển nóng Bắc Đại Tây Dương kết hợp gió Tây ôn đới đem lại khí hậu ấm áp, mưa nhiều, thuận lợi cho rừng lá rộng phát triển."
+    },
+    {
+      "id": "dl7_07",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khí hậu châu Âu",
+      "question": "Ý nào sau đây không phải là đặc điểm của đới khí hậu cận nhiệt ở châu Âu?",
+      "options": ["A. Mùa hè nóng, ẩm, mưa nhiều.", "B. Mùa hè nóng, khô.", "C. Mùa đông ấm, có mưa rào.", "D. Lượng mưa trung bình."],
+      "answer": 0,
+      "explanation": "Khí hậu cận nhiệt Địa Trung Hải ở Nam Âu có mùa hè nóng và khô, mùa đông ấm áp và mưa nhiều."
+    },
+    {
+      "id": "dl7_08",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Đô thị hóa châu Âu",
+      "question": "Nhận định nào sau đây không đúng với quá trình đô thị hóa ở châu Âu?",
+      "options": ["A. Đô thị hình thành muộn, tốc độ đô thị hóa chậm.", "B. Mức độ đô thị hóa cao, tốc độ nhanh.", "C. Mạng lưới đô thị phát triển rộng khắp.", "D. Quy mô dân số tăng nhanh, lối sống hiện đại."],
+      "answer": 0,
+      "explanation": "Đô thị hóa ở châu Âu diễn ra từ rất sớm (từ thời Cổ đại) chứ không phải hình thành muộn."
+    },
+    {
+      "id": "dl7_09",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Liên minh châu Âu",
+      "question": "Yếu tố nào sau đây không góp phần đến sự mở rộng và phát triển của Liên minh châu Âu?",
+      "options": ["A. số lượng lao động đông đảo.", "B. đội ngũ lao động có trình độ văn hoá cao.", "C. lao động có tay nghề thành thạo.", "D. nền khoa học tiên tiến."],
+      "answer": 0,
+      "explanation": "Dân số châu Âu đang già hóa nhanh và thiếu hụt lao động phổ thông, không có lợi thế về nguồn lao động dồi dào số lượng lớn."
+    },
+    {
+      "id": "dl7_10",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Liên minh châu Âu",
+      "question": "Nước nào sau đây không thuộc Liên minh châu Âu?",
+      "options": ["A. Na Uy, Thụy Sĩ.", "B. Đức, Ba Lan.", "C. Pháp, Séc.", "D. Hy Lạp, Lít-va."],
+      "answer": 0,
+      "explanation": "Na Uy và Thụy Sĩ là hai quốc gia Tây/Bắc Âu phát triển nhưng không tham gia Liên minh châu Âu (EU)."
+    },
+    {
+      "id": "dl7_11",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Liên minh châu Âu",
+      "question": "Năm 1993 Cộng đồng kinh tế châu Âu đã đổi tên là",
+      "options": ["A. Liên minh châu Âu.", "B. thị trường châu Âu.", "C. Cộng đồng than đá châu Âu.", "D. Cộng đồng châu Âu."],
+      "answer": 0,
+      "explanation": "Năm 1993, theo Hiệp ước Ma-xtrích, Cộng đồng kinh tế châu Âu chính thức đổi tên thành Liên minh châu Âu (EU)."
+    },
+    {
+      "id": "dl7_12",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Đô thị hóa châu Âu",
+      "question": "Ý nào sau đây đánh giá không đúng về sự phát triển đô thị ở châu Âu?",
+      "options": ["A. Hình thành muộn, phát triển chậm, quy mô nhỏ.", "B. Phát triển sớm từ thời cổ - trung đại.", "C. Phát triển nhanh trong thời kỳ cách mạng công nghiệp.", "D. Mạng lưới phát triển rộng khắp và hiện đại."],
+      "answer": 0,
+      "explanation": "Đô thị hóa ở châu Âu gắn liền với lịch sử lâu đời và cách mạng công nghiệp, quy mô hiện đại và phân bố rộng khắp."
+    },
+    {
+      "id": "dl7_13",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Môi trường châu Âu",
+      "question": "Phương thức nào sau đây giúp con người châu Âu phát triển bền vững về thiên nhiên?",
+      "options": ["A. Khai thác, sử dụng và bảo vệ thiên nhiên.", "B. Khai thác và cải tạo thiên nhiên.", "C. Sử dụng và cải tạo thiên nhiên.", "D. Bảo vệ thiên nhiên, cấm khai thác"],
+      "answer": 0,
+      "explanation": "Phát triển bền vững đòi hỏi kết hợp đồng thời việc khai thác, sử dụng hợp lý và khoanh nuôi, bảo vệ thiên nhiên."
+    },
+    {
+      "id": "dl7_14",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Vị trí địa lí châu Á",
+      "question": "Châu Á tiếp giáp với các đại dương",
+      "options": ["A. Thái Bình Dương, Bắc Băng Dương và Đại Tây Dương.", "B. Thái Bình Dương, Ấn Độ Dương và Đại Tây Dương.", "C. Ấn Độ Dương, Bắc Băng Dương và Đại Tây Dương.", "D. Thái Bình Dương, Ấn Độ Dương và Bắc Băng Dương."],
+      "answer": 3,
+      "explanation": "Châu Á giáp Bắc Băng Dương ở phía Bắc, Thái Bình Dương ở phía Đông và Ấn Độ Dương ở phía Nam."
+    },
+    {
+      "id": "dl7_15",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khí hậu châu Á",
+      "question": "Kiểu khí hậu lục địa ở châu Á có đặc điểm",
+      "options": ["A. mùa đông khô và nóng, mùa hạ mưa nhiều.", "B. mùa hạ khô và nóng, mùa đông lạnh và khô.", "C. mùa hạ khô và mát, mùa đông mưa nhiều.", "D. mùa hạ ẩm ướt, mùa đông mưa ít."],
+      "answer": 1,
+      "explanation": "Khí hậu lục địa sâu trong nội địa châu Á có mùa hạ khô nóng, mùa đông khô lạnh và lượng mưa rất ít."
+    },
+    {
+      "id": "dl7_16",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khí hậu châu Á",
+      "question": "Khí hậu châu Á phân hóa đa dạng thành nhiều đới:",
+      "options": ["A. cận cực, cận nhiệt, nhiệt đới, cận xích đạo, xích đạo.", "B. cực và cận cực, ôn đới, nhiệt đới, cận xích đạo, xích đạo.", "C. cực, ôn đới, cận nhiệt, xích đạo và cận xích đạo.", "D. cực và cận cực, ôn đới, cận nhiệt, nhiệt đới, xích đạo và cận xích đạo."],
+      "answer": 3,
+      "explanation": "Do trải dài trên nhiều vĩ độ, châu Á có đủ các đới khí hậu: cực và cận cực, ôn đới, cận nhiệt, nhiệt đới, xích đạo và cận xích đạo."
+    },
+    {
+      "id": "dl7_17",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khí hậu châu Á",
+      "question": "Kiểu khí hậu gió mùa ở châu Á phân bố chủ yếu ở khu vực nào?",
+      "options": ["A. Đông Á, Đông Nam Á và Nam Á.", "B. Tây Á, Trung Á và Bắc Á.", "C. Bắc Á, Trung Á và Nam Á.", "D. Tây Á và Đông Á."],
+      "answer": 0,
+      "explanation": "Khí hậu gió mùa phân bố chủ yếu ở Nam Á, Đông Nam Á và Đông Á."
+    },
+    {
+      "id": "dl7_18",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Cảnh quan thiên nhiên châu Á",
+      "question": "Đới thiên nhiên nào sau đây phân bố ở khu vực Nam Á?",
+      "options": ["A. Rừng xích đạo, rừng rụng lá.", "B. Thảo nguyên và bán hoang mạc.", "C. Rừng nhiệt đới ẩm và xa van.", "D. Rừng thưa và cây bụi."],
+      "answer": 2,
+      "explanation": "Nam Á thuộc đới khí hậu nhiệt đới gió mùa nên phát triển đới thiên nhiên rừng nhiệt đới ẩm và xa van."
+    },
+    {
+      "id": "dl7_19",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Địa hình châu Á",
+      "question": "Sơn nguyên nào sau đây đồ sộ nhất châu Á?",
+      "options": ["A. Tây Tạng.", "B. I-ran.", "C. Đê-can.", "D. A-na-tô-li."],
+      "answer": 0,
+      "explanation": "Sơn nguyên Tây Tạng là sơn nguyên đồ sộ và cao nhất châu Á cũng như thế giới."
+    },
+    {
+      "id": "dl7_20",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Vị trí địa lí châu Á",
+      "question": "Đông Nam Á là cầu nối của hai đại dương nào sau đây?",
+      "options": ["A. Thái Bình Dương và Bắc Băng Dương.", "B. Thái Bình Dương và Đại Tây Dương.", "C. Thái Bình Dương và Ấn Độ Dương.", "D. Ấn Độ Dương và Đại Tây Dương."],
+      "answer": 2,
+      "explanation": "Khu vực Đông Nam Á là cầu nối quan trọng giữa Thái Bình Dương và Ấn Độ Dương."
+    },
+    {
+      "id": "dl7_21",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khoáng sản châu Á",
+      "question": "Nhận định nào sau đây không đúng về khai thác khoáng sản ở châu Á?",
+      "options": ["A. Khoáng sản có vai trò quan trọng với nhiều quốc gia.", "B. Một số khoáng sản có trữ lượng bậc nhất thế giới.", "C. Hoạt động khai thác khoáng sản hiện đại và gắn với bảo vệ môi trường.", "D. Có nguồn khoáng sản rất phong phú và trữ lượng lớn."],
+      "answer": 2,
+      "explanation": "Ở nhiều khu vực của châu Á, công nghệ khai thác còn thô sơ, chưa gắn liền với bảo vệ môi trường."
+    },
+    {
+      "id": "dl7_22",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khí hậu châu Á",
+      "question": "Khí hậu châu Á lại chia thành nhiều đới là do",
+      "options": ["A. lãnh thổ trải dài theo chiều kinh tuyến.", "B. ảnh hưởng của các dãy núi.", "C. lãnh thổ trải dài từ vùng cực bắc đến vùng Xích đạo.", "D. châu Á giáp với nhiều đại dương lớn."],
+      "answer": 2,
+      "explanation": "Lãnh thổ trải dài trên nhiều vĩ độ từ cực Bắc đến Xích đạo khiến bức xạ nhiệt phân bố khác nhau tạo nên nhiều đới khí hậu."
+    },
+    {
+      "id": "dl7_23",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Khí hậu châu Á",
+      "question": "Phía đông khu vực Nam Á có rừng nhiệt đới ẩm là do",
+      "options": ["A. ảnh hưởng của gió mùa đông bắc lạnh, khô.", "B. ảnh hưởng của gió mùa tây nam nóng, ẩm.", "C. ảnh hưởng của sườn núi phía nam dãy Hi-ma-lay-a.", "D. ảnh hưởng của sườn núi phía Bắc dãy Hi-ma-lay-a."],
+      "answer": 1,
+      "explanation": "Gió mùa Tây Nam từ Ấn Độ Dương thổi vào mang theo lượng ẩm lớn gây mưa dồi dào, hình thành rừng nhiệt đới ẩm."
+    },
+    {
+      "id": "dl7_24",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Môi trường châu Á",
+      "question": "Việc khai thác và sử dụng đới thiên nhiên ở châu Á cần chú ý vấn đề",
+      "options": ["A. trồng rừng.", "B. khai thác hợp lý.", "C. bảo vệ và phục hồi rừng.", "D. hạn chế cháy rừng."],
+      "answer": 2,
+      "explanation": "Bảo vệ và phục hồi rừng là vấn đề cấp thiết nhằm bảo tồn đa dạng sinh thái và chống thoái hóa đất."
+    },
+    {
+      "id": "dl7_25",
+      "subject_part": "Địa lí",
+      "type": "multiple_choice",
+      "topic": "Vị trí địa lí châu Á",
+      "question": "Biển nào sau đây của châu Á lớn đứng thứ tư trên thế giới?",
+      "options": ["A. Biển Đông.", "B. Biển Nhật Bản.", "C. Biển Hoa Đông.", "D. Biển Gia-va."],
+      "answer": 0,
+      "explanation": "Biển Đông là một trong những biển rộng lớn nhất châu Á và đứng thứ tư trên thế giới."
+    },
+    {
+      "id": "tl_ls_01",
+      "subject_part": "Lịch sử",
+      "type": "short_essay",
+      "topic": "Các cuộc phát kiến địa lí",
+      "question": "Nêu hệ quả của các cuộc phát kiến địa lí?",
+      "modelAnswer": "- Tích cực:\n+ Đem lại hiểu biết mới về Trái Đất, con đường mới, dân tộc mới.\n+ Thúc đẩy nhanh sự tan rã của xã hội phong kiến và sự ra đời của chủ nghĩa tư bản.\n+ Thị trường thế giới được mở rộng.\n- Tiêu cực:\n+ Sự ra đời của chủ nghĩa thực dân và nạn cướp bóc thuộc địa.\n+ Nảy sinh quá trình cướp bóc thuộc địa và buôn bán nô lệ.\n+ Thổ dân châu Mỹ và nền văn hóa bản địa bị hủy diệt.",
+      "explanation": "Hệ quả phát kiến địa lí có cả mặt tích cực (mở mang tri thức, thúc đẩy CNTB) và tiêu cực (thực dân hóa, nô lệ hóa)."
+    },
+    {
+      "id": "tl_ls_02",
+      "subject_part": "Lịch sử",
+      "type": "short_essay",
+      "topic": "Phong trào Văn hóa Phục hưng",
+      "question": "Nêu ý nghĩa và tác động của phong trào Văn hóa Phục hưng đối với xã hội Tây Âu?",
+      "modelAnswer": "- Ý nghĩa:\n+ Đề cao giá trị con người và tự do cá nhân.\n+ Đề cao khoa học - kỹ thuật.\n+ Phá vỡ sự thống trị tinh thần của Giáo hội và đả phá chế độ phong kiến.\n- Tác động:\n+ Góp phần thay đổi nhận thức của con người đương thời.\n+ Khai sáng tư tưởng và góp phần thay đổi lịch sử văn minh nhân loại.\n+ Mở đường cho sự phát triển văn hóa Tây Âu các thế kỷ sau.",
+      "explanation": "Văn hóa Phục hưng đề cao con người, khoa học và đả phá phong kiến, giáo hội, mở đường cho văn minh hiện đại."
+    },
+    {
+      "id": "tl_dl_01",
+      "subject_part": "Địa lí",
+      "type": "short_essay",
+      "topic": "Địa hình châu Âu",
+      "question": "Trình bày các khu vực địa hình chính ở châu Âu?",
+      "modelAnswer": "Châu Âu có hai khu vực địa hình chính:\n1. Khu vực Đồng bằng: Chiếm 2/3 diện tích châu lục. Địa hình có đặc điểm khác nhau theo nguồn gốc hình thành (tiêu biểu: Đồng bằng Bắc Âu, Đông Âu, đồng bằng trung lưu và hạ lưu sông Đa-nuýp).\n2. Khu vực Miền núi:\n- Núi già: Phân bố ở phía Bắc và trung tâm châu lục, độ cao trung bình hoặc thấp (dãy Xcan-đi-na-vi, U-ran).\n- Núi trẻ: Phân bố ở phía Nam, phần lớn có độ cao trung bình dưới 2000m (dãy An-pơ, Các-pát, Ban-căng).",
+      "explanation": "Châu Âu: đồng bằng chiếm 2/3 diện tích, núi già ở Bắc/trung tâm, núi trẻ ở phía Nam."
+    },
+    {
+      "id": "tl_dl_02",
+      "subject_part": "Địa lí",
+      "type": "short_essay",
+      "topic": "Khí hậu châu Âu",
+      "question": "Trình bày đặc điểm khí hậu ở châu Âu?",
+      "modelAnswer": "- Đại bộ phận lãnh thổ có khí hậu ôn đới hải dương và ôn đới lục địa; một diện tích nhỏ ở cực bắc có khí hậu hàn đới, phía nam có khí hậu Địa Trung Hải.\n- Phân hóa rõ rệt từ Bắc xuống Nam và từ Tây sang Đông.\n- Phân hóa theo độ cao địa hình ở các khu vực vùng núi.",
+      "explanation": "Khí hậu châu Âu chủ yếu ôn đới, phân hóa Bắc-Nam, Tây-Đông và theo độ cao."
+    },
+    {
+      "id": "tl_dl_03",
+      "subject_part": "Địa lí",
+      "type": "short_essay",
+      "topic": "Khí hậu châu Á",
+      "question": "Trình bày đặc điểm khí hậu ở châu Á?",
+      "modelAnswer": "- Khí hậu phân hóa đa dạng thành nhiều đới, mỗi đới lại gồm nhiều kiểu khí hậu khác nhau.\n- Hai kiểu khí hậu chiếm diện tích lớn nhất là khí hậu gió mùa và khí hậu lục địa.\n- Ý nghĩa: Tạo nên sự phong phú đa dạng của các sản phẩm nông nghiệp và du lịch, song cũng chịu nhiều thiên tai và biến đổi khí hậu khắc nghiệt.",
+      "explanation": "Khí hậu châu Á đa dạng nhiều đới, gió mùa và lục địa chiếm ưu thế, phong phú nông nghiệp nhưng nhiều thiên tai."
+    }
+  ]
+}

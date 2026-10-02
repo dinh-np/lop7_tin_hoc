@@ -1,6 +1,7 @@
 // Master Question Bank - aggregates all subjects
 import { tinHocQuestions } from './tinHocQuestions';
 import { petB1Questions } from './petB1Questions';
+import { lichSuDiaLiQuestions } from './lichSuDiaLiQuestions';
 // When adding new subjects, import here:
 // import { toanQuestions } from './toanQuestions';
 // import { khoaHocTuNhienQuestions } from './khoaHocTuNhienQuestions';
@@ -10,7 +11,7 @@ export const toanQuestions = [];
 export const khoaHocTuNhienQuestions = [];
 export const nguVanQuestions = [];
 export const tiengAnhQuestions = []; // School English (not PET)
-export const lichSuDiaLiQuestions = [];
+// lichSuDiaLiQuestions — imported above from ./lichSuDiaLiQuestions.js
 export const gdcdQuestions = [];
 export const congNgheQuestions = [];
 export const gdDiaPhuongQuestions = [];
