@@ -5,7 +5,8 @@
       "path": "user_antigravity/skills/them-cau-hoi/SKILL.md"
     },
     {
-      "name": "supabase-local",
+      "name": "firebase-firestore",
+      "description": "Setup Firebase Firestore offline-first, xem kết quả thi, debug kết nối",
       "path": "user_antigravity/skills/supabase-local/SKILL.md"
     },
     {
@@ -30,3 +31,4 @@
     }
   ]
 }
+

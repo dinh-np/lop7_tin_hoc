@@ -32,49 +32,53 @@ vercel --prod
 ## Redeploy sau khi sửa code
 
 ```powershell
-# Commit code
+# Commit và push → Vercel tự động deploy (CI/CD)
 git add -A
 git commit -m "mô tả thay đổi"
 git push
-
-# Vercel tự động deploy khi push lên GitHub
-# Hoặc deploy thủ công:
-vercel --prod
 ```
 
 ## Environment Variables trên Vercel
 
-⚠️ `.env.local` KHÔNG được push lên GitHub. Phải thêm tay trên Vercel.
+⚠️ `.env.local` KHÔNG được push lên GitHub. Phải thêm tay trên Vercel Dashboard.
 
 **Vercel Dashboard → Project → Settings → Environment Variables:**
 
-| Key | Value | Environments |
-|-----|-------|-------------|
-| `VITE_GEMINI_API_KEY` | `AQ.xxx...` | Production, Preview |
-| `VITE_SUPABASE_URL` | URL Supabase Cloud | Production, Preview |
-| `VITE_SUPABASE_ANON_KEY` | `sb_publishable_xxx` hoặc Supabase Cloud key | Production, Preview |
+| Key | Environments |
+|-----|-------------|
+| `VITE_GEMINI_API_KEY` | Production, Preview |
+| `VITE_FIREBASE_API_KEY` | Production, Preview |
+| `VITE_FIREBASE_AUTH_DOMAIN` | Production, Preview |
+| `VITE_FIREBASE_PROJECT_ID` | Production, Preview |
+| `VITE_FIREBASE_STORAGE_BUCKET` | Production, Preview |
+| `VITE_FIREBASE_MESSAGING_SENDER_ID` | Production, Preview |
+| `VITE_FIREBASE_APP_ID` | Production, Preview |
 
-> **Quan trọng**: Với Vercel, dùng Supabase **Cloud** (không phải Local 127.0.0.1).
-> Xem hướng dẫn tạo Supabase Cloud: supabase/SETUP.md
+> **Lưu ý**: Dùng **Firebase Cloud** (không phải local). Sau khi thêm biến, phải **Redeploy** để áp dụng.
 
 ## Kiểm tra sau deploy
 
 1. Truy cập URL Vercel → app load được không
-2. Chọn môn Tin học → Thi thử → Nộp bài
-3. Kiểm tra AI phân tích xuất hiện (xác nhận Gemini API key hoạt động)
-4. Kiểm tra Supabase Dashboard → bảng sessions có record mới
+2. Mở DevTools → Application → Service Workers → kiểm tra SW đang active
+3. Chọn môn Tin học → **Thi Thử** → Nộp bài
+4. Kiểm tra AI phân tích xuất hiện (xác nhận `VITE_GEMINI_API_KEY` hoạt động)
+5. Vào Firebase Console → Firestore → collection `submissions` có record mới
+6. **Test offline**: DevTools → Network → Offline → reload app → vẫn load được từ cache
 
 ## Vercel Project Info
 
-- **Project**: `lop7-tin-hoc` (dinhNPS projects)
+- **Project**: `lop7-tin-hoc` (dinhnps-projects)
 - **Project ID**: `prj_DWGfGysERysaMwWp4Lu7dBgkiAzB`
-- **Owner**: `dinhnps-projects` (team_x1IVkT1edu34rU2MGs9hryCZ)
+- **GitHub repo**: `dinh-np/lop7_tin_hoc`
+- **Auto-deploy**: Mỗi push lên `main` → Vercel tự build & deploy
 
 ## Troubleshooting
 
 | Lỗi | Giải pháp |
 |-----|-----------|
-| 404 Not Found | Kiểm tra vercel.json có `rewrites` và `outputDirectory: "dist"` |
-| Build failed | Chạy `npm run build` local, sửa lỗi trước khi deploy |
-| Gemini không hoạt động | Kiểm tra VITE_GEMINI_API_KEY trong Vercel env vars |
-| Supabase không kết nối | Dùng Supabase Cloud URL, không dùng 127.0.0.1 |
+| 404 Not Found | Kiểm tra `vercel.json` có `rewrites` và `outputDirectory: "dist"` |
+| Build failed | Chạy `npm run build` local trước, sửa lỗi rồi push |
+| Gemini không hoạt động | Kiểm tra `VITE_GEMINI_API_KEY` trong Vercel env vars |
+| Firebase không lưu data | Kiểm tra 6 biến `VITE_FIREBASE_*` trong Vercel env vars |
+| App không load offline | Kiểm tra Service Worker đã install; hard-refresh rồi test lại |
+| Chunk size warning | Bình thường với Firebase SDK — không ảnh hưởng chức năng |

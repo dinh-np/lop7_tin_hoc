@@ -1,99 +1,143 @@
 ---
-name: supabase-local
+name: firebase-firestore
 description: >-
-  Hướng dẫn khởi động, quản lý và truy vấn Supabase Local cho dự án này.
-  Dùng khi cần start/stop Supabase, xem dữ liệu, hoặc debug kết nối.
+  Hướng dẫn setup, kết nối và truy vấn Firebase Firestore cho dự án (thay Supabase).
+  Dùng khi cần xem kết quả thi của con, debug kết nối, hoặc cấu hình Firebase mới.
 ---
 
-# Skill: Supabase Local – Quản lý & Truy vấn
+# Skill: Firebase Firestore – Offline-First Setup & Quản lý
 
-## Thông tin kết nối
+> **Đã migrate từ Supabase Local** (2026-10-02). File `src/lib/supabase.js` cũ đã bị xóa,
+> thay bằng `src/lib/firebase.js`.
 
-| Thông số | Giá trị |
-|----------|---------|
-| API URL | `http://127.0.0.1:54321` |
-| Studio | `http://127.0.0.1:54323` |
-| DB (psql) | `postgresql://postgres:postgres@127.0.0.1:54322/postgres` |
-| Publishable key | `sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH` |
+## Lấy Firebase Config
 
-## Lệnh thường dùng
+1. Vào [Firebase Console](https://console.firebase.google.com)
+2. Tạo project (hoặc mở project hiện có)
+3. **Project Settings → General → Your apps → Web app** → Copy `firebaseConfig`
+4. **Bật Firestore**: Firestore Database → Create database → Start in **test mode**
 
-```powershell
-# Khởi động (cần Docker Desktop)
-npx supabase start
+## Cấu hình .env.local
 
-# Dừng (giữ data)
-npx supabase stop
-
-# Dừng và xóa data
-npx supabase stop --no-backup
-
-# Xem trạng thái
-npx supabase status
-
-# Reset DB và chạy lại migration
-npx supabase db reset
-
-# Tạo migration mới
-npx supabase migration new ten_migration
+```env
+VITE_FIREBASE_API_KEY=AIzaSy...
+VITE_FIREBASE_AUTH_DOMAIN=ten-project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=ten-project
+VITE_FIREBASE_STORAGE_BUCKET=ten-project.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
+VITE_FIREBASE_APP_ID=1:123456789:web:abc...
 ```
 
-## Cấu trúc DB
+⚠️ **Vercel production**: Thêm 6 biến `VITE_FIREBASE_*` vào **Vercel Dashboard → Settings → Environment Variables**.
 
-### Bảng `sessions` (public schema)
-```sql
-id              BIGSERIAL PRIMARY KEY
-subject         TEXT NOT NULL          -- 'tin_hoc', 'pet_b1', etc.
-mode            TEXT NOT NULL          -- 'practice' | 'exam'
-score           NUMERIC(4,2)           -- 0.00 – 10.00
-total_questions INT
-correct_count   INT
-wrong_ids       JSONB DEFAULT '[]'     -- array of question ids
-duration_seconds INT
-created_at      TIMESTAMPTZ DEFAULT NOW()
+## Collections Firestore
+
+### `submissions` — Kết quả mỗi lần thi
+```
+test_id            string | null
+subject            string   — 'tin_hoc', 'pet_b1', ...
+mode               string   — 'practice' | 'exam'
+score              number   — 0.00 – 10.00
+correct_count      number
+wrong_count        number
+time_spent_seconds number
+submitted_at       Timestamp (serverTimestamp)
 ```
 
-### View `subject_stats`
-```sql
-SELECT * FROM subject_stats;
--- Trả về: subject, total_sessions, avg_score, best_score, last_session
+### `wrong_answers` — Chi tiết câu sai
+```
+submission_id      string
+test_id            string | null
+question_id        string | number
+question_text      string
+question_topic     string
+student_answer     number   — index 0-3, hoặc -1 nếu bỏ trống
+correct_answer     number
+explanation        string
+error_reason_type  null (để AI phân tích sau)
+ai_diagnostic      null
+submitted_at       Timestamp
+```
+
+## API từ src/lib/firebase.js
+
+```js
+import {
+  saveSubmission,       // lưu kết quả thi → trả về submissionId
+  saveWrongAnswers,     // lưu chi tiết câu sai
+  fetchSubmissions,     // lấy 20 bài nộp gần nhất (cho phụ huynh)
+  checkFirebaseStatus,  // kiểm tra kết nối
+  isFirebaseConfigured, // boolean
+} from './src/lib/firebase.js';
+
+// Kiểm tra trong browser console
+const status = await checkFirebaseStatus();
+console.log(status); // { connected: true } hoặc { connected: false, reason: '...' }
+
+// Xem kết quả gần nhất
+const sessions = await fetchSubmissions(10);
+console.table(sessions);
 ```
 
 ## Xem kết quả thi của con
 
-**Cách 1 – Supabase Studio (đẹp nhất):**
-1. Mở http://127.0.0.1:54323
-2. Table Editor → sessions
+**Cách 1 – Firebase Console (trực quan nhất):**
+1. Vào https://console.firebase.google.com → Firestore Database
+2. Collection `submissions` → xem theo `submitted_at`
+3. Collection `wrong_answers` → filter theo `submission_id`
 
-**Cách 2 – CLI query:**
-```bash
-# Xem 10 session gần nhất
-echo "SELECT subject, mode, score, correct_count, total_questions, created_at FROM sessions ORDER BY created_at DESC LIMIT 10;" | npx supabase db query
-
-# Thống kê theo môn
-echo "SELECT * FROM subject_stats;" | npx supabase db query
-```
-
-## Kết nối từ app (src/lib/supabase.js)
-
+**Cách 2 – Browser console trên app:**
 ```js
-// Kiểm tra kết nối (dùng trong browser console)
-import { checkSupabaseStatus } from './src/lib/supabase.js';
-const status = await checkSupabaseStatus();
-console.log(status); // { connected: true } hoặc { connected: false, reason: '...' }
+const { fetchSubmissions } = await import('/src/lib/firebase.js');
+const data = await fetchSubmissions(20);
+console.table(data.map(d => ({
+  subject: d.subject,
+  score: d.score,
+  correct: d.correct_count,
+  wrong: d.wrong_count,
+  time: d.time_spent_seconds + 's',
+  at: d.submitted_at?.toDate?.()
+})));
 ```
 
-## Thêm migration mới
+## Offline-First hoạt động thế nào
 
-1. Tạo file: `supabase/migrations/YYYYMMDDHHMMSS_ten.sql`
-2. Viết SQL
-3. Chạy: `npx supabase db reset`
+```
+Online:  App → Firestore SDK → IndexedDB cache + Cloud Firestore
+Offline: App → Firestore SDK → IndexedDB cache (pending writes queue)
+         Khi có mạng → SDK tự sync pending writes lên Cloud
+```
+
+- `persistentLocalCache` → lưu data vào IndexedDB (không phải memory)
+- `persistentMultipleTabManager` → tránh lỗi `failed-precondition` khi mở nhiều tab trên Safari/iPadOS
+- Service Worker bỏ qua Firebase requests → để SDK tự quản lý offline
+
+## Security Rules (Production)
+
+```javascript
+// firestore.rules — thêm sau khi test xong
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // submissions: chỉ write, không read từ client (phụ huynh dùng Admin SDK)
+    match /submissions/{id} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+    match /wrong_answers/{id} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+  }
+}
+```
 
 ## Troubleshooting
 
 | Lỗi | Giải pháp |
 |-----|-----------|
-| Docker not running | Mở Docker Desktop, chờ khởi động |
-| Port 54321 in use | `npx supabase stop` rồi `npx supabase start` |
-| Cannot connect | Kiểm tra `.env.local` – URL phải là `http://127.0.0.1:54321` (không phải postgresql://) |
-| Key invalid | Dùng `sb_publishable_...` (không phải JWT `eyJ...`) |
+| `isFirebaseConfigured = false` | Kiểm tra `.env.local` có đủ 6 biến `VITE_FIREBASE_*` không |
+| `failed-precondition` | Đã được xử lý bởi `persistentMultipleTabManager` — nếu vẫn xảy ra, hard-refresh browser |
+| Data không sync | Kiểm tra Firestore Rules không block write; xem Network tab |
+| Build lỗi | Chạy `npm run build` local, kiểm tra import paths |
+| Vercel không có Firebase data | Thêm 6 biến `VITE_FIREBASE_*` vào Vercel Dashboard |

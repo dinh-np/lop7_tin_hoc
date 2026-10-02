@@ -2,9 +2,10 @@
 
 ## Bối cảnh dự án
 Đây là PWA ôn thi đa môn cho học sinh lớp 7 (con của user).
-- Stack: React 19 + Vite 8 + Supabase Local + Gemini 2.0 Flash
-- User là phụ huynh muốn giám sát kết quả con từ xa qua Supabase
+- Stack: React 19 + Vite 8 + **Firebase Firestore (Offline-First)** + Gemini 2.0 Flash
+- User là phụ huynh muốn giám sát kết quả con từ xa qua Firebase Console
 - Giao diện tiếng Việt, thân thiện học sinh
+- Hỗ trợ đa thiết bị: Laptop, Android, iPhone, iPad
 
 ## Quy tắc code
 
@@ -19,12 +20,15 @@
 - `answer` là INDEX số (0-3), không phải chữ cái
 - Tiếng Việt đúng dấu trong `question` và `explanation`
 - PET B1: thêm field `skill: 'reading'|'grammar'|'vocabulary'|'writing'|'listening'|'speaking'`
+- Loại câu hỏi: `type: 'multiple_choice'|'calculation'|'short_essay'` (mặc định: `multiple_choice`)
 
-### Supabase
-- URL local: `http://127.0.0.1:54321` (HTTP, KHÔNG phải postgresql://)
-- Key local: `sb_publishable_xxx` (KHÔNG phải JWT eyJ...)
-- Mọi Supabase call phải có try/catch và fallback graceful
-- `isSupabaseConfigured` check TRƯỚC khi call bất kỳ Supabase function nào
+### Firebase Firestore (thay Supabase)
+- Config đọc từ 6 biến `VITE_FIREBASE_*` trong `.env.local`
+- `isFirebaseConfigured` check TRƯỚC khi call bất kỳ Firebase function nào
+- Mọi Firebase call phải có try/catch và fallback graceful
+- Offline-First: Firestore SDK tự quản lý IndexedDB cache — KHÔNG cần xử lý thủ công
+- `persistentMultipleTabManager` đã được cấu hình trong `firebase.js` (tránh lỗi Safari)
+- Collections: `submissions`, `wrong_answers` (xem schema trong PROJECT_MEMORY.md)
 
 ### Gemini AI
 - Gemini key format: `AQ.xxx` (mới) hoặc `AIza` (cũ) — đều hợp lệ
@@ -34,14 +38,19 @@
 
 ### Deploy
 - Build output: `dist/` (Vite)
-- Vercel: KHÔNG cần cấu hình thêm nếu `vercel.json` đúng
-- Với Vercel prod: dùng Supabase Cloud, không dùng 127.0.0.1
+- Vercel: tự deploy khi push lên GitHub (`dinh-np/lop7_tin_hoc`)
+- Với Vercel prod: thêm 6 biến `VITE_FIREBASE_*` vào Vercel Dashboard
+
+### Touch & Responsive
+- Mọi button/option phải có `min-height: 48px` (WCAG tap target)
+- Input/select phải có `font-size: 16px` (tránh Safari auto-zoom)
+- Dùng class `no-select` cho các element không cần chọn text
 
 ## Skills có sẵn
 Đọc trong `user_antigravity/skills/` khi cần:
 - `them-cau-hoi` — thêm câu hỏi môn mới
-- `supabase-local` — quản lý Supabase Local  
-- `deploy-vercel` — deploy lên Vercel
+- `firebase-firestore` — setup Firebase, xem kết quả, debug kết nối
+- `deploy-vercel` — deploy lên Vercel, thêm env vars
 - `gemini-ai` — debug Gemini AI
 
 ## Memory file
