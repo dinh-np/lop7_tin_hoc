@@ -16,9 +16,11 @@ const shuffle = (array) => {
 
 const EXAM_COUNT = 30;
 const DEFAULT_EXAM_DURATION = 45 * 60;
+const PALETTE_LEGEND_ID = 'nv-palette-drawer';
 
 // examId: thi theo đúng 1 đề (Ngữ văn) — giữ nguyên thứ tự, không bốc ngẫu nhiên
-export default function Exam({ subjectId, part = 'all', examId = null, durationMinutes = null }) {
+export default function Exam({ subjectId, part = 'all', examId = null, examTitle = '', durationMinutes = null }) {
+  const [paletteOpen, setPaletteOpen] = useState(false);
   const EXAM_DURATION = durationMinutes ? durationMinutes * 60 : DEFAULT_EXAM_DURATION;
   const allQuestions = getQuestionsForSubject(subjectId, part).filter((q) => !examId || q.examId === examId);
 
@@ -298,6 +300,95 @@ export default function Exam({ subjectId, part = 'all', examId = null, durationM
       ))}
     </>
   );
+
+  // ─── COMPACT LAYOUT (thi theo đề — Ngữ văn): topbar sticky + drawer danh sách câu ───
+  if (examId) {
+    const doneCount = Object.keys(answers).length;
+    const isEssayQ = currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options);
+    return (
+      <div className="nv-exam">
+        <div className="nv-topbar">
+          <div className="nv-topbar-title" title={examTitle}>{examTitle || 'Thi Thử'}</div>
+          <div className={`${timerCls} nv-topbar-timer`}>⏱ {formatTime(timeLeft)}</div>
+          <button
+            type="button"
+            className="nv-list-btn"
+            id="nv-open-palette"
+            aria-controls={PALETTE_LEGEND_ID}
+            onClick={() => setPaletteOpen(true)}
+          >
+            📋 Danh sách câu ({examQuestions.length})
+            <span className="nv-badge">{doneCount}/{examQuestions.length}</span>
+          </button>
+          <button type="button" className="btn-danger nv-submit-btn" id="submit-exam-btn-top" onClick={handleSubmit}>
+            📤 Nộp bài
+          </button>
+        </div>
+
+        <div className="card nv-card">
+          <div className="question-meta" style={{ marginBottom: 10 }}>
+            <span style={{ fontWeight: 700, color: 'var(--text-2)', fontSize: '0.88rem' }}>
+              Câu {currentIdx + 1} / {examQuestions.length}
+            </span>
+            <span className="tag topic">{currentQuestion.part}</span>
+          </div>
+
+          <SplitView passage={currentQuestion.passage}>
+            <p className="question-text">{currentQuestion.question}</p>
+            {isEssayQ ? (
+              <ShortEssayQuestion
+                key={currentQuestion.id}
+                question={currentQuestion}
+                subjectId={subjectId}
+                onAnswer={(val) => setAnswers((prev) => ({ ...prev, [currentIdx]: val }))}
+              />
+            ) : null}
+            <div className="flex-between" style={{ marginTop: 24 }}>
+              <button className="btn-outline" onClick={() => setCurrentIdx(Math.max(0, currentIdx - 1))} disabled={currentIdx === 0}>
+                ← Câu trước
+              </button>
+              {currentIdx === examQuestions.length - 1 ? (
+                <button className="btn-danger" id="submit-exam-btn" onClick={handleSubmit}>📤 Nộp Bài</button>
+              ) : (
+                <button className="btn-primary" onClick={() => setCurrentIdx(Math.min(examQuestions.length - 1, currentIdx + 1))}>
+                  Câu tiếp →
+                </button>
+              )}
+            </div>
+          </SplitView>
+        </div>
+
+        {paletteOpen && (
+          <div className="nv-drawer-overlay" onClick={() => setPaletteOpen(false)}>
+            <aside
+              className="nv-drawer"
+              id={PALETTE_LEGEND_ID}
+              role="dialog"
+              aria-label="Danh sách câu"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="nv-drawer-head">
+                <strong>Danh sách câu ({doneCount}/{examQuestions.length} hoàn thành)</strong>
+                <button type="button" className="btn-ghost" onClick={() => setPaletteOpen(false)} aria-label="Đóng">✕</button>
+              </div>
+              <div className="nv-drawer-grid no-select">
+                {examQuestions.map((_, idx) => (
+                  <button
+                    key={idx}
+                    id={`nv-palette-btn-${idx}`}
+                    className={`palette-btn ${currentIdx === idx ? 'active' : ''} ${answers[idx] !== undefined ? 'answered' : ''}`}
+                    onClick={() => { setCurrentIdx(idx); setPaletteOpen(false); }}
+                  >
+                    {idx + 1}
+                  </button>
+                ))}
+              </div>
+            </aside>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="exam-split">

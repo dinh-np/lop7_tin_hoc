@@ -21,6 +21,7 @@ export default function NguVanExam({ subjectId }) {
           key={selected.id}
           subjectId={subjectId}
           examId={selected.id}
+          examTitle={selected.title.replace(/\s*\(.*\)$/, '')}
           durationMinutes={selected.time_limit_minutes}
         />
       </div>
