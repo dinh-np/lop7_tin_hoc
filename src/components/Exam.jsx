@@ -80,6 +80,7 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
     if (isFirebaseConfigured) {
       try {
         const submissionId = await saveSubmission({
+          testId: examId,
           subject: subjectId,
           mode: 'exam',
           score: parseFloat(finalScore.toFixed(2)),

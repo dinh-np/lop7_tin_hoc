@@ -113,7 +113,7 @@ export async function saveWrongAnswers(submissionId, wrongItems) {
     const promises = wrongItems.map((item) =>
       addDoc(collection(db, 'wrong_answers'), {
         submission_id: submissionId,
-        test_id: item.testId || null,
+        test_id: item.testId || item.question?.examId || null,
         question_id: item.question.id,
         question_text: item.question.question,
         question_topic: item.question.topic,
