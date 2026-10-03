@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
+import PassagePanel from './PassagePanel';
 
 export default function Review({ subjectId, part = 'all' }) {
   const allQuestions = getQuestionsForSubject(subjectId, part);
@@ -97,6 +98,8 @@ export default function Review({ subjectId, part = 'all' }) {
         </span>
         <span className="tag topic">{currentQuestion.topic}</span>
       </div>
+
+      <PassagePanel passage={currentQuestion.passage} />
 
       <p className="question-text">{currentQuestion.question}</p>
       {currentQuestion.image && (

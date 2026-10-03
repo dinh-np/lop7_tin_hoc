@@ -213,6 +213,16 @@ export function ShortEssayQuestion({ question, onAnswer, subjectId }) {
               {question.modelAnswer || question.explanation || 'Chưa có đáp án mẫu.'}
             </ReactMarkdown>
           </div>
+          {Array.isArray(question.keyPoints) && question.keyPoints.length > 0 && (
+            <div style={{ marginTop: 10 }}>
+              <strong>🎯 Ý chính cần đạt (tự chấm):</strong>
+              <ul style={{ margin: '6px 0 0 20px' }}>
+                {question.keyPoints.map((kp, i) => (
+                  <li key={i}>{kp}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       )}
 

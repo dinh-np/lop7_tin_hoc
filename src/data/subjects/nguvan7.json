@@ -1,0 +1,645 @@
+[
+  {
+    "id": "van7_de_01",
+    "title": "Đề 1: Mùa xuân ơi hãy về (Nguyễn Lãm Thắng)",
+    "subject": "nguvan",
+    "term": "HK1_GiuaKy",
+    "time_limit_minutes": 90,
+    "reading_passage": "MÙA XUÂN ƠI HÃY VỀ\n(Nguyễn Lãm Thắng)\n\nMùa xuân ơi hãy về!\nMang thêm nhiều nắng ấm\nCho khắp nẻo làng quê\nCho em thêm tuổi mới\n\nĐược nhiều lộc đầu năm\nThêm áo quần mới nữa\nNở bừng nhiều hoa thắm\nCho con ong làm mật\n\nCùng anh đi hội xuân\nCho chim non vỗ cánh\nCho con én tung trời\nCho dòng sông trong vắt\n\nÊm đềm con thuyền trôi\nRíu rít khung trời thơ\nXua mùa đông giá lạnh\nMùa xuân ơi hãy về!",
+    "questions": [
+      {
+        "id": "v7_d1_c1",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 1. Xác định thể thơ của bài thơ trên. Nêu dấu hiệu nhận biết thể thơ đó.",
+        "modelAnswer": "- Thể thơ: Thơ 5 chữ (hoặc thơ ngũ ngôn).\n- Dấu hiệu nhận biết: Mỗi dòng thơ đều có 5 tiếng (âm tiết); ngắt nhịp linh hoạt (nhịp 3/2 hoặc 2/3).",
+        "keyPoints": [
+          "Thể thơ 5 chữ",
+          "Mỗi dòng có 5 tiếng/âm tiết"
+        ]
+      },
+      {
+        "id": "v7_d1_c2",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 2. Chỉ ra các tiếng gieo vần ở khổ thơ đầu. Cho biết kiểu gieo vần.",
+        "modelAnswer": "- Các tiếng gieo vần ở khổ 1: 'về' - 'quê' (vần 'ê').\n- Kiểu gieo vần: Vần cách (gieo vần ở cuối dòng 1 và dòng 3).",
+        "keyPoints": [
+          "Tiếng gieo vần: về - quê",
+          "Kiểu gieo vần: Vần cách"
+        ]
+      },
+      {
+        "id": "v7_d1_c3",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 3. Từ “êm đềm” trong câu thơ “Êm đềm con thuyền trôi” có nghĩa là gì?",
+        "modelAnswer": "'Êm đềm' là từ láy gợi tả trạng thái yên ả, tĩnh lặng, nhẹ nhàng, trôi chảy một cách êm ái, thanh bình, không có sóng gió hay biến động.",
+        "keyPoints": [
+          "Yên ả, nhẹ nhàng, thanh bình, không sóng gió"
+        ]
+      },
+      {
+        "id": "v7_d1_c4",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 4. Bài thơ miêu tả mùa nào? Dựa vào từ ngữ nào em biết.",
+        "modelAnswer": "- Bài thơ miêu tả mùa xuân.\n- Căn cứ vào các từ ngữ, hình ảnh: 'mùa xuân', 'nắng ấm', 'lộc đầu năm', 'áo quần mới', 'hội xuân', 'con én tung trời', 'xua mùa đông giá lạnh'.",
+        "keyPoints": [
+          "Mùa xuân",
+          "Từ ngữ dẫn chứng: lộc đầu năm, hội xuân, con én, xua mùa đông..."
+        ]
+      },
+      {
+        "id": "v7_d1_c5",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 5. Những hình ảnh nào trong bài thơ khắc hoạ được vẻ đẹp bức tranh thiên nhiên khi đón nhận mùa xuân về. Nhận xét từ ngữ tác giả sử dụng.",
+        "modelAnswer": "- Hình ảnh thiên nhiên: nắng ấm, hoa thắm nở bừng, con ong làm mật, chim non vỗ cánh, con én tung trời, dòng sông trong vắt, con thuyền trôi êm đềm.\n- Nhận xét từ ngữ: Sử dụng nhiều tính từ gợi cảm, động từ mạnh ('nở bừng', 'trong vắt', 'êm đềm', 'ríu rít'), hình ảnh trong sáng, tươi tắn, tràn đầy sức sống.",
+        "keyPoints": [
+          "Liệt kê đủ hình ảnh thiên nhiên",
+          "Nhận xét từ ngữ gợi cảm, tươi tắn, giàu sức sống"
+        ]
+      },
+      {
+        "id": "v7_d1_c6",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 6. Chủ đề của bài thơ là gì?",
+        "modelAnswer": "Chủ đề: Tình yêu thiên nhiên, sự háo hức, mong chờ mùa xuân về với vẻ đẹp tươi mới, ấm áp và mang lại niềm vui, may mắn cho vạn vật, con người.",
+        "keyPoints": [
+          "Tình cảm háo hức, mong chờ mùa xuân",
+          "Ngợi ca vẻ đẹp sức sống của thiên nhiên"
+        ]
+      },
+      {
+        "id": "v7_d1_c7",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 7. Xác định một biện pháp nghệ thuật được sử dụng xuyên suốt bài thơ? Cho biết hiệu quả của việc sử dụng biện pháp đó.",
+        "modelAnswer": "- Biện pháp nghệ thuật: Điệp từ 'Cho' (kết hợp điệp cấu trúc 'Cho...').\n- Tác dụng: Tạo nhịp điệu dồn dập, rộn ràng, tha thiết; nhấn mạnh những món quà tốt đẹp, tươi vui và sự trù phú, ấm áp mà mùa xuân ban tặng cho vạn vật và con người.",
+        "keyPoints": [
+          "Chỉ đúng biện pháp (Điệp từ 'Cho')",
+          "Nêu tác dụng tạo nhịp điệu và nhấn mạnh sức sống, ân huệ mùa xuân"
+        ]
+      },
+      {
+        "id": "v7_d1_c8",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 8. Từ nội dung bài thơ, em hãy viết ngắn gọn (từ 3 đến 5 dòng) thông điệp mà văn bản muốn gửi đến người đọc.",
+        "modelAnswer": "Thông điệp: Hãy mở rộng tâm hồn đón nhận vẻ đẹp tươi mới, ấm áp của mùa xuân và biết trân trọng từng khoảnh khắc bình yên của cuộc sống. Mỗi chúng ta cần thêm yêu thiên nhiên quanh mình và gìn giữ nét đẹp rộn rã, lạc quan của mùa xuân làng quê đất Việt.",
+        "keyPoints": [
+          "Độ dài 3-5 dòng",
+          "Thông điệp trân trọng thiên nhiên, yêu cuộc sống, đón nhận đổi mới"
+        ]
+      },
+      {
+        "id": "v7_d1_tl",
+        "part": "Phần II. Viết",
+        "type": "short_essay",
+        "question": "Viết đoạn văn (khoảng 200 chữ) ghi lại cảm xúc của em khi đọc bài thơ 'Mùa xuân ơi hãy về' của tác giả Nguyễn Lãm Thắng ở phần đọc hiểu.",
+        "modelAnswer": "Gợi ý dàn ý đoạn văn biểu cảm:\n1. Mở đoạn: Giới thiệu tác giả Nguyễn Lãm Thắng, bài thơ 'Mùa xuân ơi hãy về' và ấn tượng chung về vẻ đẹp rộn ràng, ấm áp của bức tranh xuân.\n2. Thân đoạn: Bộc lộ cảm xúc về nội dung và nghệ thuật:\n- Cảm xúc trước bức tranh thiên nhiên tươi đẹp, tràn trề sức sống: nắng ấm xua tan giá lạnh, ong làm mật, én liệng trời xanh, dòng sông trong vắt...\n- Cảm nhận niềm vui rộn rã của trẻ thơ: được thêm tuổi mới, may áo mới, đi trẩy hội xuân.\n- Ấn tượng với nghệ thuật: thể thơ 5 chữ giàu nhịp điệu, điệp từ 'Cho' lặp lại tha thiết, ngôn từ mộc mạc mà tươi sáng.\n3. Kết đoạn: Khẳng định tình cảm yêu mến mùa xuân, bài thơ khơi gợi niềm lạc quan và tình yêu thiết tha với quê hương xứ sở.",
+        "keyPoints": [
+          "Dung lượng ~200 chữ",
+          "Bộc lộ trực tiếp cảm xúc về nội dung & nét đặc sắc nghệ thuật",
+          "Bố cục Mở - Thân - Kết rõ ràng"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "van7_de_02",
+    "title": "Đề 2: Bạn trong vườn xanh (Nguyễn Lãm Thắng)",
+    "subject": "nguvan",
+    "term": "HK1_GiuaKy",
+    "time_limit_minutes": 90,
+    "reading_passage": "BẠN TRONG VƯỜN XANH\n(Nguyễn Lãm Thắng)\n\nCùng chung trong một vườn\nMít, xoài yêu thương lắm\nCành đan nhau, cành vươn\nRễ bám lòng đất ấm\n\nVà chung một vòm xanh\nGọi chim về làm tổ\nDù nắng cháy, mưa dầm\nĐem lá cành che chở\n\nXoài bế “em” trên cao\nMít gùi “em” dưới gốc\nQuả chẳng giống tí nào\nXoài trơn, mít gai góc\n\nHè về trong tiếng chim\nHót mừng mùa trái chín\nMùi hương dắt bé tìm\nQuả đầu mùa ngọt lịm.",
+    "questions": [
+      {
+        "id": "v7_d2_c1",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 1. Xác định thể thơ của bài thơ trên. Nêu dấu hiệu nhận biết thể thơ đó.",
+        "modelAnswer": "- Thể thơ: 5 chữ (ngũ ngôn).\n- Dấu hiệu: Mỗi dòng có đúng 5 tiếng (âm tiết); ngắt nhịp nhịp nhàng 3/2 hoặc 2/3.",
+        "keyPoints": [
+          "Thể thơ 5 chữ",
+          "Mỗi dòng có 5 tiếng"
+        ]
+      },
+      {
+        "id": "v7_d2_c2",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 2. Chỉ ra các tiếng gieo vần ở khổ thơ đầu. Cho biết kiểu gieo vần.",
+        "modelAnswer": "- Tiếng gieo vần: 'vườn' - 'vươn' (vần cách, vần chân), 'lắm' - 'ấm' (vần liền, vần chân).\n- Kiểu gieo vần: Vần cách / vần chân kết hợp linh hoạt.",
+        "keyPoints": [
+          "Chỉ ra vần vườn - vươn hoặc lắm - ấm",
+          "Xác định kiểu gieo vần"
+        ]
+      },
+      {
+        "id": "v7_d2_c3",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 3. Cho câu “Đêm, trời rét”, hãy mở rộng thành phần câu bằng cụm từ.",
+        "modelAnswer": "Ví dụ mở rộng:\n- Mở rộng chủ ngữ/vị ngữ: 'Đêm nay, bầu trời rét buốt như cắt vào da thịt.'\n- Mở rộng trạng ngữ: 'Vào những đêm mùa đông lạnh giá, bầu trời rét buốt căm căm.'",
+        "keyPoints": [
+          "Biến từ đơn thành cụm từ (cụm danh từ, cụm vị từ)",
+          "Câu văn đúng ngữ pháp"
+        ]
+      },
+      {
+        "id": "v7_d2_c4",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 4. Bài thơ miêu tả mùa nào? Dựa vào từ ngữ nào em biết.",
+        "modelAnswer": "- Bài thơ miêu tả mùa hè.\n- Căn cứ từ ngữ: 'nắng cháy', 'hè về', 'tiếng chim', 'mùa trái chín', 'quả đầu mùa ngọt lịm'.",
+        "keyPoints": [
+          "Mùa hè",
+          "Dẫn chứng từ ngữ đúng"
+        ]
+      },
+      {
+        "id": "v7_d2_c5",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 5. Chỉ ra những hình ảnh nói về bức tranh mùa hè ở khổ thơ cuối và cho biết ý nghĩa của hình ảnh đó.",
+        "modelAnswer": "- Hình ảnh: tiếng chim hót mừng, mùa trái chín, mùi hương dẫn lối, quả đầu mùa ngọt lịm.\n- Ý nghĩa: Khắc họa bức tranh mùa hè rộn rã, ngọt ngào, tràn trề sức sống; thể hiện thành quả ngọt ngào sau chuỗi ngày gắn bó, che chở cùng lớn lên của các loài cây trong vườn.",
+        "keyPoints": [
+          "Chỉ đúng hình ảnh",
+          "Nêu ý nghĩa bức tranh hè trù phú, thành quả yêu thương"
+        ]
+      },
+      {
+        "id": "v7_d2_c6",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 6. Chủ đề của bài thơ là gì?",
+        "modelAnswer": "Chủ đề: Tình bạn, sự gắn kết, yêu thương, tương trợ lẫn nhau giữa cây mít và cây xoài trong vườn xanh; qua đó ca ngợi tình cảm gắn bó, hòa thuận giữa con người.",
+        "keyPoints": [
+          "Tình bạn, sự đùm bọc, yêu thương",
+          "Bài học về sự gắn bó, hòa hợp"
+        ]
+      },
+      {
+        "id": "v7_d2_c7",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 7. Xác định một biện pháp nghệ thuật được sử dụng xuyên suốt bài thơ? Cho biết hiệu quả của việc sử dụng biện pháp đó.",
+        "modelAnswer": "- Biện pháp nghệ thuật: Nhân hóa ('yêu thương lắm', 'cành đan nhau', 'gọi chim', 'che chở', 'bế em', 'gùi em').\n- Tác dụng: Khiến hình ảnh cây cối trở nên sinh động, có tâm hồn, cử chỉ thân thương như hai người bạn thân thiết, làm nổi bật thông điệp về tình yêu thương, sẻ chia.",
+        "keyPoints": [
+          "Biện pháp nhân hóa",
+          "Tác dụng làm hình tượng sinh động, ấm áp tình bạn"
+        ]
+      },
+      {
+        "id": "v7_d2_c8",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 8. Từ nội dung bài thơ, em hãy viết ngắn gọn (từ 3 đến 5 dòng) thông điệp mà văn bản muốn gửi đến người đọc.",
+        "modelAnswer": "Thông điệp: Dù mỗi cá nhân mang tính cách, ngoại hình khác nhau như mít và xoài, chúng ta vẫn cần sống hòa thuận, biết yêu thương, sẻ chia và đùm bọc nhau vượt qua giông bão cuộc đời để cùng nhau tạo nên những trái ngọt ý nghĩa.",
+        "keyPoints": [
+          "Độ dài 3-5 dòng",
+          "Thông điệp về tình đoàn kết, chia sẻ, tôn trọng sự khác biệt"
+        ]
+      },
+      {
+        "id": "v7_d2_tl",
+        "part": "Phần II. Viết",
+        "type": "short_essay",
+        "question": "Viết đoạn văn (khoảng 200 chữ) ghi lại cảm xúc của em khi đọc bài thơ 'Bạn trong vườn xanh'.",
+        "modelAnswer": "Gợi ý: Bộc lộ cảm nhận về bức tranh khu vườn ấm áp tình bạn giữa cây xoài và cây mít. Cảm kích trước sự bao bọc qua những từ ngữ nhân hóa đáng yêu ('bế em', 'gùi em'). Suy ngẫm về bài học cuộc sống: cần biết nương tựa, yêu thương những người xung quanh.",
+        "keyPoints": [
+          "Đoạn văn hoàn chỉnh ~200 chữ",
+          "Có cảm xúc cá nhân, liên hệ thực tế"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "van7_de_03",
+    "title": "Đề 3: Mẹ (Đỗ Trung Lai)",
+    "subject": "nguvan",
+    "term": "HK1_GiuaKy",
+    "time_limit_minutes": 90,
+    "reading_passage": "MẸ\n(Đỗ Trung Lai)\n\nLưng mẹ còng rồi\nCau thì vẫn thẳng\nCau – ngọn xanh rờn\nMẹ – đầu bạc trắng\n\nCau ngày càng cao\nMẹ ngày một thấp\nCau gần với giời\nMẹ thì gần đất!\n\nNgày con còn bé\nCau mẹ bổ tư\nGiờ cau bổ tám\nMẹ còn ngại to!\n\nMột miếng cau khô\nKhô gầy như mẹ\nCon nâng trên tay\nKhông cầm được lệ\n\nNgẩng hỏi giời vậy\n- Sao mẹ ta già?\nKhông một lời đáp\nMây bay về xa.",
+    "questions": [
+      {
+        "id": "v7_d3_c1",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 1. Xác định thể thơ của bài thơ. Nêu dấu hiệu nhận biết thể thơ đó.",
+        "modelAnswer": "- Thể thơ: Thơ 4 chữ.\n- Dấu hiệu: Mỗi dòng thơ có 4 tiếng; nhịp thơ 2/2 trầm lắng, chậm rãi.",
+        "keyPoints": [
+          "Thể thơ 4 chữ",
+          "Mỗi dòng 4 tiếng"
+        ]
+      },
+      {
+        "id": "v7_d3_c2",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 2. Xác định các tiếng gieo vần ở khổ thơ cuối và cho biết kiểu gieo vần.",
+        "modelAnswer": "- Tiếng gieo vần ở khổ cuối: 'già' - 'xa' (vần 'a').\n- Kiểu gieo vần: Vần cách (dòng 2 gieo với dòng 4), vần chân.",
+        "keyPoints": [
+          "Vần già - xa",
+          "Vần cách / vần chân"
+        ]
+      },
+      {
+        "id": "v7_d3_c3",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 3. Từ “còng” trong câu thơ “Lưng mẹ còng rồi” có nghĩa là gì?",
+        "modelAnswer": "'Còng' chỉ trạng thái lưng bị gập cong xuống phía trước do tuổi già, sức yếu và sự vất vả dãi dầu qua năm tháng của cuộc đời người mẹ.",
+        "keyPoints": [
+          "Lưng cong gập xuống do tuổi già, thời gian và sự nhọc nhằn"
+        ]
+      },
+      {
+        "id": "v7_d3_c4",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 4. Xác định chủ đề của bài thơ.",
+        "modelAnswer": "Chủ đề: Tình mẫu tử thiêng liêng; niềm xót xa, thương cảm và lòng biết ơn sâu sắc của người con trước dấu vết thời gian làm người mẹ ngày một già yếu.",
+        "keyPoints": [
+          "Tình mẫu tử thiêng liêng",
+          "Nỗi xót xa khi mẹ già yếu"
+        ]
+      },
+      {
+        "id": "v7_d3_c5",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 5. Hình ảnh nào trong bài thơ được đối sánh với hình ảnh mẹ, ở phương diện nào? Liệt kê những từ ngữ được hình ảnh thể hiện? Vì sao tác giả lựa chọn hình ảnh đó.",
+        "modelAnswer": "- Hình ảnh đối sánh: Cây cau.\n- Phương diện đối sánh:\n  + Vóc dáng: Lưng mẹ còng đối lập Cau vẫn thẳng.\n  + Sắc diện: Cau xanh rờn đối lập Mẹ đầu bạc trắng.\n  + Chiều hướng: Cau ngày càng cao đối lập Mẹ ngày một thấp; Cau gần với giời đối lập Mẹ thì gần đất.\n- Lý do lựa chọn: Cây cau gắn liền với làng quê Việt Nam và thói quen ăn trầu của mẹ, là biểu tượng gần gũi, quen thuộc làm nổi bật bước đi nghiệt ngã của thời gian trên dáng hình người mẹ.",
+        "keyPoints": [
+          "Hình ảnh cây cau",
+          "Liệt kê đủ các cặp đối lập (còng - thẳng, xanh rờn - bạc trắng, cao - thấp...)",
+          "Lý do: Cau gắn với mẹ và làng quê"
+        ]
+      },
+      {
+        "id": "v7_d3_c6",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 6. Để thể hiện hình tượng người mẹ và cau, tác giả đã sử dụng BPTT nào? Chỉ ra tác dụng của BPTT đó?",
+        "modelAnswer": "- BPTT: Biện pháp tương phản đối lập (kết hợp so sánh 'miếng cau khô gầy như mẹ').\n- Tác dụng: Làm nổi bật sự tương phản rõ rệt giữa sức sống tươi non của cây cau với sự già nua, tàn lụi theo thời gian của mẹ; gợi sự xót xa thắt nghẹn lòng người con.",
+        "keyPoints": [
+          "Biện pháp đối lập / tương phản (hoặc so sánh)",
+          "Tác dụng làm bật lên sự già yếu của mẹ"
+        ]
+      },
+      {
+        "id": "v7_d3_c7",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 7. Hai câu thơ “Cau gần với giời/ Mẹ thì gần đất” gợi cho em cảm xúc, suy nghĩ gì?",
+        "modelAnswer": "Hai câu thơ gợi cảm giác xót xa, nhói lòng. 'Gần đất' vừa tả vóc dáng còng lưng của mẹ, vừa gợi quy luật sinh - lão - bệnh - tử (gần đất xa trời), mẹ ngày càng tiến gần đến điểm cuối cuộc đời, nhắc nhở con cái về sự hữu hạn của thời gian bên mẹ.",
+        "keyPoints": [
+          "Xót xa, nghẹn ngào",
+          "Gợi quy luật tuổi già, 'gần đất xa trời', lời nhắc nhở hiếu thuận"
+        ]
+      },
+      {
+        "id": "v7_d3_c8",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 8. Từ nội dung bài thơ, em hãy viết ngắn gọn (từ 3 đến 5 dòng) thông điệp mà văn bản muốn gửi đến người đọc.",
+        "modelAnswer": "Thông điệp: Thời gian trôi qua không bao giờ trở lại và cha mẹ sẽ ngày một già đi. Hãy biết trân trọng, yêu thương, phụng dưỡng và chăm sóc cha mẹ từng ngày khi mẹ còn ở bên cạnh chúng ta.",
+        "keyPoints": [
+          "Độ dài 3-5 dòng",
+          "Thông điệp đạo hiếu, trân trọng cha mẹ"
+        ]
+      },
+      {
+        "id": "v7_d3_tl",
+        "part": "Phần II. Viết",
+        "type": "short_essay",
+        "question": "Viết đoạn văn (khoảng 200 chữ) ghi lại cảm xúc của em khi đọc bài thơ 'Mẹ'.",
+        "modelAnswer": "Đoạn văn cần bộc lộ: Nỗi xúc động nghẹn ngào trước hình ảnh mẹ già qua ngòi bút Đỗ Trung Lai; sự tương phản đắt giá giữa cau và mẹ; chi tiết nâng miếng cau khô 'không cầm được lệ' và câu hỏi trời không lời đáp; liên hệ lòng biết ơn của bản thân đối với mẹ.",
+        "keyPoints": [
+          "Khoảng 200 chữ",
+          "Bộc lộ cảm xúc sâu lắng, chân thành",
+          "Đúng cấu trúc đoạn văn"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "van7_de_04",
+    "title": "Đề 4: Đêm nay Bác không ngủ (Minh Huệ)",
+    "subject": "nguvan",
+    "term": "HK1_GiuaKy",
+    "time_limit_minutes": 90,
+    "reading_passage": "“...Anh đội viên thức dậy\nThấy trời khuya lắm rồi\nMà sao Bác vẫn ngồi\nĐêm nay Bác không ngủ.\n\nLặng yên bên bếp lửa\nVẻ mặt Bác trầm ngâm\nNgoài trời mưa lâm thâm\nMái lều tranh xơ xác.\n\nAnh đội viên nhìn Bác\nCàng nhìn lại càng thương\nNgười Cha mái tóc bạc\nĐốt lửa cho anh nằm.” [...]\n(Trích Đêm nay Bác không ngủ - Minh Huệ)",
+    "questions": [
+      {
+        "id": "v7_d4_c1",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 1. Văn bản trên được viết theo thể thơ nào? Nêu dấu hiệu nhận biết của thể thơ đó.",
+        "modelAnswer": "- Thể thơ: Thơ 5 chữ.\n- Dấu hiệu: Mỗi câu có 5 tiếng; ngắt nhịp 3/2 hoặc 2/3 linh hoạt, phù hợp chất thơ tự sự trữ tình.",
+        "keyPoints": [
+          "Thể thơ 5 chữ",
+          "Mỗi dòng 5 tiếng"
+        ]
+      },
+      {
+        "id": "v7_d4_c2",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 2. Xác định và nêu tác dụng của từ láy trong khổ thơ sau: 'Lặng yên bên bếp lửa / Vẻ mặt Bác trầm ngâm / Ngoài trời mưa lâm thâm / Mái lều tranh xơ xác.'",
+        "modelAnswer": "- Các từ láy: 'trầm ngâm', 'lâm thâm', 'xơ xác'.\n- Tác dụng:\n  + 'trầm ngâm': Thể hiện vẻ mặt đăm chiêu suy nghĩ, lo lắng sâu kín của Bác cho chiến dịch và vận mệnh đất nước.\n  + 'lâm thâm', 'xơ xác': Gợi tả hoàn cảnh gian khổ, lạnh giá nơi chiến khu với cơn mưa đêm rả rích và mái lều tranh thô sơ.",
+        "keyPoints": [
+          "Chỉ đúng 3 từ láy",
+          "Nêu rõ tác dụng gợi cảnh và gợi tâm trạng của Bác"
+        ]
+      },
+      {
+        "id": "v7_d4_c3",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 3. Cho câu: “Mùa xuân, hoa nở”, hãy mở rộng thành phần câu bằng cụm từ.",
+        "modelAnswer": "Ví dụ mở rộng:\n- Mở rộng chủ ngữ: 'Khi mùa xuân đến dịu dàng, muôn vàn bông hoa đào đỏ thắm đã đua nhau nở rộ.'\n- 'Mỗi độ mùa xuân ấm áp về, khắp các cành cây hoa bung nở rực rỡ dưới nắng.'",
+        "keyPoints": [
+          "Mở rộng thành phần bằng cụm từ",
+          "Câu đúng ngữ pháp, mạch lạc"
+        ]
+      },
+      {
+        "id": "v7_d4_c4",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 4. Em hiểu như thế nào về hình ảnh \"Người Cha\" trong câu “Người Cha mái tóc bạc”",
+        "modelAnswer": "Hình ảnh 'Người Cha' là biện pháp ẩn dụ thiêng liêng thể hiện tình yêu thương bao la, sự chăm sóc ân cần, gần gũi của Bác Hồ dành cho các chiến sĩ như người cha ruột thịt lo lắng cho con cái, đồng thời bộc lộ lòng tôn kính sâu sắc của anh bộ đội đối với Người.",
+        "keyPoints": [
+          "Phép ẩn dụ",
+          "Tình thương bao la, ấm áp như cha con",
+          "Lòng tôn kính Bác Hồ"
+        ]
+      },
+      {
+        "id": "v7_d4_c5",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 5. Xác định các tiếng gieo vần trong khổ 1. Cho biết kiểu gieo vần.",
+        "modelAnswer": "- Các tiếng gieo vần: 'rồi' - 'ngồi' (vần 'ôi').\n- Kiểu gieo vần: Vần liền (dòng 2 và 3), vần chân.",
+        "keyPoints": [
+          "Vần rồi - ngồi",
+          "Vần liền / vần chân"
+        ]
+      },
+      {
+        "id": "v7_d4_c6",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 6. Chủ đề của bài thơ là gì?",
+        "modelAnswer": "Chủ đề: Ca ngợi tấm lòng yêu thương bao la, đức hi sinh quên mình của Bác Hồ đối với quân và dân ta; đồng thời thể hiện tấm lòng kính yêu, biết ơn vô hạn của người lính dành cho Bác.",
+        "keyPoints": [
+          "Tình thương bao la của Bác",
+          "Lòng tôn kính, biết ơn của bộ đội đối với Bác"
+        ]
+      },
+      {
+        "id": "v7_d4_c7",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 7. Em có suy nghĩ gì về hình ảnh Bác trong bài thơ trên?",
+        "modelAnswer": "Hình ảnh Bác Hồ hiện lên vô cùng vĩ đại nhưng lại hết sức giản dị, gần gũi. Trong đêm đông giá rét, Bác không ngủ mà lặng lẽ ngồi sưởi ấm, chăm chút từng giấc ngủ cho anh bộ đội. Vẻ đẹp của Bác là hiện thân trọn vẹn của lòng nhân ái và đức hi sinh cao cả vì dân tộc.",
+        "keyPoints": [
+          "Vĩ đại mà mộc mạc, gần gũi",
+          "Lòng nhân ái, sự chăm sóc ân cần, đức hi sinh"
+        ]
+      },
+      {
+        "id": "v7_d4_c8",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 8. Từ nội dung bài thơ, em hãy viết ngắn gọn (từ 3 đến 5 dòng) thông điệp mà văn bản muốn gửi đến người đọc.",
+        "modelAnswer": "Thông điệp: Hãy luôn ghi nhớ và biết ơn công lao trời biển, tấm lòng nhân ái của Chủ tịch Hồ Chí Minh; từ đó ra sức học tập, rèn luyện đạo đức, sống có trách nhiệm và biết yêu thương, sẻ chia với những người xung quanh.",
+        "keyPoints": [
+          "Độ dài 3-5 dòng",
+          "Biết ơn Bác Hồ, sống có trách nhiệm và nhân ái"
+        ]
+      },
+      {
+        "id": "v7_d4_tl",
+        "part": "Phần II. Viết",
+        "type": "short_essay",
+        "question": "Viết đoạn văn (khoảng 200 chữ) ghi lại cảm xúc của em khi đọc bài thơ “Đêm nay Bác không ngủ”.",
+        "modelAnswer": "Đoạn văn cần bộc lộ: Niềm xúc động nghẹn ngào trước tấm lòng bao la của Bác; cảm phục cử chỉ đốt lửa sưởi ấm cho anh nằm; ấn tượng với thể thơ 5 chữ giàu nhạc điệu và hình ảnh so sánh, ẩn dụ xúc động; lời hứa noi gương Bác.",
+        "keyPoints": [
+          "Khoảng 200 chữ",
+          "Bộc lộ cảm xúc kính yêu, biết ơn Bác Hồ"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "van7_de_05",
+    "title": "Đề 5: Mưa (Nguyễn Diệu)",
+    "subject": "nguvan",
+    "term": "HK1_GiuaKy",
+    "time_limit_minutes": 90,
+    "reading_passage": "MƯA\n(Nguyễn Diệu)\n\nMưa rơi tí tách\nHạt trước hạt sau\nKhông xô đẩy nhau\nXếp hàng lần lượt\n\nMưa vẽ trên sân\nMưa dàn trên lá\nMưa rơi trắng xóa\nBong bóng phập phồng\n\nMưa nâng cánh hoa\nMưa gọi chồi biếc\nMưa rửa sạch bụi\nNhư em lau nhà.\n\nMưa rơi, mưa rơi\nMưa là bạn tôi\nMưa là nốt nhạc\nTôi hát thành lời...",
+    "questions": [
+      {
+        "id": "v7_d5_c1",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 1. Xác định thể thơ của bài thơ trên. Nêu dấu hiệu nhận biết thể thơ đó.",
+        "modelAnswer": "- Thể thơ: Thơ 4 chữ.\n- Dấu hiệu: Mỗi dòng thơ gồm 4 tiếng (âm tiết); ngắt nhịp 2/2 vui tươi, nhanh nhẹn.",
+        "keyPoints": [
+          "Thể thơ 4 chữ",
+          "Mỗi dòng 4 tiếng"
+        ]
+      },
+      {
+        "id": "v7_d5_c2",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 2. Xác định các tiếng gieo vần ở khổ 1. Cho biết kiểu gieo vần.",
+        "modelAnswer": "- Các tiếng gieo vần: 'sau' - 'nhau' (vần 'au').\n- Kiểu gieo vần: Vần liền (dòng 2 và dòng 3), vần chân.",
+        "keyPoints": [
+          "Vần sau - nhau",
+          "Vần liền / vần chân"
+        ]
+      },
+      {
+        "id": "v7_d5_c3",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 3. Khổ thơ thứ 2 ngắt nhịp như thế nào? Việc ngắt nhịp như vậy có tác dụng gì?",
+        "modelAnswer": "- Cách ngắt nhịp: Nhịp 2/2 ('Mưa vẽ / trên sân', 'Mưa dàn / trên lá', 'Mưa rơi / trắng xóa', 'Bong bóng / phập phồng').\n- Tác dụng: Tạo nhịp điệu rộn ràng, nhịp nhàng, mô phỏng sinh động chuyển động nhịp nhàng, dồn dập của những giọt mưa rơi.",
+        "keyPoints": [
+          "Ngắt nhịp 2/2",
+          "Tác dụng tạo nhịp điệu vui tươi, mô phỏng giọt mưa"
+        ]
+      },
+      {
+        "id": "v7_d5_c4",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 4. Từ “tí tách” trong câu thơ “Mưa rơi tí tách” gợi tả điều gì?",
+        "modelAnswer": "Từ tượng thanh 'tí tách' mô phỏng âm thanh nhỏ, đều đặn của từng giọt mưa khi rơi xuống mái nhà, mặt đất hoặc cành lá, tạo cảm giác vui tai, thanh bình và quen thuộc.",
+        "keyPoints": [
+          "Từ tượng thanh",
+          "Gợi âm thanh giọt nước mưa rơi nhỏ, đều đặn, vui tai"
+        ]
+      },
+      {
+        "id": "v7_d5_c5",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 5. Xác định BPTT có trong khổ thơ sau và nêu tác dụng: 'Mưa nâng cánh hoa / Mưa gọi chồi biếc / Mưa rửa sạch bụi / Như em lau nhà.'",
+        "modelAnswer": "- BPTT: Nhân hóa ('nâng cánh hoa', 'gọi chồi biếc', 'rửa sạch bụi'), Điệp từ ('Mưa') và So sánh ('Như em lau nhà').\n- Tác dụng: Biến cơn mưa thành một đứa trẻ ngoan ngoãn, cần mẫn; làm nổi bật lợi ích tươi mát mà mưa mang lại cho cây cỏ, vạn vật và không gian.",
+        "keyPoints": [
+          "Chỉ đúng Nhân hóa, Điệp từ hoặc So sánh",
+          "Nêu tác dụng làm cơn mưa sinh động, có ích cho vạn vật"
+        ]
+      },
+      {
+        "id": "v7_d5_c6",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 6. Chủ đề của bài thơ là gì?",
+        "modelAnswer": "Chủ đề: Tình yêu thiên nhiên trong sáng của tuổi thơ; vẻ đẹp tươi vui, hữu ích và sự gần gũi của cơn mưa đối với cỏ cây, con người.",
+        "keyPoints": [
+          "Tình yêu thiên nhiên tuổi thơ",
+          "Vẻ đẹp tươi mát, gần gũi của cơn mưa"
+        ]
+      },
+      {
+        "id": "v7_d5_c7",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 7. Theo em, vì sao tác giả lại nói: 'Mưa là bạn tôi'.",
+        "modelAnswer": "Tác giả coi mưa là bạn vì mưa mang lại niềm vui, khơi gợi cảm xúc hồn nhiên trong trẻo, cùng tác giả hòa nhịp như một bản nhạc tuổi thơ và làm cho khu vườn thêm tươi tốt, đáng yêu.",
+        "keyPoints": [
+          "Mưa gần gũi, mang niềm vui, khơi gợi bản nhạc tâm hồn tuổi thơ"
+        ]
+      },
+      {
+        "id": "v7_d5_c8",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 8. Qua bài thơ, em cảm nhận tình cảm của tác giả đối với mưa như thế nào?",
+        "modelAnswer": "Tác giả dành cho mưa tình cảm yêu mến, thích thú, gắn bó thân thiết như người bạn tri kỷ với cái nhìn trìu mến, hồn nhiên của tuổi thơ.",
+        "keyPoints": [
+          "Yêu mến, gắn bó, thích thú, hồn nhiên"
+        ]
+      },
+      {
+        "id": "v7_d5_tl",
+        "part": "Phần II. Viết",
+        "type": "short_essay",
+        "question": "Viết đoạn văn (khoảng 200 chữ) ghi lại cảm xúc của em khi đọc bài thơ “Mưa”.",
+        "modelAnswer": "Đoạn văn cần bộc lộ: Cảm nhận thích thú trước âm điệu 4 chữ trong sáng; hình ảnh giọt mưa xếp hàng trật tự, gội rửa bụi trần, đánh thức chồi biếc; ấn tượng với liên tưởng 'Mưa là bạn tôi'; liên hệ tình yêu thiên nhiên của bản thân.",
+        "keyPoints": [
+          "Đoạn văn khoảng 200 chữ",
+          "Bộc lộ tình cảm hồn nhiên, yêu thích cơn mưa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "van7_de_06",
+    "title": "Đề 6: Trăng ơi... từ đâu đến? (Trần Đăng Khoa)",
+    "subject": "nguvan",
+    "term": "HK1_GiuaKy",
+    "time_limit_minutes": 90,
+    "reading_passage": "TRĂNG ƠI TỪ ĐÂU ĐẾN?\n(Trần Đăng Khoa)\n\nTrăng ơi từ đâu đến?\nHay từ cánh rừng xa\nTrăng hồng như quả chín\nLửng lơ lên trước nhà\n\nTrăng ơi từ đâu đến?\nHay biển xanh diệu kì\nTrăng tròn như mắt cá\nChẳng bao giờ chớp mi\n\nTrăng ơi từ đâu đến?\nHay từ một sân chơi\nTrăng bay như quả bóng\nBạn nào đá lên trời\n\nTrăng ơi từ đâu đến?\nHay từ lời mẹ ru\nThương Cuội không được học\nHú gọi trâu đến giờ\n\nTrăng ơi từ đâu đến?\nHay từ đường hành quân\nTrăng soi chú bộ đội\nVà soi vàng góc sân\n\nTrăng ơi từ đâu đến?\nTrăng đi khắp mọi miền\nTrăng ơi có nơi nào\nSáng hơn đất nước em\n\n1968\n(Trần Đăng Khoa, Góc sân và khoảng trời)",
+    "questions": [
+      {
+        "id": "v7_d6_c1",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 1. Văn bản được viết theo thể thơ nào? Nêu dấu hiệu nhận biết.",
+        "modelAnswer": "- Thể thơ: Thơ 5 chữ.\n- Dấu hiệu nhận biết: Mỗi câu có 5 tiếng; nhịp ngắt 3/2 hoặc 2/3 linh hoạt, hồn nhiên.",
+        "keyPoints": [
+          "Thể thơ 5 chữ",
+          "Mỗi dòng 5 tiếng"
+        ]
+      },
+      {
+        "id": "v7_d6_c2",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 2. Xác định các tiếng gieo vần ở khổ 3. Cho biết kiểu gieo vần.",
+        "modelAnswer": "- Các tiếng gieo vần ở khổ 3: 'chơi' - 'trời' (vần 'ơi').\n- Kiểu gieo vần: Vần cách (dòng 2 gieo với dòng 4), vần chân.",
+        "keyPoints": [
+          "Vần chơi - trời",
+          "Vần cách / vần chân"
+        ]
+      },
+      {
+        "id": "v7_d6_c3",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 3. Tác dụng chủ yếu của phép tu từ so sánh được sử dụng trong câu thơ: “Trăng bay như quả bóng” là gì?",
+        "modelAnswer": "Tác dụng: Gợi tả hình ảnh vầng trăng tròn, lơ lửng giữa bầu trời với góc nhìn ngộ nghĩnh, quen thuộc của trẻ thơ gắn với trò chơi đá bóng, tạo nên vẻ đẹp năng động, tinh nghịch và gần gũi.",
+        "keyPoints": [
+          "Hình ảnh vầng trăng tròn, chuyển động",
+          "Góc nhìn ngây thơ, tinh nghịch của trẻ em"
+        ]
+      },
+      {
+        "id": "v7_d6_c4",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 4. Phân tích tác dụng của phép điệp ngữ: “Trăng ơi từ đâu đến?”",
+        "modelAnswer": "- Tác dụng:\n  + Tạo điệp khúc rộn ràng, khắc sâu câu hỏi tu từ và nỗi niềm tò mò tha thiết của tuổi thơ.\n  + Đóng vai trò làm sợi dây liên kết các khổ thơ, mở ra những liên tưởng phong phú, kì diệu về nguồn cội vầng trăng.",
+        "keyPoints": [
+          "Tạo nhạc điệu điệp khúc rộn ràng",
+          "Nhấn mạnh sự tò mò, khám phá thế giới của tuổi thơ"
+        ]
+      },
+      {
+        "id": "v7_d6_c5",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 5. Em hiểu như thế nào về câu thơ dưới đây:\n'Trăng ơi có nơi nào\nSáng hơn đất nước em?'",
+        "modelAnswer": "Câu thơ là câu hỏi tu từ bộc lộ niềm tự hào mãnh liệt và tình yêu tha thiết với quê hương đất nước. Trong mắt nhà thơ, vầng trăng đất nước mình là vầng trăng đẹp nhất, sáng nhất vì soi chiếu một dải non sông anh hùng, bình dị và thân thương.",
+        "keyPoints": [
+          "Câu hỏi tu từ khẳng định niềm tự hào dân tộc",
+          "Tình yêu quê hương đất nước sâu sắc"
+        ]
+      },
+      {
+        "id": "v7_d6_c6",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 6. Chủ đề của bài thơ là gì?",
+        "modelAnswer": "Chủ đề: Tình yêu thiên nhiên, trí tưởng tượng phong phú của tuổi thơ gắn liền với tình yêu quê hương đất nước và lòng kính phục các chú bộ đội đang cầm súng bảo vệ bầu trời Tổ quốc.",
+        "keyPoints": [
+          "Tình yêu thiên nhiên, trí tưởng tượng tuổi thơ",
+          "Tình yêu quê hương đất nước"
+        ]
+      },
+      {
+        "id": "v7_d6_c7",
+        "part": "I. Đọc hiểu văn bản và Tiếng Việt",
+        "type": "short_essay",
+        "question": "Câu 7. Từ nội dung bài thơ, viết đoạn văn (3-5 câu), bộc lộ tình cảm của em với quê hương đất nước.",
+        "modelAnswer": "Em luôn cảm thấy tự hào và yêu tha thiết mảnh đất hình chữ S tươi đẹp của mình. Quê hương không chỉ có những cánh đồng bao la, vầng trăng sáng diệu kỳ mà còn có sự chở che, hi sinh thầm lặng của biết bao thế hệ đi trước. Là một học sinh, em tự nhủ sẽ luôn cố gắng học tập thật tốt để góp phần xây dựng đất nước ngày càng giàu đẹp.",
+        "keyPoints": [
+          "Dung lượng 3-5 câu",
+          "Bộc lộ chân thành tình yêu, tự hào và trách nhiệm với quê hương"
+        ]
+      },
+      {
+        "id": "v7_d6_tl",
+        "part": "Phần II. Viết",
+        "type": "short_essay",
+        "question": "Viết đoạn văn (khoảng 200 chữ) ghi lại cảm xúc của em khi đọc bài thơ “Trăng ơi từ đâu đến?”.",
+        "modelAnswer": "Đoạn văn cần bộc lộ: Cảm xúc thích thú trước những liên tưởng bất ngờ của thần đồng thơ Trần Đăng Khoa (trăng như quả chín, mắt cá, quả bóng); cảm nhận sự gắn bó giữa trăng với người lính hành quân; xúc động trước niềm tự hào quê hương ở khổ thơ cuối.",
+        "keyPoints": [
+          "Khoảng 200 chữ",
+          "Bộc lộ cảm xúc rõ ràng, giàu hình ảnh"
+        ]
+      }
+    ]
+  }
+]

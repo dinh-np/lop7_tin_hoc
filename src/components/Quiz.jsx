@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
+import PassagePanel from './PassagePanel';
 
 export default function Quiz({ subjectId, part = 'all' }) {
   const questions = getQuestionsForSubject(subjectId, part);
@@ -96,6 +97,8 @@ export default function Quiz({ subjectId, part = 'all' }) {
           <span className="tag skill">{currentQuestion.skill}</span>
         )}
       </div>
+
+      <PassagePanel passage={currentQuestion.passage} />
 
       {/* Question */}
       <p className="question-text">{currentQuestion.question}</p>

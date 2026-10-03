@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
+import PassagePanel from './PassagePanel';
 import { saveSubmission, saveWrongAnswers, isFirebaseConfigured } from '../lib/firebase';
 import { batchDiagnose, isGeminiConfigured } from '../lib/gemini';
 
@@ -320,6 +321,8 @@ export default function Exam({ subjectId, part = 'all' }) {
           </span>
           <span className="tag topic">{currentQuestion.topic}</span>
         </div>
+
+        <PassagePanel passage={currentQuestion.passage} />
 
         <p className="question-text">{currentQuestion.question}</p>
         {currentQuestion.image && (
