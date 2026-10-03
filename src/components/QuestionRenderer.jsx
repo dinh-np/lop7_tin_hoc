@@ -5,6 +5,8 @@
  *  - short_essay: input text + reveal model answer + self-evaluation
  */
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export default function QuestionRenderer({ question, onAnswer, subjectId }) {
   const type = question.type || 'multiple_choice';
@@ -206,8 +208,10 @@ export function ShortEssayQuestion({ question, onAnswer, subjectId }) {
       {showAnswer && (
         <div className="explanation" style={{ marginTop: 12 }}>
           <strong>📝 Đáp án mẫu:</strong>
-          <div style={{ marginTop: 8, whiteSpace: 'pre-wrap' }}>
-            {question.modelAnswer || question.explanation || 'Chưa có đáp án mẫu.'}
+          <div className="markdown-body" style={{ marginTop: 8 }}>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {question.modelAnswer || question.explanation || 'Chưa có đáp án mẫu.'}
+            </ReactMarkdown>
           </div>
         </div>
       )}

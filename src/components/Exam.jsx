@@ -322,6 +322,9 @@ export default function Exam({ subjectId, part = 'all' }) {
         </div>
 
         <p className="question-text">{currentQuestion.question}</p>
+        {currentQuestion.image && (
+          <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
+        )}
 
         {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
           <ShortEssayQuestion

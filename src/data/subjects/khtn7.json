@@ -1,0 +1,982 @@
+{
+  "test_id": "khtn_7_hk1",
+  "title": "Khoa học tự nhiên 7 - Giữa kì 1",
+  "subject": "khoa_hoc_tu_nhien",
+  "term": "HK1_GiuaKy",
+  "time_limit_minutes": 45,
+  "is_active": true,
+  "questions": [
+    {
+      "id": "khtn7_tn_01",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 1. Khẳng định nào dưới đây không đúng?",
+      "options": [
+        "A. Dự báo là kĩ năng cần thiết trong nghiên cứu khoa học tự nhiên.",
+        "B. Dự báo là kĩ năng không cần thiết của người làm nghiên cứu.",
+        "C. Dự báo là kĩ năng dự đoán điều gì sẽ xảy ra dựa vào quan sát, kiến thức, suy luận của con người,.. về các sự vật, hiện tượng.",
+        "D. Kĩ năng dự báo thường được sử dụng trong bước dự đoán của phương pháp tìm hiểu tự nhiên."
+      ],
+      "answer": 1,
+      "explanation": "Đáp án B sai vì dự báo là kĩ năng rất cần thiết trong nghiên cứu khoa học tự nhiên."
+    },
+    {
+      "id": "khtn7_tn_02",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 2. Thứ tự sắp xếp đúng các bước trong phương pháp tìm hiểu tự nhiên là\n(a) hình thành giả thuyết.\n(b) quan sát và đặt câu hỏi.\n(c) lập kế hoạch kiểm tra giả thuyết.\n(d) thực hiện kế hoạch.\n(e) kết luận.",
+      "options": [
+        "A. (a) - (b) - (c) - (d) - (e).",
+        "B. (b) - (a) - (c) - (d) - (e).",
+        "C. (a) - (b) - (c) - (e) - (d).",
+        "D. (b) - (a) - (c) - (e) - (d)."
+      ],
+      "answer": 1,
+      "explanation": "Thứ tự đúng: (b) quan sát và đặt câu hỏi -> (a) hình thành giả thuyết -> (c) lập kế hoạch kiểm tra giả thuyết -> (d) thực hiện kế hoạch -> (e) kết luận."
+    },
+    {
+      "id": "khtn7_tn_03",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 3. Phương pháp tìm hiểu tự nhiên là",
+      "options": [
+        "A. hoạt động con người chủ động tìm tòi, khám phá ra tri thức khoa học.",
+        "B. tìm hiểu về thế giới con người, mối quan hệ của con người với môi trường.",
+        "C. cách thức tìm hiểu các sự vật, hiện tượng trong tự nhiên và đời sống, chứng minh được các vấn đề trong thực tiễn bằng các dẫn chứng khoa học.",
+        "D. cách thức tìm hiểu về thế giới tự nhiên và những ứng dụng khoa học tự nhiên trong cuộc sống thông qua các phương tiện truyền thông như sách, báo, internet,.."
+      ],
+      "answer": 2,
+      "explanation": "Phương pháp tìm hiểu tự nhiên là cách thức tìm hiểu các sự vật, hiện tượng trong tự nhiên và đời sống, chứng minh được các vấn đề trong thực tiễn bằng các dẫn chứng khoa học."
+    },
+    {
+      "id": "khtn7_tn_04",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 4. Bước làm nào sau đây không thuộc phương pháp tìm hiểu tự nhiên?",
+      "options": [
+        "A. Đề xuất vấn đề cần tìm hiểu",
+        "B. Đưa ra dự đoán khoa học để giải quyết vấn đề.",
+        "C. Lập kế hoạch sinh hoạt cá nhân.",
+        "D. Viết báo cáo. Thảo luận và trình bày báo cáo khi được yêu cầu."
+      ],
+      "answer": 2,
+      "explanation": "Lập kế hoạch sinh hoạt cá nhân không thuộc phương pháp tìm hiểu tự nhiên."
+    },
+    {
+      "id": "khtn7_tn_05",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 5. Nội dung thực hiện khi nghiên cứu sự hòa tan của một số chất rắn\n(a) tìm hiểu khả năng hòa tan của muối ăn, đường, đá vôi (dạng bột) trong nước.\n(b) dự đoán trong số các chất muối ăn, đường, đá vôi (dạng bột), chất nào tan, chất nào không tan trong nước?\n(c) thực hiện các bước thí nghiệm: rót vào cùng một thể tích nước (khoảng 5 mL) vào ba ống nghiệm. Thêm vào mỗi ống nghiệm khoảng 1 gam mỗi chất rắn và lắc đều khoảng 1 - 2 phút. Quan sát và ghi lại kết quả thí nghiệm. So sánh và rút ra kết luận.\n(d) đề xuất thí nghiệm để kiểm tra dự đoán (chuẩn bị dụng cụ, hóa chất và các bước thí nghiệm).\n(e) viết báo cáo và trình bày quá trình thực nghiệm, thảo luận kết quả thí nghiệm.\nCách sắp xếp đúng theo các bước của phương pháp tìm hiểu tự nhiên là",
+      "options": [
+        "A. (a), (b), (d), (c), (e).",
+        "B. (a), (b), (c), (d), (e).",
+        "C. (b), (c), (a), (d), (e).",
+        "D. (b), (a), (d), (e), (c)."
+      ],
+      "answer": 0,
+      "explanation": "Trình tự đúng là: (a) Quan sát/đặt câu hỏi -> (b) Dự đoán -> (d) Đề xuất kế hoạch thí nghiệm -> (c) Thực hiện kế hoạch thí nghiệm -> (e) Viết báo cáo, thảo luận."
+    },
+    {
+      "id": "khtn7_tn_06",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 6. Con người có thể định lượng được các sự vật và hiện tượng tự nhiên dựa trên kĩ năng nào?",
+      "options": [
+        "A. Kĩ năng quan sát, phân loại.",
+        "B. Kĩ năng liên kết tri thức.",
+        "C. Kĩ năng dự báo.",
+        "D. Kĩ năng đo."
+      ],
+      "answer": 3,
+      "explanation": "Kĩ năng đo giúp con người định lượng được các đại lượng, sự vật và hiện tượng tự nhiên."
+    },
+    {
+      "id": "khtn7_tn_07",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 7. Phương pháp tìm hiểu tự nhiên được thực hiện qua mấy bước?",
+      "options": [
+        "A. 4.",
+        "B. 5.",
+        "C. 6.",
+        "D. 7."
+      ],
+      "answer": 1,
+      "explanation": "Phương pháp tìm hiểu tự nhiên gồm 5 bước cơ bản."
+    },
+    {
+      "id": "khtn7_tn_08",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 8. Số electron tối đa ở lớp thứ nhất là",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 6.",
+        "D. 8."
+      ],
+      "answer": 1,
+      "explanation": "Lớp electron thứ nhất (lớp trong cùng) chứa tối đa 2 electron."
+    },
+    {
+      "id": "khtn7_tn_09",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 9. Phát biểu nào sau đây không mô tả đúng mô hình nguyên tử của Rutherford-Bohr?",
+      "options": [
+        "A. Nguyên tử gồm các electron được sắp xếp thành từng lớp và chuyển động xung quanh hạt nhân theo quỹ đạo giống như hành tinh trong hệ mặt trời.",
+        "B. Nguyên tử có cấu tạo gồm hạt nhân ở bên trong và vỏ tạo bởi một hay nhiều electron.",
+        "C. Nguyên tử có cấu tạo gồm hạt nhân ở bên trong và vỏ tạo bởi một hay nhiều proton.",
+        "D. Hạt nhân nguyên tử mang điện tích dương, electron mang điện tích âm."
+      ],
+      "answer": 2,
+      "explanation": "Đáp án C không đúng vì vỏ nguyên tử tạo bởi electron, không phải proton."
+    },
+    {
+      "id": "khtn7_tn_10",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 10. Trừ hạt nhân của nguyên tử hydrogen, hạt nhân các nguyên tử còn lại được thành từ các hạt",
+      "options": [
+        "A. electron và proton.",
+        "B. electron và neutron.",
+        "C. electron, proton và neutron.",
+        "D. proton và neutron."
+      ],
+      "answer": 3,
+      "explanation": "Hạt nhân các nguyên tử (trừ H thường chỉ có 1 proton) được cấu tạo từ proton và neutron."
+    },
+    {
+      "id": "khtn7_tn_11",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 11. Kí hiệu của 3 hạt neutron, proton, electron lần lượt là",
+      "options": [
+        "A. n, p, e.",
+        "B. e, p, n.",
+        "C. n, e, p.",
+        "D. p, n, e."
+      ],
+      "answer": 0,
+      "explanation": "Neutron kí hiệu là n, proton là p, electron là e."
+    },
+    {
+      "id": "khtn7_tn_12",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 12. Nguyên tử được cấu tạo bởi",
+      "options": [
+        "A. neutron, proton và electron.",
+        "B. proton và neutron.",
+        "C. proton và electron.",
+        "D. electron và neutron."
+      ],
+      "answer": 0,
+      "explanation": "Nguyên tử được cấu tạo từ 3 loại hạt: proton, neutron và electron."
+    },
+    {
+      "id": "khtn7_tn_13",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 13. Hạt nhân nguyên tử được cấu tạo bởi",
+      "options": [
+        "A. neutron và electron.",
+        "B. proton và electron.",
+        "C. proton và neutron.",
+        "D. electron."
+      ],
+      "answer": 2,
+      "explanation": "Hạt nhân nguyên tử gồm proton và neutron."
+    },
+    {
+      "id": "khtn7_tn_14",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 14. Trong nguyên tử, hạt nào mang điện tích dương?",
+      "options": [
+        "A. Electron.",
+        "B. Proton.",
+        "C. Neutron.",
+        "D. Neutron và proton."
+      ],
+      "answer": 1,
+      "explanation": "Hạt proton mang điện tích dương (+)."
+    },
+    {
+      "id": "khtn7_tn_15",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 15. Trong các phát biểu sau, phát biểu nào là không đúng?",
+      "options": [
+        "A. Hạt nhân nguyên tử được tạo bởi proton và neutron.",
+        "B. Số proton trong nguyên tử bằng số neutron.",
+        "C. Số proton trong hạt nhân bằng số electron của lớp vỏ nguyên tử.",
+        "D. Theo mô hình nguyên tử của Rutherford-Bohr, các electron ở vỏ được xếp thành từng lớp và chuyển động xung quanh hạt nhân theo những quỹ đạo như các hành tinh quay quanh Mặt Trời."
+      ],
+      "answer": 1,
+      "explanation": "Phát biểu B không đúng vì trong nguyên tử, số proton chưa chắc bằng số neutron (chỉ chắc chắn số proton = số electron)."
+    },
+    {
+      "id": "khtn7_tn_16",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 16. Đơn vị của khối lượng nguyên tử là",
+      "options": [
+        "A. gam.",
+        "B. kilogam.",
+        "C. lít.",
+        "D. amu."
+      ],
+      "answer": 3,
+      "explanation": "Đơn vị khối lượng nguyên tử theo IUPAC là amu (atomic mass unit)."
+    },
+    {
+      "id": "khtn7_tn_17",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 17. Một nguyên tử có 20 proton. Số electron của nguyên tử đó là",
+      "options": [
+        "A. 20.",
+        "B. 21.",
+        "C. 22.",
+        "D. 23."
+      ],
+      "answer": 0,
+      "explanation": "Trong nguyên tử trung hòa về điện: Số electron = Số proton = 20."
+    },
+    {
+      "id": "khtn7_tn_18",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 18. Cho nguyên tử sodium có 11 proton trong hạt nhân. Câu nào sau đây không đúng?",
+      "options": [
+        "A. Sodium có 11 electron ở lớp vỏ nguyên tử.",
+        "B. Sodium có điện tích hạt nhân là +11.",
+        "C. Sodium có số đơn vị điện tích hạt nhân là 11.",
+        "D. Sodium có 11 electron trong hạt nhân."
+      ],
+      "answer": 3,
+      "explanation": "Hạt nhân không chứa electron mà chỉ chứa proton và neutron. Electron nằm ở lớp vỏ."
+    },
+    {
+      "id": "khtn7_tn_19",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 19. Nguyên tố hóa học nào chiếm hàm lượng cao nhất trong cơ thể người?",
+      "options": [
+        "A. Carbon.",
+        "B. Hydrogen.",
+        "C. Oxygen.",
+        "D. Nitrogen."
+      ],
+      "answer": 2,
+      "explanation": "Oxygen chiếm khoảng 65% khối lượng cơ thể người."
+    },
+    {
+      "id": "khtn7_tn_20",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 20. Nguyên tố hóa học nào chiếm hàm lượng cao nhất trong vỏ Trái Đất?",
+      "options": [
+        "A. Carbon.",
+        "B. Hydrogen.",
+        "C. Oxygen.",
+        "D. Nitrogen."
+      ],
+      "answer": 2,
+      "explanation": "Oxygen là nguyên tố phổ biến nhất, chiếm gần một nửa khối lượng vỏ Trái Đất."
+    },
+    {
+      "id": "khtn7_tn_21",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 21. Nguyên tố hoá học có kí hiệu Cl là",
+      "options": [
+        "A. chlorine.",
+        "B. carbon.",
+        "C. copper.",
+        "D. calcium."
+      ],
+      "answer": 0,
+      "explanation": "Cl là kí hiệu hoá học của nguyên tố chlorine."
+    },
+    {
+      "id": "khtn7_tn_22",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 22. Kí hiệu nào sau đây là kí hiệu hoá học của nguyên tố magnesium?",
+      "options": [
+        "A. MG.",
+        "B. Mg.",
+        "C. mg.",
+        "D. Ma."
+      ],
+      "answer": 1,
+      "explanation": "Kí hiệu đúng của magnesium là Mg (chữ cái đầu viết hoa, chữ thứ hai viết thường)."
+    },
+    {
+      "id": "khtn7_tn_23",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 23. Kí hiệu hóa học của nguyên tố aluminium là?",
+      "options": [
+        "A. Mg.",
+        "B. Ar.",
+        "C. Ca.",
+        "D. Al."
+      ],
+      "answer": 3,
+      "explanation": "Aluminium có kí hiệu hóa học là Al."
+    },
+    {
+      "id": "khtn7_tn_24",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 24. Cho dãy các kí hiệu hóa học sau: O, Na, P, Be, Cl. Thứ tự tên của các nguyên tố lần lượt là?",
+      "options": [
+        "A. Oxygen, sodium, phosphorus, beryllium, calcium.",
+        "B. Oxygen, potassium, phosphorus, beryllium, chlorine.",
+        "C. Oxygen, phosphorus, sodium, beryllium, chlorine.",
+        "D. Oxygen, sodium, phosphorus, beryllium, chlorine."
+      ],
+      "answer": 3,
+      "explanation": "O: Oxygen, Na: Sodium, P: Phosphorus, Be: Beryllium, Cl: Chlorine."
+    },
+    {
+      "id": "khtn7_tn_25",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 25. Cho nguyên tử của nguyên tố Oxygen có 8 proton. Chọn câu đúng?",
+      "options": [
+        "A. Số electron là 8.",
+        "B. Số hiệu nguyên tử là 16.",
+        "C. Khối lượng nguyên tử là 8 amu.",
+        "D. Đây là nguyên tố carbon."
+      ],
+      "answer": 0,
+      "explanation": "Nguyên tử có 8 proton thì số electron cũng bằng 8."
+    },
+    {
+      "id": "khtn7_tn_26",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 26. Khí nitrogen được tạo thành từ nguyên tố nào?",
+      "options": [
+        "A. Carbon.",
+        "B. Hydrogen.",
+        "C. Oxygen.",
+        "D. Nitrogen."
+      ],
+      "answer": 3,
+      "explanation": "Khí nitrogen là đơn chất được tạo thành từ nguyên tố nitrogen."
+    },
+    {
+      "id": "khtn7_tn_27",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 27. Trong nguyên tử, hạt mang điện tích âm là",
+      "options": [
+        "A. hạt proton.",
+        "B. hạt neutron.",
+        "C. hạt electron.",
+        "D. hạt nhân."
+      ],
+      "answer": 2,
+      "explanation": "Hạt electron mang điện tích âm (-)."
+    },
+    {
+      "id": "khtn7_tn_28",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 28. Nguyên tử iron (sắt) có 26 proton. Điện tích hạt nhân của nguyên tử iron là",
+      "options": [
+        "A. 26+.",
+        "B. +26.",
+        "C. -26.",
+        "D. 26-."
+      ],
+      "answer": 1,
+      "explanation": "Điện tích hạt nhân được ghi dấu cộng phía trước số đơn vị: +26."
+    },
+    {
+      "id": "khtn7_tn_29",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 29. Bảng tuần hoàn các nguyên tố hoá học được cấu tạo từ",
+      "options": [
+        "A. ô nguyên tố, chu kì, nhóm.",
+        "B. chu kì, nhóm.",
+        "C. ô nguyên tố.",
+        "D. chu kì."
+      ],
+      "answer": 0,
+      "explanation": "Bảng tuần hoàn gồm 3 thành phần cấu tạo: ô nguyên tố, chu kì và nhóm."
+    },
+    {
+      "id": "khtn7_tn_30",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 30. Trong bảng tuần hoàn các nguyên tố hóa học, số chu kì nhỏ và số chu kì lớn là?",
+      "options": [
+        "A. 3 và 3.",
+        "B. 4 và 3.",
+        "C. 4 và 4.",
+        "D. 3 và 4."
+      ],
+      "answer": 3,
+      "explanation": "Có 3 chu kì nhỏ (1, 2, 3) và 4 chu kì lớn (4, 5, 6, 7)."
+    },
+    {
+      "id": "khtn7_tn_31",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 31. Các nguyên tố xếp ở chu kì 2 có số lớp electron trong nguyên tử là?",
+      "options": [
+        "A. 2.",
+        "B. 3.",
+        "C. 4.",
+        "D. 5."
+      ],
+      "answer": 0,
+      "explanation": "Số thứ tự chu kì = số lớp electron trong nguyên tử. Do đó chu kì 2 có 2 lớp electron."
+    },
+    {
+      "id": "khtn7_tn_32",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 32. Carbon nằm ở ô số 6. Số hạt proton trong nguyên tử carbon là",
+      "options": [
+        "A. 6.",
+        "B. 3.",
+        "C. 12.",
+        "D. 18."
+      ],
+      "answer": 0,
+      "explanation": "Số thứ tự ô nguyên tố = số hiệu nguyên tử = số proton = 6."
+    },
+    {
+      "id": "khtn7_tn_33",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 33. Các nguyên tố kim loại thuộc nhóm IIA được gọi là gì?",
+      "options": [
+        "A. Nhóm kim loại kiềm.",
+        "B. Nhóm kim loại kiềm thổ.",
+        "C. Nhóm halogen.",
+        "D. Nhóm nguyên tố khí hiếm."
+      ],
+      "answer": 1,
+      "explanation": "Nhóm IA là kim loại kiềm, nhóm IIA là kim loại kiềm thổ."
+    },
+    {
+      "id": "khtn7_tn_34",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 34. Các nguyên tố khí hiếm nằm ở nhóm",
+      "options": [
+        "A. IA.",
+        "B. IIA.",
+        "C. VIIA.",
+        "D. VIIIA."
+      ],
+      "answer": 3,
+      "explanation": "Các nguyên tố khí hiếm thuộc nhóm VIIIA."
+    },
+    {
+      "id": "khtn7_tn_35",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 35. Phát biểu nào sau đây không đúng?",
+      "options": [
+        "A. Hầu hết các nguyên tố phi kim tập trung ở các nhóm VA, VIA, VIIA.",
+        "B. Các nguyên tố khí hiếm nằm ở nhóm VIIIA.",
+        "C. Các nguyên tố kim loại có mặt ở tất cả các nhóm trong bảng tuần hoàn.",
+        "D. Các nguyên tố khí hiếm đều có 8 electron ở lớp ngoài cùng (trừ He)."
+      ],
+      "answer": 2,
+      "explanation": "Phát biểu C không đúng vì nhóm VIIIA chỉ gồm các khí hiếm, không có kim loại."
+    },
+    {
+      "id": "khtn7_tn_36",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 36. Nguyên tử của nguyên tố X có 3 lớp electron, lớp electron ngoài cùng có 2 electron. Vị trí của nguyên tố X là",
+      "options": [
+        "A. thuộc chu kỳ 3, nhóm VIA.",
+        "B. thuộc chu kỳ 3, nhóm IIA.",
+        "C. thuộc chu kỳ 2, nhóm IIIA.",
+        "D. thuộc chu kỳ 2, nhóm VIA."
+      ],
+      "answer": 1,
+      "explanation": "Có 3 lớp electron -> Chu kì 3; Có 2 electron lớp ngoài cùng -> Nhóm IIA."
+    },
+    {
+      "id": "khtn7_tn_37",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 37. Một phân tử nước chứa hai nguyên tử hydrogen và một oxygen. Nước là",
+      "options": [
+        "A. một hợp chất.",
+        "B. một đơn chất.",
+        "C. một hỗn hợp.",
+        "D. một nguyên tố hoá học."
+      ],
+      "answer": 0,
+      "explanation": "Nước được tạo nên từ 2 nguyên tố hóa học khác nhau (H và O) nên là một hợp chất."
+    },
+    {
+      "id": "khtn7_tn_38",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 38. Khối lượng phân tử sulfur dioxide (SO2) và sulfur trioxide (SO3) lần lượt là",
+      "options": [
+        "A. 64 amu và 80 amu.",
+        "B. 48 amu và 48 amu.",
+        "C. 16 amu và 32 amu.",
+        "D. 80 amu và 64 amu."
+      ],
+      "answer": 0,
+      "explanation": "SO2: 32 + 16*2 = 64 amu; SO3: 32 + 16*3 = 80 amu."
+    },
+    {
+      "id": "khtn7_tn_39",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 39. Chất được phân chia thành hai loại lớn là .........(1) và ............(2). Đơn chất được tạo nên từ một nguyên tố hóa học, còn ...........(3) được tạo nên từ hai nguyên tố hóa học trở lên. (1), (2), (3) lần lượt là",
+      "options": [
+        "A. phân tử, đơn chất, hợp chất.",
+        "B. phân tử, hợp chất, hợp chất.",
+        "C. đơn chất, hợp chất, hợp chất.",
+        "D. đơn chất, hợp chất, đơn chất."
+      ],
+      "answer": 2,
+      "explanation": "(1) đơn chất, (2) hợp chất, (3) hợp chất."
+    },
+    {
+      "id": "khtn7_tn_40",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 40. Cho các chất sau: Cu, Mg, NaCl, HCl, BaO, N2, O2. Có bao nhiêu chất là đơn chất?",
+      "options": [
+        "A. 2.",
+        "B. 3.",
+        "C. 4.",
+        "D. 5."
+      ],
+      "answer": 2,
+      "explanation": "Có 4 đơn chất là: Cu, Mg, N2, O2."
+    },
+    {
+      "id": "khtn7_tn_41",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 41. Từ một nguyên tố hóa học có thể tạo nên bao nhiêu đơn chất?",
+      "options": [
+        "A. Chỉ 1 đơn chất.",
+        "B. Chỉ 2 đơn chất.",
+        "C. Chỉ 3 đơn chất.",
+        "D. Tùy thuộc vào tính chất của nguyên tố hóa học đó."
+      ],
+      "answer": 3,
+      "explanation": "Một nguyên tố có thể tạo ra một hoặc nhiều dạng đơn chất khác nhau (ví dụ carbon tạo than chì, kim cương; oxygen tạo O2, O3)."
+    },
+    {
+      "id": "khtn7_tn_42",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 42. Sulfur dioxide gồm 1S và 2O. Ta nói thành phần phân tử của sulfur dioxide gồm",
+      "options": [
+        "A. 2 đơn chất sulfur và oxygen.",
+        "B. 1 nguyên tố sulfur và 2 nguyên tố oxygen.",
+        "C. Nguyên tử sulfur và nguyên tử oxygen.",
+        "D. 1 nguyên tử sulfur và 2 nguyên tử oxygen."
+      ],
+      "answer": 3,
+      "explanation": "Thành phần phân tử sulfur dioxide gồm 1 nguyên tử sulfur và 2 nguyên tử oxygen."
+    },
+    {
+      "id": "khtn7_tn_43",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 43. Đơn chất là những chất được tạo nên từ bao nhiêu nguyên tố hóa học?",
+      "options": [
+        "A. Từ 1 nguyên tố.",
+        "B. Từ 2 nguyên tố trở lên.",
+        "C. Từ 3 nguyên tố.",
+        "D. Từ 4 nguyên tố."
+      ],
+      "answer": 0,
+      "explanation": "Đơn chất được tạo nên từ 1 nguyên tố hóa học."
+    },
+    {
+      "id": "khtn7_tn_44",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 44. Trong các chất sau hãy cho biết dãy nào chỉ gồm toàn đơn chất?",
+      "options": [
+        "A. FeO, NO, C, S.",
+        "B. Mg, K, S, C, N2.",
+        "C. FeO, Mg, N2, H2O.",
+        "D. Mg, K2O, O2, S."
+      ],
+      "answer": 1,
+      "explanation": "Dãy Mg, K, S, C, N2 đều được tạo nên từ 1 nguyên tố hóa học nên toàn là đơn chất."
+    },
+    {
+      "id": "khtn7_tn_45",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 45. Chất nào sau đây không phải là hợp chất cộng hóa trị",
+      "options": [
+        "A. SO2.",
+        "B. CO2.",
+        "C. NaCl.",
+        "D. H2O."
+      ],
+      "answer": 2,
+      "explanation": "NaCl là hợp chất ion (liên kết ion giữa kim loại Na và phi kim Cl)."
+    },
+    {
+      "id": "khtn7_tn_46",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 46. Trong phân tử NaCl, nguyên tử Na và nguyên tử Cl liên kết với nhau bằng liên kết",
+      "options": [
+        "A. cộng hóa trị.",
+        "B. ion.",
+        "C. kim loại.",
+        "D. phi kim."
+      ],
+      "answer": 1,
+      "explanation": "NaCl là hợp chất ion, liên kết ion hình thành do lực hút tĩnh điện giữa ion Na+ và Cl-."
+    },
+    {
+      "id": "khtn7_tn_47",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 47. Cho các hợp chất sau: MgCl2, Na2O, NH3, HCl, NaCl. Hợp chất nào sau đây có liên kết cộng hóa trị",
+      "options": [
+        "A. NH3 và HCl.",
+        "B. Na2O và NH3.",
+        "C. MgCl2 và Na2O.",
+        "D. HCl và NaCl."
+      ],
+      "answer": 0,
+      "explanation": "NH3 và HCl là hợp chất tạo bởi các phi kim với nhau nên có liên kết cộng hóa trị."
+    },
+    {
+      "id": "khtn7_tn_48",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 48. Liên kết được hình thành bởi sự dùng chung electron giữa hai nguyên tử là liên kết nào?",
+      "options": [
+        "A. Liên kết ion.",
+        "B. Liên kết cộng hóa trị.",
+        "C. Liên kết hydrogen.",
+        "D. Liên kết kim loại."
+      ],
+      "answer": 1,
+      "explanation": "Liên kết cộng hóa trị là liên kết được hình thành bởi sự dùng chung một hay nhiều cặp electron."
+    },
+    {
+      "id": "khtn7_tn_49",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 49. Phát biểu nào sau đây là đúng về chất ion?",
+      "options": [
+        "A. Chất ion là chất được tạo bởi các ion dương và ion âm.",
+        "B. Ở điều kiện thường, chất ion thường ở thể rắn, lỏng, khí.",
+        "C. Chất ion dễ bay hơi, kém bền nhiệt.",
+        "D. Chất ion không tan được trong nước."
+      ],
+      "answer": 0,
+      "explanation": "Chất ion được tạo thành bởi lực hút tĩnh điện giữa các ion dương và ion âm."
+    },
+    {
+      "id": "khtn7_tn_50",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 50. Phát biểu nào sau đây là sai về chất cộng hóa trị?",
+      "options": [
+        "A. Chất cộng hóa trị là chất được tạo thành nhờ liên kết cộng hóa trị.",
+        "B. Ở điều kiện thường, chất cộng hóa trị có thể ở thể rắn, lỏng, khí.",
+        "C. Chất cộng hóa trị thường dễ bay hơi, kém bền nhiệt.",
+        "D. Chất cộng hóa trị không tan được trong nước."
+      ],
+      "answer": 3,
+      "explanation": "Phát biểu D sai vì nhiều chất cộng hóa trị tan rất tốt trong nước (như đường saccharose, rượu ethanol, khí HCl, khí NH3,...)."
+    },
+    {
+      "id": "khtn7_tn_51",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 51. Để hình thành liên kết ion trong phân tử sodium sulfide, nguyên tử S (sulfur) (Z = 16)",
+      "options": [
+        "A. nhường 2 electron cho nguyên tử sodium.",
+        "B. nhường 6 electron cho nguyên tử sodium.",
+        "C. nhận 2 electron từ nguyên tử sodium.",
+        "D. nhận 4 electron từ nguyên tử sodium."
+      ],
+      "answer": 2,
+      "explanation": "S có 6 electron ở lớp ngoài cùng nên nhận thêm 2 electron từ 2 nguyên tử sodium để đạt cấu hình bền vững 8e."
+    },
+    {
+      "id": "khtn7_tn_52",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 52. Khi hình thành phân tử calcium chloride, nguyên tử Ca (calcium) (Z = 20)",
+      "options": [
+        "A. nhường 2 electron cho nguyên tử chlorine.",
+        "B. nhận 1 electron từ nguyên tử chlorine.",
+        "C. nhường 1 electron cho nguyên tử chlorine.",
+        "D. nhận 2 electron từ nguyên tử chlorine."
+      ],
+      "answer": 0,
+      "explanation": "Ca có 2 electron lớp ngoài cùng nên nhường 2 electron (mỗi e cho 1 nguyên tử Cl) để đạt cấu hình bền vững."
+    },
+    {
+      "id": "khtn7_tn_53",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 53. Dãy các hợp chất có nhiệt độ nóng chảy và nhiệt độ sôi thấp là",
+      "options": [
+        "A. Nước, khí ammonia, khí carbon dioxide.",
+        "B. Nước, muối ăn, khí ammonia.",
+        "C. Magnesium oxide, nước, khí carbon dioxide.",
+        "D. Muối ăn, khí ammonia, khí carbon dioxide."
+      ],
+      "answer": 0,
+      "explanation": "Nước, ammonia, carbon dioxide đều là các hợp chất cộng hóa trị nên có nhiệt độ nóng chảy và nhiệt độ sôi tương đối thấp."
+    },
+    {
+      "id": "khtn7_tn_54",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 54. Muối ăn chứa hai nguyên tố hóa học là sodium và chlorine. Trong hạt nhân nguyên tử của các nguyên tố sodium và chlorine có lần lượt 11 và 17 proton. Số electron ở lớp ngoài cùng của vỏ nguyên tử sodium và chlorine lần lượt là",
+      "options": [
+        "A. 1 và 7.",
+        "B. 3 và 9.",
+        "C. 9 và 15.",
+        "D. 3 và 7."
+      ],
+      "answer": 0,
+      "explanation": "Na (Z=11): 2, 8, 1 -> lớp ngoài cùng có 1e. Cl (Z=17): 2, 8, 7 -> lớp ngoài cùng có 7e."
+    },
+    {
+      "id": "khtn7_tn_55",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "multiple_choice",
+      "part": "A. BÀI TẬP TRẮC NGHIỆM",
+      "question": "Câu 55. Nguyên tử X có 11 proton và 12 neutron. Tổng số hạt trong nguyên tử X là",
+      "options": [
+        "A. 23.",
+        "B. 34.",
+        "C. 35.",
+        "D. 4"
+      ],
+      "answer": 1,
+      "explanation": "Số e = Số p = 11. Tổng số hạt = p + e + n = 11 + 11 + 12 = 34 hạt."
+    },
+    {
+      "id": "khtn7_ds_01",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "B. PHẦN TRẮC NGHIỆM ĐÚNG SAI",
+      "question": "Câu 1. Xét tính đúng - sai của các phát biểu sau:\na) Nguyên tử trung hòa về điện.\nb) Khối lượng nguyên tử tập trung chủ yếu ở hạt nhân.\nc) Trong nguyên tử, số hạt mang điện tích dương bằng số hạt mang điện tích âm nên số hạt electron bằng số hạt neutron.\nd) Vỏ nguyên tử gồm các lớp electron có khoảng cách khác nhau đối với hạt nhân.",
+      "modelAnswer": "a) Đúng (Đ)\nb) Đúng (Đ)\nc) Sai (S) - Vì số hạt mang điện tích dương (proton) bằng số hạt mang điện tích âm (electron), không phải neutron.\nd) Đúng (Đ)",
+      "explanation": "a-Đ, b-Đ, c-S, d-Đ theo đáp án chính thức trong đề cương."
+    },
+    {
+      "id": "khtn7_ds_02",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "B. PHẦN TRẮC NGHIỆM ĐÚNG SAI",
+      "question": "Câu 2. Hạt nhân nguyên tử nguyên tố Phosphorus chứa 15 proton và 16 neutron.\na) Kí hiệu hóa học của Phosphorus là P.\nb) Nguyên tử Phosphorus có 16 electron.\nc) Tổng số hạt trong nguyên tử Phosphorus là 47 hạt.\nd) Khối lượng nguyên tử Phosphorus là 31 amu.",
+      "modelAnswer": "a) Đúng (Đ)\nb) Sai (S) - Vì số electron = số proton = 15 electron.\nc) Sai (S) - Vì tổng số hạt = p + e + n = 15 + 15 + 16 = 46 hạt.\nd) Đúng (Đ) - Khối lượng nguyên tử ≈ p + n = 15 + 16 = 31 amu.",
+      "explanation": "a-Đ, b-S, c-S, d-Đ theo đáp án ghi chú trong đề cương."
+    },
+    {
+      "id": "khtn7_ds_03",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "B. PHẦN TRẮC NGHIỆM ĐÚNG SAI",
+      "question": "Câu 3. Cho các chất sau: ammonia, methane, muối ăn, nước, carbon dioxide, khí Oxygen.\na) Có 3 hợp chất cộng hóa trị.\nb) Có 1 hợp chất ion.\nc) Có 4 phân tử là hợp chất.\nd) Có 1 phân tử là đơn chất.",
+      "modelAnswer": "a) Sai (S) - Có 4 hợp chất cộng hóa trị (ammonia, methane, nước, carbon dioxide).\nb) Đúng (Đ) - Muối ăn (NaCl) là hợp chất ion duy nhất.\nc) Sai (S) - Có 5 hợp chất (ammonia, methane, muối ăn, nước, carbon dioxide).\nd) Đúng (Đ) - Khí Oxygen là đơn chất duy nhất.",
+      "explanation": "Đánh giá đúng sai các nhận định dựa trên phân loại đơn chất, hợp chất ion và hợp chất cộng hóa trị."
+    },
+    {
+      "id": "khtn7_ds_04",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "B. PHẦN TRẮC NGHIỆM ĐÚNG SAI",
+      "question": "Câu 4. Khi hình thành phân tử calcium chloride, xét nguyên tử Ca (calcium) và Cl (chlorine) (Ca (Z = 20), Cl (Z = 17))\na) Nguyên tử Ca nhường 2 electron.\nb) Mỗi nguyên tử Cl nhận 2 electron.\nc) Liên kết trong phân tử calcium chloride là liên kết cộng hóa trị.\nd) Liên kết trong phân tử được hình thành nhờ sự góp chung electron.",
+      "modelAnswer": "a) Đúng (Đ)\nb) Sai (S) - Mỗi nguyên tử Cl chỉ nhận 1 electron để đạt 8 electron lớp ngoài cùng.\nc) Sai (S) - Đây là liên kết ion (hình thành giữa kim loại Ca và phi kim Cl).\nd) Sai (S) - Liên kết hình thành do lực hút tĩnh điện giữa ion Ca2+ và Cl-, không phải sự góp chung electron.",
+      "explanation": "Lưu ý đề cương ghi nhận các nhận định đúng sai tương ứng."
+    },
+    {
+      "id": "khtn7_tl_01",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "C. BÀI TẬP TỰ LUẬN",
+      "image": "/images/khtn7_cau1.png",
+      "question": "Câu 1. (NB) Cho sơ đồ một số nguyên tử sau (xem sơ đồ hình ảnh đính kèm của Nitrogen và Magnesium):\nHãy chỉ ra: Số p trong hạt nhân, số e trong nguyên tử, số lớp electron và số e lớp ngoài cùng của mỗi nguyên tử.",
+      "modelAnswer": "1. Nguyên tử Nitrogen (hạt nhân có 7+):\n- Số p trong hạt nhân: 7\n- Số e trong nguyên tử: 7\n- Số lớp electron: 2 lớp\n- Số e lớp ngoài cùng: 5 electron.\n\n2. Nguyên tử Magnesium (hạt nhân có 12+):\n- Số p trong hạt nhân: 12\n- Số e trong nguyên tử: 12\n- Số lớp electron: 3 lớp\n- Số e lớp ngoài cùng: 2 electron.",
+      "explanation": "Quan sát sơ đồ mô hình Rutherford-Bohr: số proton hiển thị ở tâm hạt nhân (+), đếm các vòng tròn để biết số lớp e và đếm số chấm electron trên từng vòng."
+    },
+    {
+      "id": "khtn7_tl_02",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "C. BÀI TẬP TỰ LUẬN",
+      "image": "/images/khtn7_cau2.png",
+      "question": "Câu 2. Cho mô hình nguyên tử của các nguyên tố hóa học sau (Lithium, Sodium, Fluorine, Chlorine):\na) Cho biết vị trí (ô, chu kì, nhóm) của nguyên tử nguyên tố trong bảng tuần hoàn.\nb) Cho biết nguyên tố là kim loại, phi kim hay khí hiếm.",
+      "modelAnswer": "a) Vị trí trong bảng tuần hoàn:\n- Lithium (Li): Ô số 3, chu kì 2 (2 lớp e), nhóm IA (1e ngoài cùng).\n- Sodium (Na): Ô số 11, chu kì 3 (3 lớp e), nhóm IA (1e ngoài cùng).\n- Fluorine (F): Ô số 9, chu kì 2 (2 lớp e), nhóm VIIA (7e ngoài cùng).\n- Chlorine (Cl): Ô số 17, chu kì 3 (3 lớp e), nhóm VIIA (7e ngoài cùng).\n\nb) Phân loại nguyên tố:\n- Lithium (Li): Kim loại.\n- Sodium (Na): Kim loại.\n- Fluorine (F): Phi kim.\n- Chlorine (Cl): Phi kim.",
+      "explanation": "Quy tắc xác định: Số thứ tự ô = số p = số e; Số chu kì = số lớp e; Số nhóm A = số e lớp ngoài cùng. Nhóm IA có 1e ngoài cùng là kim loại, nhóm VIIA có 7e ngoài cùng là phi kim."
+    },
+    {
+      "id": "khtn7_tl_03",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "C. BÀI TẬP TỰ LUẬN",
+      "question": "Câu 3. (NB) Hãy chỉ ra đâu là đơn chất, đâu là hợp chất trong các trường hợp sau và tính khối lượng phân tử:\na. Khí ammonia tạo nên từ 1N và 3H\nb. Khí oxygen tạo nên từ 2O\nc. Hydrochloric acid tạo nên từ 1H và 1Cl\nd. Calcium carbonate tạo nên từ 1Ca, 1C và 3O\ne. Saccharose tạo nên từ 12C, 22H và 11O\nf. Khí carbon dioxide tạo nên từ 1C và 2O\n(Cho biết: H = 1, C = 12, N = 14, O = 16, Cl = 35.5, Ca = 40)",
+      "modelAnswer": "| Chất | Phân loại | Khối lượng phân tử (amu) |\n| :--- | :--- | :--- |\n| a. Khí ammonia (NH3) | Hợp chất | 14 + 1×3 = 17 amu |\n| b. Khí oxygen (O2) | Đơn chất | 16×2 = 32 amu |\n| c. Hydrochloric acid (HCl) | Hợp chất | 1 + 35.5 = 36.5 amu |\n| d. Calcium carbonate (CaCO3) | Hợp chất | 40 + 12 + 16×3 = 100 amu |\n| e. Saccharose (C12H22O11) | Hợp chất | 12×12 + 1×22 + 16×11 = 342 amu |\n| f. Khí carbon dioxide (CO2) | Hợp chất | 12 + 16×2 = 44 amu |\n\n* Giải thích: Khí oxygen là đơn chất vì tạo nên từ 1 nguyên tố hóa học (Oxygen). Các chất còn lại là hợp chất vì tạo nên từ 2 hay nhiều nguyên tố hóa học trở lên.",
+      "explanation": "Đơn chất được tạo từ 1 nguyên tố, hợp chất tạo từ 2 nguyên tố trở lên. Khối lượng phân tử bằng tổng khối lượng của các nguyên tử trong phân tử."
+    },
+    {
+      "id": "khtn7_tl_04",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "C. BÀI TẬP TỰ LUẬN",
+      "question": "Câu 4. Vẽ sơ đồ mô tả quá trình hình thành các ion: Na+, K+, Ca2+, Mg2+, Al3+, S2-, O2-.",
+      "modelAnswer": "Quá trình hình thành các ion:\n1. Hình thành ion dương (Cation - nhường electron):\n- Na -> Na+ + 1e  (Nguyên tử Na nhường 1e)\n- K -> K+ + 1e    (Nguyên tử K nhường 1e)\n- Ca -> Ca2+ + 2e (Nguyên tử Ca nhường 2e)\n- Mg -> Mg2+ + 2e (Nguyên tử Mg nhường 2e)\n- Al -> Al3+ + 3e (Nguyên tử Al nhường 3e)\n\n2. Hình thành ion âm (Anion - nhận electron):\n- S + 2e -> S2-   (Nguyên tử S nhận 2e)\n- O + 2e -> O2-   (Nguyên tử O nhận 2e)",
+      "explanation": "Kim loại có 1, 2, 3 electron lớp ngoài cùng xu hướng nhường e tạo ion dương (+). Phi kim có 6, 7 electron ngoài cùng xu hướng nhận thêm e tạo ion âm (-)."
+    },
+    {
+      "id": "khtn7_tl_05",
+      "subject": "khtn",
+      "term": "HK1_GiuaKy",
+      "type": "short_essay",
+      "part": "C. BÀI TẬP TỰ LUẬN",
+      "question": "Câu 5. Vẽ sơ đồ mô tả sự hình thành liên kết trong các phân tử:\na) Khí oxygen (O2).\nb) Hydrogen chloride (gồm 1 nguyên tử H và 1 nguyên tử Cl).\nc) Muối ăn (gồm 1 nguyên tử Na và 1 nguyên tử Cl).\nd) Magnesium oxide (gồm 1 nguyên tử Mg và 1 nguyên tử O).",
+      "modelAnswer": "a) Khí oxygen (O2 - Liên kết cộng hóa trị):\n- Mỗi nguyên tử O có 6 electron lớp ngoài cùng, cùng góp chung 2 electron để tạo thành 2 cặp electron dùng chung (liên kết đôi O=O).\n\nb) Hydrogen chloride (HCl - Liên kết cộng hóa trị):\n- Nguyên tử H góp chung 1 electron, nguyên tử Cl góp chung 1 electron tạo thành 1 cặp electron dùng chung (liên kết đơn H-Cl).\n\nc) Muối ăn (NaCl - Liên kết ion):\n- Nguyên tử Na nhường 1 electron cho nguyên tử Cl để tạo thành ion Na+ và ion Cl-.\n- Hai ion trái dấu Na+ và Cl- hút nhau bằng lực hút tĩnh điện tạo thành liên kết ion trong NaCl: Na+ + Cl- -> NaCl.\n\nd) Magnesium oxide (MgO - Liên kết ion):\n- Nguyên tử Mg nhường 2 electron cho nguyên tử O tạo thành ion Mg2+ và ion O2-.\n- Hai ion trái dấu Mg2+ và O2- hút nhau tạo thành liên kết ion trong MgO: Mg2+ + O2- -> MgO.",
+      "explanation": "Liên kết cộng hóa trị được hình thành nhờ các cặp electron dùng chung (phi kim với phi kim). Liên kết ion được hình thành do lực hút tĩnh điện giữa các ion mang điện tích trái dấu (kim loại với phi kim)."
+    }
+  ]
+}

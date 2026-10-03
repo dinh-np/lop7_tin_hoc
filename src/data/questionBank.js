@@ -3,13 +3,13 @@ import { tinHocQuestions } from './tinHocQuestions';
 import { petB1Questions } from './petB1Questions';
 import { lichSuDiaLiQuestions } from './lichSuDiaLiQuestions';
 import { gdcdQuestions } from './gdcdQuestions';
+import { khoaHocTuNhienQuestions } from './khoaHocTuNhienQuestions';
 // When adding new subjects, import here:
 // import { toanQuestions } from './toanQuestions';
-// import { khoaHocTuNhienQuestions } from './khoaHocTuNhienQuestions';
 
 // Placeholder banks for new subjects (to be filled with real questions)
 export const toanQuestions = [];
-export const khoaHocTuNhienQuestions = [];
+// khoaHocTuNhienQuestions — imported above from ./khoaHocTuNhienQuestions.js
 export const nguVanQuestions = [];
 export const tiengAnhQuestions = []; // School English (not PET)
 // lichSuDiaLiQuestions — imported above from ./lichSuDiaLiQuestions.js

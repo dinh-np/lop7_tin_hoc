@@ -99,6 +99,9 @@ export default function Quiz({ subjectId, part = 'all' }) {
 
       {/* Question */}
       <p className="question-text">{currentQuestion.question}</p>
+      {currentQuestion.image && (
+        <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
+      )}
 
       {/* Options */}
       {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
