@@ -16,8 +16,8 @@ const shuffle = (array) => {
 const EXAM_COUNT = 30;
 const EXAM_DURATION = 45 * 60;
 
-export default function Exam({ subjectId }) {
-  const allQuestions = getQuestionsForSubject(subjectId);
+export default function Exam({ subjectId, part = 'all' }) {
+  const allQuestions = getQuestionsForSubject(subjectId, part);
 
   const [examQuestions, setExamQuestions] = useState([]);
   const [answers, setAnswers] = useState({});

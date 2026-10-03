@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
 
-export default function Review({ subjectId }) {
-  const allQuestions = getQuestionsForSubject(subjectId);
+export default function Review({ subjectId, part = 'all' }) {
+  const allQuestions = getQuestionsForSubject(subjectId, part);
   const storageKey = `wrongQ_${subjectId}`;
 
   const [incorrectIds, setIncorrectIds] = useState([]);

@@ -31,8 +31,17 @@ export const questionsBySubject = {
 };
 
 // Get questions for a specific subject
-export const getQuestionsForSubject = (subjectId) => {
-  return questionsBySubject[subjectId] || [];
+export const getQuestionsForSubject = (subjectId, part = 'all') => {
+  const list = questionsBySubject[subjectId] || [];
+  if (part === 'essay') return list.filter((q) => q.type === 'short_essay');
+  if (part === 'mcq') return list.filter((q) => q.type !== 'short_essay');
+  return list;
+};
+
+// Môn có cả trắc nghiệm lẫn tự luận → hiện 2 tab riêng
+export const hasEssayQuestions = (subjectId) => {
+  const list = questionsBySubject[subjectId] || [];
+  return list.some((q) => q.type === 'short_essay') && list.some((q) => q.type !== 'short_essay');
 };
 
 // Legacy export – for backward compatibility (old components still use questionBank)

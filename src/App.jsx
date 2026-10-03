@@ -4,11 +4,13 @@ import Quiz from './components/Quiz';
 import Exam from './components/Exam';
 import Review from './components/Review';
 import { getSubject } from './data/subjects';
+import { hasEssayQuestions } from './data/questionBank';
 import './styles/theme.css';
 
 function App() {
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [mode, setMode] = useState('practice'); // practice | exam | review
+  const [partChoice, setPartChoice] = useState('mcq'); // mcq | essay
   const [installPrompt, setInstallPrompt] = useState(null);
 
   useEffect(() => {
@@ -30,6 +32,7 @@ function App() {
   const handleSelectSubject = (subjectId) => {
     setSelectedSubject(subjectId);
     setMode('practice');
+    setPartChoice('mcq');
   };
 
   const handleBack = () => {
@@ -37,6 +40,8 @@ function App() {
   };
 
   const subjectInfo = selectedSubject ? getSubject(selectedSubject) : null;
+  const splitParts = selectedSubject ? hasEssayQuestions(selectedSubject) : false;
+  const part = splitParts ? partChoice : 'all';
 
   return (
     <div className="app">
@@ -100,11 +105,29 @@ function App() {
               </button>
             </nav>
 
-            {/* Mode content */}
+            {/* Tách riêng Trắc nghiệm / Tự luận (chỉ khi môn có cả hai) */}
+            {splitParts && (
+              <nav className="nav" style={{ marginBottom: 12 }}>
+                <button
+                  className={`nav-btn ${partChoice === 'mcq' ? 'active' : ''}`}
+                  onClick={() => setPartChoice('mcq')}
+                >
+                  🔘 Phần Trắc nghiệm
+                </button>
+                <button
+                  className={`nav-btn ${partChoice === 'essay' ? 'active' : ''}`}
+                  onClick={() => setPartChoice('essay')}
+                >
+                  ✍️ Phần Tự luận
+                </button>
+              </nav>
+            )}
+
+            {/* Mode content — key theo phần để reset state khi đổi phần */}
             <main>
-              {mode === 'practice' && <Quiz subjectId={selectedSubject} />}
-              {mode === 'exam' && <Exam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />}
-              {mode === 'review' && <Review subjectId={selectedSubject} />}
+              {mode === 'practice' && <Quiz key={`quiz-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
+              {mode === 'exam' && <Exam key={`exam-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
+              {mode === 'review' && <Review key={`review-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
             </main>
           </div>
         )}

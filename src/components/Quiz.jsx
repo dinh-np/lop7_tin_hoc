@@ -2,8 +2,8 @@ import { useState, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
 
-export default function Quiz({ subjectId }) {
-  const questions = getQuestionsForSubject(subjectId);
+export default function Quiz({ subjectId, part = 'all' }) {
+  const questions = getQuestionsForSubject(subjectId, part);
   const topics = useMemo(
     () => ['Tất cả', ...new Set(questions.map((q) => q.topic))],
     [questions]
