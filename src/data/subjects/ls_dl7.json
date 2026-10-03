@@ -15,9 +15,14 @@
       "type": "multiple_choice",
       "topic": "Tây Âu thời hậu kì trung đại",
       "question": "Lãnh địa phong kiến được xem là",
-      "options": ["A. một khu tự trị", "B. một đơn vị hành chính", "C. một ngôi nhà", "D. một đất nước"],
-      "answer": 0,
-      "explanation": "Mỗi lãnh địa phong kiến là một đơn vị kinh tế và chính trị độc lập (khu tự trị) mang tính khép kín của lãnh chúa phong kiến."
+      "options": [
+        "A. một khu tự trị",
+        "B. một đơn vị hành chính",
+        "C. một ngôi nhà",
+        "D. một đất nước"
+      ],
+      "answer": 1,
+      "explanation": "Mỗi lãnh địa phong kiến là một đơn vị kinh tế và chính trị cơ bản (một đơn vị hành chính) mang tính khép kín của lãnh chúa phong kiến."
     },
     {
       "id": "ls7_02",
