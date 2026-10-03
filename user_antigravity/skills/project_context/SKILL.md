@@ -12,56 +12,46 @@ description: >-
 
 ```
 questionBank.js (index)
-  ├── tinHocQuestions.js  → subject: 'tin_hoc'
-  ├── petB1Questions.js   → subject: 'pet_b1'
-  └── [các môn khác]      → placeholder []
+  ├── tinHocQuestions.js         → 'tin_hoc'
+  ├── petB1Questions.js          → 'pet_b1'
+  ├── khoaHocTuNhienQuestions.js → 'khoa_hoc_tu_nhien' (subjects/khtn7.json)
+  ├── lichSuDiaLiQuestions.js    → 'lich_su_dia_li'    (subjects/ls_dl7.json)
+  ├── gdcdQuestions.js           → 'gdcd'              (subjects/gdcd7.json)
+  ├── nguVanQuestions.js         → 'ngu_van'           (subjects/nguvan7.json, flatten 6 đề,
+  │                                  mỗi câu có examId + passage)
+  └── [các môn khác]             → placeholder []
 
-getQuestionsForSubject(subjectId) → Question[]
+getQuestionsForSubject(subjectId, part='all'|'mcq'|'essay') → Question[]
+hasEssayQuestions(subjectId) → true nếu có cả TN lẫn TL
 
 App.jsx
   └── selectedSubject state
-      ├── null → <SubjectPicker onSelect={setSelectedSubject} />
-      └── 'tin_hoc' | 'pet_b1' | ...
-          ├── <Quiz subjectId={selectedSubject} />
-          ├── <Exam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />
-          └── <Review subjectId={selectedSubject} />
+      ├── null → <SubjectPicker onSelect={...} />
+      └── subjectId
+          ├── <Quiz subjectId part />
+          ├── mode 'exam': subjectId==='ngu_van' ? <NguVanExam/> : <Exam subjectId part />
+          └── <Review subjectId part />
+
+NguVanExam → chọn đề → <Exam examId examTitle durationMinutes />
+
+Quiz / Review / Exam: nội dung làm bài bọc trong <SplitView passage={q.passage}>
+  (không có passage → render như cũ)
 ```
 
 ## localStorage Schema
 ```
 wrongQ_tin_hoc    → [1, 5, 12, ...]     (array of question ids)
 wrongQ_pet_b1     → ['pet_3', 'pet_7']
-wrongQ_toan       → []
+wrongQ_ngu_van    → ['v7_d1_c3', ...]
 ```
 
-## Supabase Schema chi tiết
-
-### Bảng `sessions`
-```sql
-id               BIGSERIAL PRIMARY KEY
-subject          TEXT NOT NULL              -- foreign key logically to subjects.id
-mode             TEXT NOT NULL              -- 'practice' | 'exam'
-score            NUMERIC(4,2)               -- 0.00 to 10.00
-total_questions  INT
-correct_count    INT
-wrong_ids        JSONB DEFAULT '[]'         -- array: [1, 5, 'pet_3', ...]
-duration_seconds INT
-created_at       TIMESTAMPTZ DEFAULT NOW()
+## Firestore Schema (thay Supabase)
 ```
-
-### View `subject_stats`
-```sql
-SELECT subject, COUNT(*) total_sessions, AVG(score) avg_score,
-       MAX(score) best_score, MIN(score) worst_score,
-       SUM(correct_count) total_correct,
-       SUM(total_questions) total_questions_answered,
-       MAX(created_at) last_session
-FROM sessions GROUP BY subject ORDER BY last_session DESC;
+submissions/   subject, mode, score, correct_count, wrong_count, time_spent_seconds, submitted_at
+wrong_answers/ submission_id, question_id, question_text, question_topic,
+               student_answer, correct_answer, explanation, error_reason_type, ai_diagnostic
 ```
-
-### RLS Policies
-- SELECT: `USING (true)` — bố/mẹ có thể xem tất cả
-- INSERT: `WITH CHECK (true)` — app của con có thể insert
+Chi tiết xem `PROJECT_MEMORY.md`. (Supabase đã deprecated.)
 
 ## Gemini API chi tiết
 
@@ -82,28 +72,36 @@ data?.candidates?.[0]?.content?.parts?.[0]?.text
 ```
 
 ### Giới hạn trong app
-- Tối đa 5 câu/lần (`wrongs.slice(0, 5)`)
+- Tối đa 5 câu/lần (`wrongs.slice(0, 5)`), chỉ câu trắc nghiệm
 - Delay 300ms giữa requests
 - Timeout: không set (browser default)
 
 ## Component Props
 
-### `<Quiz subjectId="tin_hoc" />`
-- Đọc questions từ `getQuestionsForSubject(subjectId)`
-- Lọc theo `topic` (dropdown)
+### `<Quiz subjectId part />`
+- Đọc questions từ `getQuestionsForSubject(subjectId, part)`
+- Lọc theo `topic` (dropdown; Ngữ văn: topic = tên đề)
 - Lưu sai vào `wrongQ_${subjectId}`
-- Progress bar theo index hiện tại
+- Câu có `passage` → hiện bài đọc qua `SplitView`
 
-### `<Exam subjectId="tin_hoc" />`
-- Random 30 câu (hoặc tất cả nếu < 30)
-- Timer 45 phút (đỏ khi < 1 phút, vàng khi < 5 phút)
-- Sau nộp: gọi `saveSession()` + `batchDiagnose()`
-- AI analysis hiển thị per câu sai
+### `<Exam subjectId part examId? examTitle? durationMinutes? />`
+- Không `examId`: random 30 câu, timer 45 phút (đỏ <1', vàng <5')
+- Có `examId` (Ngữ văn): lọc đúng đề, giữ thứ tự, timer `durationMinutes`,
+  layout compact (topbar sticky + drawer danh sách câu, không sidebar)
+- Sau nộp: `saveSubmission()` + `saveWrongAnswers()` + `batchDiagnose()` (chỉ câu TN)
+- Tự luận tính đúng khi HS bấm "Tôi đã nắm được"
 
-### `<Review subjectId="tin_hoc" />`
+### `<NguVanExam subjectId />`
+- 6 thẻ chọn đề (tên, thời gian, số câu từ `nguVanTestMeta`)
+- "← Chọn đề khác" có confirm
+
+### `<SplitView passage>` / `<PassagePanel passage>`
+- ≥768px: grid 2 cột, bài thơ sticky bên trái
+- <768px: bài thơ ở trên, nút Thu gọn/Mở rộng
+
+### `<Review subjectId part />`
 - Đọc `wrongQ_${subjectId}` từ localStorage
 - Trả lời đúng → xóa khỏi danh sách
-- Progress bar màu đỏ→cam
 - Nút "Xóa tất cả" có confirm dialog
 
 ### `<SubjectPicker onSelect={fn} />`
@@ -135,19 +133,12 @@ data?.candidates?.[0]?.content?.parts?.[0]?.text
 - `.palette-btn.answered` — câu trong palette đã trả lời
 - `.timer.warning` / `.danger` — đồng hồ đổi màu
 
-## Package.json dependencies
+## Package.json dependencies (chính)
 ```json
 {
-  "dependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "@supabase/supabase-js": "latest"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^6.1.1",
-    "vite": "^8.3.0",
-    "oxlint": "^1.81.0"
-  }
+  "dependencies": { "react": "^19", "react-dom": "^19", "firebase": "...",
+                    "react-markdown": "...", "remark-gfm": "..." },
+  "devDependencies": { "@vitejs/plugin-react": "...", "vite": "^8", "oxlint": "..." }
 }
 ```
 
@@ -171,5 +162,5 @@ supabase/.temp
 ### Deploy checklist
 1. `npm run build` → 0 errors
 2. `git push` → Vercel auto-deploy
-3. Vercel Dashboard → thêm env vars (Gemini key + Supabase Cloud)
-4. Kiểm tra table `sessions` trên Supabase Cloud sau khi thi thử
+3. Vercel Dashboard → có đủ `VITE_GEMINI_API_KEY` + 6 biến `VITE_FIREBASE_*`
+4. Kiểm tra collection `submissions` trên Firebase Console sau khi thi thử

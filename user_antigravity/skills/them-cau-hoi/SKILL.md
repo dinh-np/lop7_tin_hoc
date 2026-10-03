@@ -78,6 +78,24 @@ skill: 'reading',  // 'reading' | 'grammar' | 'vocabulary' | 'writing' | 'listen
 }
 ```
 
+**Tự luận có bài đọc hiểu (Ngữ văn)** — thêm `keyPoints` (ý chính để HS tự chấm) và:
+```js
+passage: '...văn bản...',   // hiện ở PassagePanel/SplitView
+examId: 'van7_de_01',       // nhóm câu theo đề; Exam lọc theo examId, giữ thứ tự
+keyPoints: ['Ý 1', 'Ý 2'],
+```
+
+## Cách nạp từ file JSON (mẫu đang dùng)
+
+Dữ liệu lớn đặt tại `src/data/subjects/[ten].json`, loader `src/data/[ten]Questions.js` chuẩn hóa:
+```js
+import data from './subjects/gdcd7.json';
+export const gdcdQuestions = data.questions.map((q) => ({ ...q, subject: 'gdcd' }));
+```
+Ngữ văn: JSON là mảng 6 đề → `flatMap` và gắn `topic`, `examId`, `passage` (xem `nguVanQuestions.js`).
+
+Môn có cả trắc nghiệm lẫn tự luận sẽ tự hiện 2 tab Trắc nghiệm / Tự luận (`hasEssayQuestions`).
+
 ## Bước 4 – Đăng ký vào questionBank.js
 
 Mở `src/data/questionBank.js` và:

@@ -9,53 +9,52 @@ description: >-
 # Context Hub – Cổng Ôn Tập Lớp 7
 
 ## Dự án là gì?
-PWA ôn thi **đa môn cho học sinh lớp 7** (con của user).  
-User là **phụ huynh** — muốn giám sát kết quả học của con từ xa qua Supabase.
+PWA ôn thi **đa môn cho học sinh lớp 7** (con của user).
+User là **phụ huynh** — muốn giám sát kết quả học của con từ xa qua **Firebase Console** (Firestore).
 
-## Tech Stack (hiện tại đang dùng)
+## Tech Stack (hiện tại)
 | Thành phần | Version | Ghi chú |
 |------------|---------|---------|
 | React | 19 | |
 | Vite | 8 | build output → `dist/` |
-| @supabase/supabase-js | latest | npm package, KHÔNG dùng esm.sh |
+| Firebase Firestore | web SDK | Offline-First, project `sotayontap-4c27e` |
 | Gemini | 2.0 Flash | `gemini-2.0-flash` |
-| CSS | Vanilla | Be Vietnam Pro font, Google Fonts |
+| react-markdown + remark-gfm | | render đáp án tự luận |
+| CSS | Vanilla | Be Vietnam Pro font |
+
+> Supabase đã bị thay thế bằng Firebase (thư mục `supabase/` chỉ để tham khảo).
 
 ## File quan trọng nhất
 | File | Vai trò |
 |------|---------|
 | `src/data/subjects.js` | Danh sách 10 môn + PET B1 |
-| `src/data/questionBank.js` | Index, export `getQuestionsForSubject(id)` |
-| `src/data/tinHocQuestions.js` | 70 câu Tin học (có `subject:'tin_hoc'`) |
-| `src/data/petB1Questions.js` | 20 câu PET B1 mẫu |
-| `src/lib/supabase.js` | Client wrapper, graceful fallback |
+| `src/data/questionBank.js` | Index, `getQuestionsForSubject(id, part)`, `hasEssayQuestions()` |
+| `src/data/*Questions.js` | Loader từng môn; một số đọc JSON trong `src/data/subjects/` |
+| `src/data/subjects/nguvan7.json` | 6 đề Ngữ văn (reading_passage + câu hỏi) |
+| `src/lib/firebase.js` | `saveSubmission()`, `saveWrongAnswers()`, `isFirebaseConfigured` |
 | `src/lib/gemini.js` | `diagnoseWrongAnswer()`, `batchDiagnose()` |
-| `src/components/SubjectPicker.jsx` | Home screen – chọn môn |
-| `src/components/Exam.jsx` | Thi thử + Gemini AI analysis sau nộp |
+| `src/components/Exam.jsx` | Thi thử (+ chế độ compact theo `examId` cho Ngữ văn) |
+| `src/components/NguVanExam.jsx` | Chọn đề Ngữ văn |
+| `src/components/SplitView.jsx`, `PassagePanel.*` | Bố cục 2 cột bài thơ / câu hỏi |
+| `src/components/QuestionRenderer.jsx` | Render 3 loại câu hỏi (+ keyPoints) |
 | `vercel.json` | SPA rewrites + outputDirectory:dist |
-| `supabase/schema.sql` | DDL bảng sessions + view subject_stats |
-| `supabase/migrations/20260930000000_init.sql` | Migration đã chạy |
 | `GEMINI.md` | Rules tự động load mỗi session |
 
-## .env.local (các giá trị thực)
-```
-VITE_GEMINI_API_KEY=AQ.Ab8RN6IBE8LRCpmadiirZskoT4dBBrMoAFrE42figOK0tP-jYw
-VITE_SUPABASE_URL=http://127.0.0.1:54321
-VITE_SUPABASE_ANON_KEY=sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH
-```
-> ⚠️ Key `AQ.xxx` là format MỚI của Google AI Studio — hoàn toàn hợp lệ.
+## .env.local
+Chứa `VITE_GEMINI_API_KEY` (dạng `AQ.xxx`) và 6 biến `VITE_FIREBASE_*`. Không ghi giá trị thật vào tài liệu; không commit file này.
+> Key `AQ.xxx` là format MỚI của Google AI Studio — hợp lệ.
 
 ## Môn học & trạng thái câu hỏi
 | id | Môn | Câu hỏi |
 |----|-----|---------|
 | `tin_hoc` | Tin học 💻 | ✅ 70 câu |
 | `pet_b1` | PET B1 English 🎓 | ✅ 20 câu mẫu |
+| `khoa_hoc_tu_nhien` | KHTN 🔬 | ✅ 64 câu |
+| `lich_su_dia_li` | Lịch sử & Địa lí 🗺️ | ✅ 55 câu |
+| `gdcd` | GDCD 🏛️ | ✅ 46 câu |
+| `ngu_van` | Ngữ văn 📖 | ✅ 53 câu tự luận (6 đề) |
 | `toan` | Toán 📐 | ⏳ placeholder |
-| `khoa_hoc_tu_nhien` | KHTN 🔬 | ⏳ placeholder |
-| `ngu_van` | Ngữ văn 📖 | ⏳ placeholder |
 | `tieng_anh` | Tiếng Anh 🇬🇧 | ⏳ placeholder |
-| `lich_su_dia_li` | Lịch sử & Địa lí 🗺️ | ⏳ placeholder |
-| `gdcd` | GDCD 🏛️ | ⏳ placeholder |
 | `cong_nghe` | Công nghệ ⚙️ | ⏳ placeholder |
 | `gd_dia_phuong` | GD địa phương 🏠 | ⏳ placeholder |
 
@@ -63,22 +62,16 @@ VITE_SUPABASE_ANON_KEY=sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH
 ```
 Home (SubjectPicker)
   → chọn môn → SubjectView
-      ├─ Tab "Luyện Tập"  → Quiz.jsx  (lọc theo topic, lưu sai vào localStorage)
-      ├─ Tab "Thi Thử"    → Exam.jsx  (random 30 câu, 45', sau nộp → Gemini AI)
-      └─ Tab "Sổ Tay Sai" → Review.jsx (đọc wrongQ_${subjectId} từ localStorage)
+      ├─ (môn có cả TN & TL) tab "Phần Trắc nghiệm" / "Phần Tự luận"
+      ├─ "Luyện Tập"  → Quiz.jsx  (lọc theo topic, lưu sai vào localStorage)
+      ├─ "Thi Thử"    → Exam.jsx  (random 30 câu, 45')   | Ngữ văn → NguVanExam (chọn đề, 90')
+      └─ "Sổ Tay Sai" → Review.jsx (wrongQ_${subjectId})
 ```
-
-## Supabase Local – thông tin đang chạy
-- Studio: http://127.0.0.1:54323  
-- API: http://127.0.0.1:54321  
-- Migration đã apply: `20260930000000_init.sql` ✅  
-- Bảng đã tạo: `sessions`, view: `subject_stats`  
-- Cần Docker Desktop đang chạy
 
 ## Các skills có sẵn
 - `continuity_skill` — checklist mỗi đầu session
 - `project_context` — context chi tiết từng thành phần
 - `them-cau-hoi` — thêm câu hỏi môn mới
-- `supabase-local` — quản lý Supabase Local
 - `deploy-vercel` — deploy lên Vercel
 - `gemini-ai` — debug Gemini AI
+- `supabase-local` — (lỗi thời; skill `firebase-firestore` trong skills.json trỏ vào thư mục này)
