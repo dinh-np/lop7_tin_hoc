@@ -4,7 +4,7 @@
  *  - calculation: hiển thị lời giải từng bước toggle
  *  - short_essay: input text + reveal model answer + self-evaluation
  */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function QuestionRenderer({ question, onAnswer, subjectId }) {
   const type = question.type || 'multiple_choice';
@@ -143,6 +143,14 @@ export function ShortEssayQuestion({ question, onAnswer, subjectId }) {
   const [studentText, setStudentText] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
   const [evaluated, setEvaluated] = useState(null); // 'mastered' | 'needs_review' | null
+  const textareaRef = useRef(null);
+
+  // Tự co giãn chiều cao theo nội dung
+  const autoResize = (el) => {
+    if (!el) return;
+    el.style.height = 'auto';
+    el.style.height = `${el.scrollHeight}px`;
+  };
 
   const handleMastered = () => {
     setEvaluated('mastered');
@@ -165,11 +173,15 @@ export function ShortEssayQuestion({ question, onAnswer, subjectId }) {
   return (
     <div>
       <textarea
+        ref={textareaRef}
         className="essay-input"
         id={`essay-input-${question.id}`}
         placeholder="Viết câu trả lời của bạn vào đây..."
         value={studentText}
-        onChange={(e) => setStudentText(e.target.value)}
+        onChange={(e) => {
+          setStudentText(e.target.value);
+          autoResize(e.target);
+        }}
         disabled={evaluated !== null}
       />
 

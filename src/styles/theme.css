@@ -455,10 +455,11 @@ input, textarea, select {
   border: 1.5px solid var(--border);
   border-radius: var(--radius);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 16px;
   color: var(--text);
   background: var(--surface2);
-  resize: vertical;
+  resize: none;
+  overflow: hidden;
   transition: var(--transition);
   line-height: 1.6;
 }
