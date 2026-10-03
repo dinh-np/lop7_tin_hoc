@@ -1,0 +1,45 @@
+.nv-exam-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .nv-exam-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .nv-exam-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.nv-exam-card {
+  min-height: 48px;
+  text-align: left;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1.5px solid #fcd34d;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  color: #92400e;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nv-exam-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.25);
+}
+
+.nv-exam-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.nv-exam-meta {
+  font-size: 0.85rem;
+  color: #b45309;
+}

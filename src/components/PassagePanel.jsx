@@ -21,7 +21,7 @@ export default function PassagePanel({ passage }) {
         <span>📜 Văn bản đọc hiểu</span>
         <span className="passage-chevron">{open ? '🔼 Thu gọn' : '🔽 Mở rộng'}</span>
       </button>
-      {open && <div className="passage-body">{passage}</div>}
+      <div className="passage-body">{passage}</div>
     </section>
   );
 }

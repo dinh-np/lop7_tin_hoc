@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
-import PassagePanel from './PassagePanel';
+import SplitView from './SplitView';
 
 export default function Quiz({ subjectId, part = 'all' }) {
   const questions = getQuestionsForSubject(subjectId, part);
@@ -98,8 +98,7 @@ export default function Quiz({ subjectId, part = 'all' }) {
         )}
       </div>
 
-      <PassagePanel passage={currentQuestion.passage} />
-
+      <SplitView passage={currentQuestion.passage}>
       {/* Question */}
       <p className="question-text">{currentQuestion.question}</p>
       {currentQuestion.image && (
@@ -155,6 +154,7 @@ export default function Quiz({ subjectId, part = 'all' }) {
           Câu tiếp →
         </button>
       </div>
+      </SplitView>
     </div>
   );
 }

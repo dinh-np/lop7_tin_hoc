@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
-import PassagePanel from './PassagePanel';
+import SplitView from './SplitView';
 import { saveSubmission, saveWrongAnswers, isFirebaseConfigured } from '../lib/firebase';
 import { batchDiagnose, isGeminiConfigured } from '../lib/gemini';
 
@@ -15,10 +15,12 @@ const shuffle = (array) => {
 };
 
 const EXAM_COUNT = 30;
-const EXAM_DURATION = 45 * 60;
+const DEFAULT_EXAM_DURATION = 45 * 60;
 
-export default function Exam({ subjectId, part = 'all' }) {
-  const allQuestions = getQuestionsForSubject(subjectId, part);
+// examId: thi theo đúng 1 đề (Ngữ văn) — giữ nguyên thứ tự, không bốc ngẫu nhiên
+export default function Exam({ subjectId, part = 'all', examId = null, durationMinutes = null }) {
+  const EXAM_DURATION = durationMinutes ? durationMinutes * 60 : DEFAULT_EXAM_DURATION;
+  const allQuestions = getQuestionsForSubject(subjectId, part).filter((q) => !examId || q.examId === examId);
 
   const [examQuestions, setExamQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
@@ -32,9 +34,13 @@ export default function Exam({ subjectId, part = 'all' }) {
   const [startTime] = useState(Date.now());
 
   useEffect(() => {
+    if (examId) {
+      setExamQuestions(allQuestions);
+      return;
+    }
     const count = Math.min(EXAM_COUNT, allQuestions.length);
     setExamQuestions(shuffle(allQuestions).slice(0, count));
-  }, [allQuestions.length]);
+  }, [allQuestions.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = useCallback(async () => {
     if (submitted) return;
@@ -322,8 +328,7 @@ export default function Exam({ subjectId, part = 'all' }) {
           <span className="tag topic">{currentQuestion.topic}</span>
         </div>
 
-        <PassagePanel passage={currentQuestion.passage} />
-
+        <SplitView passage={currentQuestion.passage}>
         <p className="question-text">{currentQuestion.question}</p>
         {currentQuestion.image && (
           <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
@@ -380,6 +385,7 @@ export default function Exam({ subjectId, part = 'all' }) {
             </button>
           )}
         </div>
+        </SplitView>
       </div>
 
       {/* ─── RIGHT: Sidebar (timer + palette) – tablet/desktop only ─── */}

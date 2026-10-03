@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
-import PassagePanel from './PassagePanel';
+import SplitView from './SplitView';
 
 export default function Review({ subjectId, part = 'all' }) {
   const allQuestions = getQuestionsForSubject(subjectId, part);
@@ -99,8 +99,7 @@ export default function Review({ subjectId, part = 'all' }) {
         <span className="tag topic">{currentQuestion.topic}</span>
       </div>
 
-      <PassagePanel passage={currentQuestion.passage} />
-
+      <SplitView passage={currentQuestion.passage}>
       <p className="question-text">{currentQuestion.question}</p>
       {currentQuestion.image && (
         <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
@@ -141,7 +140,7 @@ export default function Review({ subjectId, part = 'all' }) {
       </div>
       )}
 
-      {selectedAnswer !== null && (
+      {selectedAnswer !== null && currentQuestion.explanation && (
         <div className="explanation">
           <strong>Giải thích:</strong> {currentQuestion.explanation}
         </div>
@@ -152,6 +151,7 @@ export default function Review({ subjectId, part = 'all' }) {
           {selectedAnswer === currentQuestion.answer ? '✅ Đã hiểu, sang câu tiếp' : '⏭ Ôn lại sau'}
         </button>
       </div>
+      </SplitView>
     </div>
   );
 }
