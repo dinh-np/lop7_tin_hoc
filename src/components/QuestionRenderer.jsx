@@ -139,7 +139,7 @@ function CalculationQuestion({ question, onAnswer }) {
 }
 
 // ─── Short Essay ─────────────────────────────────────────────────────────────
-function ShortEssayQuestion({ question, onAnswer, subjectId }) {
+export function ShortEssayQuestion({ question, onAnswer, subjectId }) {
   const [studentText, setStudentText] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
   const [evaluated, setEvaluated] = useState(null); // 'mastered' | 'needs_review' | null

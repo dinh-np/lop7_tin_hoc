@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
+import { ShortEssayQuestion } from './QuestionRenderer';
 
 export default function Quiz({ subjectId }) {
   const questions = getQuestionsForSubject(subjectId);
@@ -100,6 +101,9 @@ export default function Quiz({ subjectId }) {
       <p className="question-text">{currentQuestion.question}</p>
 
       {/* Options */}
+      {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
+        <ShortEssayQuestion key={currentQuestion.id} question={currentQuestion} subjectId={subjectId} />
+      ) : (
       <div className="options-list">
         {currentQuestion.options.map((opt, idx) => {
           let cls = 'option-btn';
@@ -119,6 +123,7 @@ export default function Quiz({ subjectId }) {
           );
         })}
       </div>
+      )}
 
       {/* Explanation */}
       {selectedAnswer !== null && (

@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
+import { ShortEssayQuestion } from './QuestionRenderer';
 
 export default function Review({ subjectId }) {
   const allQuestions = getQuestionsForSubject(subjectId);
@@ -99,6 +100,20 @@ export default function Review({ subjectId }) {
 
       <p className="question-text">{currentQuestion.question}</p>
 
+      {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
+        <ShortEssayQuestion
+          key={currentQuestion.id}
+          question={currentQuestion}
+          subjectId={subjectId}
+          onAnswer={(val, ok) => {
+            setSelectedAnswer(val);
+            if (ok) {
+              const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
+              localStorage.setItem(storageKey, JSON.stringify(stored.filter((id) => id !== currentQuestion.id)));
+            }
+          }}
+        />
+      ) : (
       <div className="options-list">
         {currentQuestion.options.map((opt, idx) => {
           let cls = 'option-btn';
@@ -118,6 +133,7 @@ export default function Review({ subjectId }) {
           );
         })}
       </div>
+      )}
 
       {selectedAnswer !== null && (
         <div className="explanation">

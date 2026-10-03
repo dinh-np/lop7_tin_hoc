@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
+import { ShortEssayQuestion } from './QuestionRenderer';
 import { saveSubmission, saveWrongAnswers, isFirebaseConfigured } from '../lib/firebase';
 import { batchDiagnose, isGeminiConfigured } from '../lib/gemini';
 
@@ -43,10 +44,13 @@ export default function Exam({ subjectId }) {
     const wrongIds = [];
 
     examQuestions.forEach((q, idx) => {
-      if (answers[idx] === q.answer) {
+      const isEssay = q.type === 'short_essay';
+      // Tự luận: đúng khi HS tự đánh giá "đã nắm được"
+      const isCorrect = isEssay ? answers[idx] === 'mastered' : answers[idx] === q.answer;
+      if (isCorrect) {
         correct += 1;
       } else {
-        wrongs.push({ question: q, studentAnswer: answers[idx] ?? -1 });
+        wrongs.push({ question: q, studentAnswer: typeof answers[idx] === 'number' ? answers[idx] : -1 });
         wrongIds.push(q.id);
       }
     });
@@ -84,10 +88,11 @@ export default function Exam({ subjectId }) {
     }
 
     // Phân tích AI Gemini
-    if (isGeminiConfigured && wrongs.length > 0) {
+    const mcWrongs = wrongs.filter((w) => Array.isArray(w.question.options));
+    if (isGeminiConfigured && mcWrongs.length > 0) {
       setAiLoading(true);
       try {
-        const analyses = await batchDiagnose(wrongs.slice(0, 5));
+        const analyses = await batchDiagnose(mcWrongs.slice(0, 5));
         setAiAnalyses(analyses);
       } catch (e) {
         console.error('[Exam] AI analysis failed:', e);
@@ -118,7 +123,7 @@ export default function Exam({ subjectId }) {
       const keyMap = { '1': 0, 'a': 0, '2': 1, 'b': 1, '3': 2, 'c': 2, '4': 3, 'd': 3 };
       const key = e.key.toLowerCase();
 
-      if (key in keyMap && examQuestions[currentIdx]) {
+      if (key in keyMap && examQuestions[currentIdx] && examQuestions[currentIdx].type !== 'short_essay') {
         e.preventDefault();
         setAnswers((prev) => ({ ...prev, [currentIdx]: keyMap[key] }));
       } else if (key === 'arrowleft' || key === 'arrowup') {
@@ -224,19 +229,25 @@ export default function Exam({ subjectId }) {
                   <span className="tag topic">{question.topic}</span>
                 </div>
                 <p style={{ fontWeight: 600, marginBottom: 8, fontSize: '0.95rem' }}>{question.question}</p>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 10 }}>
-                  <span style={{ padding: '4px 12px', borderRadius: 99, background: 'var(--danger-light)', color: 'var(--danger)', fontSize: '0.82rem', fontWeight: 600 }}>
-                    ✗ {studentAnswer >= 0 ? question.options[studentAnswer] : 'Bỏ trống'}
-                  </span>
-                  <span style={{ padding: '4px 12px', borderRadius: 99, background: 'var(--success-light)', color: 'var(--success)', fontSize: '0.82rem', fontWeight: 600 }}>
-                    ✓ {question.options[question.answer]}
-                  </span>
-                </div>
+                {Array.isArray(question.options) ? (
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 10 }}>
+                    <span style={{ padding: '4px 12px', borderRadius: 99, background: 'var(--danger-light)', color: 'var(--danger)', fontSize: '0.82rem', fontWeight: 600 }}>
+                      ✗ {studentAnswer >= 0 ? question.options[studentAnswer] : 'Bỏ trống'}
+                    </span>
+                    <span style={{ padding: '4px 12px', borderRadius: 99, background: 'var(--success-light)', color: 'var(--success)', fontSize: '0.82rem', fontWeight: 600 }}>
+                      ✓ {question.options[question.answer]}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="explanation" style={{ marginBottom: 10, whiteSpace: 'pre-wrap' }}>
+                    <strong>📝 Đáp án mẫu:</strong> {question.modelAnswer || question.explanation}
+                  </div>
+                )}
                 <div className="explanation">
                   <strong>Giải thích:</strong> {question.explanation}
                 </div>
 
-                {isGeminiConfigured && (
+                {isGeminiConfigured && Array.isArray(question.options) && (
                   <div className="ai-panel">
                     <div className="ai-panel-header">✨ Gemini AI phân tích</div>
                     {aiLoading && !aiAnalyses[question.id] ? (
@@ -262,6 +273,7 @@ export default function Exam({ subjectId }) {
 
   // ─── EXAM SCREEN ──────────────────────────────────────────────────────────
   const currentQuestion = examQuestions[currentIdx];
+  if (!currentQuestion) return <div className="card">Đang tải câu hỏi...</div>;
   const timerCls = timeLeft <= 60 ? 'timer danger' : timeLeft <= 300 ? 'timer warning' : 'timer';
 
   // Palette component dùng chung
@@ -311,6 +323,14 @@ export default function Exam({ subjectId }) {
 
         <p className="question-text">{currentQuestion.question}</p>
 
+        {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
+          <ShortEssayQuestion
+            key={currentQuestion.id}
+            question={currentQuestion}
+            subjectId={subjectId}
+            onAnswer={(val) => setAnswers((prev) => ({ ...prev, [currentIdx]: val }))}
+          />
+        ) : (
         <div className="options-list">
           {currentQuestion.options.map((opt, idx) => (
             <button
@@ -327,6 +347,7 @@ export default function Exam({ subjectId }) {
             </button>
           ))}
         </div>
+        )}
 
         {/* Keyboard hint (desktop only) */}
         <div className="kbd-hint">

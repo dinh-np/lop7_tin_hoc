@@ -118,7 +118,7 @@ export async function saveWrongAnswers(submissionId, wrongItems) {
         question_text: item.question.question,
         question_topic: item.question.topic,
         student_answer: item.studentAnswer,
-        correct_answer: item.question.answer,
+        correct_answer: item.question.answer ?? null,
         explanation: item.question.explanation || '',
         error_reason_type: null,
         ai_diagnostic: null,
