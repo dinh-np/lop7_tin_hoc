@@ -1,0 +1,695 @@
+{
+  "test_id": "gdcd_7_hk1",
+  "title": "Giáo dục công dân 7 - Ôn tập Học kỳ 1",
+  "subject": "gdcd",
+  "term": "HK1_CuoiKy",
+  "time_limit_minutes": 45,
+  "is_active": true,
+  "questions": [
+    {
+      "id": "gdcd7_tn01",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Truyền thống quê hương là gì?",
+      "options": [
+        "A. Những thói quen sinh hoạt mới xuất hiện gần đây ở một địa phương.",
+        "B. Những giá trị tốt đẹp, riêng biệt được hình thành, lưu truyền và phát triển qua nhiều thế hệ của một địa phương, vùng miền.",
+        "C. Toàn bộ các phong tục, tập quán bất kể tiến bộ hay lạc hậu của địa phương.",
+        "D. Những quy định pháp luật do chính quyền địa phương ban hành."
+      ],
+      "answer": 1,
+      "explanation": "Truyền thống quê hương là những giá trị tốt đẹp, riêng biệt được hình thành, lưu truyền và phát triển qua nhiều thế hệ của một địa phương, vùng miền."
+    },
+    {
+      "id": "gdcd7_tn02",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Các truyền thống quê hương phổ biến ở Việt Nam bao gồm những lĩnh vực nào?",
+      "options": [
+        "A. Chỉ có truyền thống đánh giặc ngoại xâm và lễ hội dân gian.",
+        "B. Chỉ gồm truyền thống ẩm thực và các trang phục cổ truyền.",
+        "C. Ẩm thực, lễ hội, nghệ thuật, trang phục, tinh thần yêu nước, chống giặc ngoại xâm,...",
+        "D. Chỉ tập trung vào các làn điệu dân ca và trò chơi dân gian."
+      ],
+      "answer": 2,
+      "explanation": "Mỗi địa phương đều có truyền thống tốt đẹp về ẩm thực, lễ hội, nghệ thuật, trang phục, tinh thần yêu nước, chống giặc ngoại xâm,..."
+    },
+    {
+      "id": "gdcd7_tn03",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Tự hào về truyền thống quê hương được biểu hiện như thế nào?",
+      "options": [
+        "A. Luôn cho rằng truyền thống quê mình là số một, coi thường quê khác.",
+        "B. Sự tự tin, hãnh diện về những giá trị mà người dân quê hương đã sáng tạo ra và được lưu truyền từ thế hệ này sang thế hệ khác.",
+        "C. Chỉ ca ngợi truyền thống trên mạng xã hội mà không cần hành động thực tế.",
+        "D. Giữ nguyên mọi tập tục xưa cũ mà không cần đổi mới cho phù hợp đời sống hiện đại."
+      ],
+      "answer": 1,
+      "explanation": "Tự hào truyền thống quê hương là sự tự tin, hãnh diện về những giá trị người dân quê hương sáng tạo và lưu truyền qua nhiều thế hệ."
+    },
+    {
+      "id": "gdcd7_tn04",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Truyền thống quê hương có ý nghĩa như thế nào đối với sự phát triển của mỗi cá nhân?",
+      "options": [
+        "A. Giúp con người kiếm được nhiều lợi ích kinh tế cá nhân.",
+        "B. Đảm bảo cho mọi công dân đều có việc làm ổn định.",
+        "C. Có vai trò quan trọng trong việc hình thành tư tưởng, đạo đức, lối sống tốt đẹp của mỗi con người.",
+        "D. Giúp con người trở nên nổi tiếng trong cộng đồng."
+      ],
+      "answer": 2,
+      "explanation": "Truyền thống quê hương giữ vai trò đặc biệt quan trọng trong việc nuôi dưỡng tâm hồn, hình thành tư tưởng, đạo đức và lối sống lành mạnh."
+    },
+    {
+      "id": "gdcd7_tn05",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Việc làm nào sau đây thể hiện thái độ giữ gìn và phát huy truyền thống quê hương?",
+      "options": [
+        "A. Tôn trọng sự đa dạng văn hóa của các vùng miền khác nhau.",
+        "B. Chê bai trang phục truyền thống của các dân tộc thiểu số là lạc hậu.",
+        "C. Từ chối tham gia các lễ hội văn hóa tại địa phương vì thấy ồn ào.",
+        "D. Chỉ trích các món ăn truyền thống của quê hương là không hiện đại."
+      ],
+      "answer": 0,
+      "explanation": "Biểu hiện giữ gìn truyền thống là tôn trọng sự đa dạng văn hóa của các vùng miền, học hỏi và gìn giữ nét tinh hoa bản sắc."
+    },
+    {
+      "id": "gdcd7_tn06",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Hoạt động nào dưới đây là biểu hiện của truyền thống 'Uống nước nhớ nguồn', 'Đền ơn đáp nghĩa'?",
+      "options": [
+        "A. Đi tham quan du lịch tại các khu nghỉ dưỡng sinh thái.",
+        "B. Thăm hỏi, chăm sóc các Mẹ Việt Nam Anh hùng và viếng nghĩa trang liệt sĩ.",
+        "C. Mua sắm đồ hiệu nhân dịp các ngày lễ lớn trong năm.",
+        "D. Tụ tập bạn bè ăn uống trong các ngày lễ kỉ niệm của đất nước."
+      ],
+      "answer": 1,
+      "explanation": "Kính trọng, biết ơn những người có công với quê hương đất nước qua phong trào 'Đền ơn đáp nghĩa' là hành động gìn giữ truyền thống tốt đẹp."
+    },
+    {
+      "id": "gdcd7_tn07",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Trách nhiệm hàng đầu của học sinh đối với truyền thống quê hương là gì?",
+      "options": [
+        "A. Đầu tư vốn kinh doanh các sản phẩm ẩm thực truyền thống.",
+        "B. Tổ chức các tour du lịch văn hóa quy mô lớn.",
+        "C. Chăm ngoan, học giỏi, rèn luyện đạo đức để góp phần xây dựng quê hương.",
+        "D. Sưu tầm toàn bộ cổ vật văn hóa của địa phương về nhà."
+      ],
+      "answer": 2,
+      "explanation": "Trách nhiệm của học sinh là nỗ lực chăm ngoan, học giỏi, rèn luyện nhân cách đạo đức để sau này cống hiến xây dựng quê hương."
+    },
+    {
+      "id": "gdcd7_tn08",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Trước các hành vi làm tổn hại hoặc làm phai nhạt truyền thống tốt đẹp của quê hương, học sinh cần có thái độ nào?",
+      "options": [
+        "A. Thờ ơ, im lặng vì cho rằng không liên quan đến mình.",
+        "B. Đồng tình và hùa theo trào lưu đó trên mạng xã hội.",
+        "C. Biết phê phán, ngăn chặn hoặc báo cho người có trách nhiệm xử lý.",
+        "D. Tránh né và không can thiệp để tránh phiền phức."
+      ],
+      "answer": 2,
+      "explanation": "Học sinh cần biết phê phán, ngăn chặn những hành vi việc làm gây tổn hại hoặc làm mai một truyền thống quê hương."
+    },
+    {
+      "id": "gdcd7_tn09",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Tình huống: Khi lớp tổ chức hội thi 'Giới thiệu món ngon quê em', bạn Nam từ chối tham gia vì cho rằng các món ăn quê mình mộc mạc, không sang trọng bằng đồ ăn nhanh phương Tây. Em nhận xét gì về Nam?",
+      "options": [
+        "A. Nam là người có lối sống hiện đại và tư duy tiến bộ.",
+        "B. Nam chưa biết tự hào, trân trọng nét đẹp ẩm thực truyền thống của quê hương.",
+        "C. Nam rất thẳng thắn và biết bảo vệ sở thích cá nhân.",
+        "D. Nam có ý thức bảo vệ sức khỏe khi không ăn đồ dân dã."
+      ],
+      "answer": 1,
+      "explanation": "Ẩm thực quê hương kết tinh văn hóa lao động của cha ông; chối bỏ vì cho rằng không sang trọng là biểu hiện chưa biết trân trọng truyền thống."
+    },
+    {
+      "id": "gdcd7_tn10",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Tình huống: Trong buổi giao lưu văn nghệ, một bạn học sinh người dân tộc thiểu số mặc trang phục truyền thống của dân tộc mình. Một số bạn trong trường cười cợt và trêu chọc. Hành động của nhóm bạn trêu chọc thể hiện điều gì?",
+      "options": [
+        "A. Thiếu tôn trọng sự đa dạng văn hóa và bản sắc vùng miền.",
+        "B. Hài hước, tạo không khí vui vẻ cho buổi giao lưu.",
+        "C. Sự hồn nhiên, vô tư của tuổi học trò.",
+        "D. Góp ý chân thành để bạn thay đổi trang phục hiện đại hơn."
+      ],
+      "answer": 0,
+      "explanation": "Cười cợt trang phục truyền thống của dân tộc khác là hành vi sai trái, thể hiện sự thiếu tôn trọng đa dạng văn hóa."
+    },
+    {
+      "id": "gdcd7_tn11",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Hành vi nào dưới đây gây tổn hại trực tiếp đến các giá trị di tích truyền thống quê hương?",
+      "options": [
+        "A. Tham gia dọn dẹp vệ sinh khuôn viên đền, chùa ở địa phương.",
+        "B. Khắc tên, vẽ bậy lên bia đá, tường di tích lịch sử khi đi tham quan.",
+        "C. Đọc văn bia để tìm hiểu về các danh nhân địa phương.",
+        "D. Mặc trang phục lịch sự, trang nghiêm khi vào viếng đền thờ."
+      ],
+      "answer": 1,
+      "explanation": "Viết vẽ bậy, khắc tên lên tường, tượng, bia đá là hành vi phá hoại di tích lịch sử và làm hoen ố giá trị truyền thống."
+    },
+    {
+      "id": "gdcd7_tn12",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Quê hương bạn Mai có nghề dệt chiếu cói truyền thống lâu đời nhưng thu nhập không cao bằng làm việc tại nhà máy. Mai nên làm gì để thể hiện lòng tự hào?",
+      "options": [
+        "A. Khuyên bố mẹ bỏ hẳn nghề truyền thống để chuyển nghề khác.",
+        "B. Giấu bạn bè vì sợ bị chê là nhà làm nghề thủ công lạc hậu.",
+        "C. Học hỏi kỹ thuật dệt chiếu, phụ giúp gia đình và quảng bá nét đẹp sản phẩm quê hương.",
+        "D. Không bao giờ dùng chiếu cói trong gia đình."
+      ],
+      "answer": 2,
+      "explanation": "Tôn trọng, học hỏi và chung tay quảng bá sản phẩm làng nghề thủ công là hành động thiết thực giữ gìn truyền thống."
+    },
+    {
+      "id": "gdcd7_tn13",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Việc thế hệ trẻ học hát Dân ca Quan họ Bắc Ninh, Đờn ca tài tử Nam Bộ hay Hát Xoan Phú Thọ là biểu hiện của truyền thống nào?",
+      "options": [
+        "A. Truyền thống nghệ thuật dân gian.",
+        "B. Truyền thống ẩm thực dân tộc.",
+        "C. Truyền thống trang phục vùng miền.",
+        "D. Truyền thống thể dục thể thao."
+      ],
+      "answer": 0,
+      "explanation": "Các làn điệu dân ca, nhã nhạc, đờn ca là tinh hoa của truyền thống nghệ thuật dân gian Việt Nam."
+    },
+    {
+      "id": "gdcd7_tn14",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Câu tục ngữ nào dưới đây nói về truyền thống biết ơn, đền ơn đáp nghĩa của dân tộc ta?",
+      "options": [
+        "A. 'Có công mài sắt, có ngày nên kim'.",
+        "B. 'Uống nước nhớ nguồn'.",
+        "C. 'Học thầy không tày học bạn'.",
+        "D. 'Lá lành đùm lá rách'."
+      ],
+      "answer": 1,
+      "explanation": "'Uống nước nhớ nguồn' nhắc nhở con người luôn ghi nhớ, tri ân cội nguồn và những người có công."
+    },
+    {
+      "id": "gdcd7_tn15",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Một người luôn tự hào về quê hương mình nhưng lại thường xuyên có lời lẽ chê bai, bài xích phong tục tốt đẹp của các địa phương khác là biểu hiện của:",
+      "options": [
+        "A. Tình yêu quê hương chân chính.",
+        "B. Nhận thức hẹp hòi, chưa tôn trọng sự đa dạng văn hóa.",
+        "C. Tinh thần bảo vệ bản sắc quê hương tuyệt đối.",
+        "D. Tinh thần dám nghĩ dám nói thẳng thắn."
+      ],
+      "answer": 1,
+      "explanation": "Tự hào chân chính phải đi liền với thái độ tôn trọng sự đa dạng, nét đẹp văn hóa riêng của các vùng miền khác."
+    },
+    {
+      "id": "gdcd7_tn16",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Nhà trường phát động phong trào 'Chăm sóc đài tưởng niệm các anh hùng liệt sĩ', việc làm đúng đắn của mỗi học sinh là:",
+      "options": [
+        "A. Chỉ đi nếu được cộng điểm học tập.",
+        "B. Tích cực, tự giác tham gia quét dọn, dâng hương với lòng thành kính.",
+        "C. Đến điểm danh chụp ảnh check-in rồi bỏ về.",
+        "D. Đùn đẩy nhiệm vụ cho ban cán sự lớp."
+      ],
+      "answer": 1,
+      "explanation": "Tự giác, trách nhiệm và thành kính trong hoạt động 'Đền ơn đáp nghĩa' là biểu hiện cụ thể của người học sinh có đạo đức."
+    },
+    {
+      "id": "gdcd7_tn17",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Trong thời kỳ hội nhập quốc tế hiện nay, việc tiếp thu văn hóa nước ngoài cần dựa trên nguyên tắc nào đối với truyền thống quê hương?",
+      "options": [
+        "A. Sao chép nguyên vẹn tất cả những gì của nước ngoài và từ bỏ truyền thống cũ.",
+        "B. 'Hòa nhập nhưng không hòa tan', tiếp thu có chọn lọc tinh hoa văn hóa nhân loại đồng thời gìn giữ bản sắc dân tộc.",
+        "C. Tuyệt đối đóng cửa, bài xích mọi nét văn hóa từ bên ngoài du nhập vào.",
+        "D. Chỉ coi trọng văn hóa phương Tây, xem nhẹ văn hóa truyền thống Á Đông."
+      ],
+      "answer": 1,
+      "explanation": "Cần tiếp thu có chọn lọc những tiến bộ của thế giới, đồng thời bảo tồn và phát huy bản sắc văn hóa tốt đẹp của dân tộc."
+    },
+    {
+      "id": "gdcd7_tn18",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Tình huống: Thấy bác hàng xóm đem rác thải sinh hoạt vứt bừa bãi ra khuôn viên cây xanh của đình làng, em nên xử sự thế nào?",
+      "options": [
+        "A. Coi như không thấy để giữ hòa khí làng xóm.",
+        "B. Đăng bài lên mạng bêu riếu bác để cộng đồng mạng chỉ trích.",
+        "C. Nhắc nhở khéo léo bác giữ vệ sinh chung hoặc báo với ban quản lý di tích thôn/ấp.",
+        "D. Cùng vứt thêm rác vào đó vì thấy chỗ đó đã có rác."
+      ],
+      "answer": 2,
+      "explanation": "Nhắc nhở nhẹ nhàng, văn minh hoặc báo người có thẩm quyền là cách ứng xử có trách nhiệm để bảo vệ di tích văn hóa."
+    },
+    {
+      "id": "gdcd7_tn19",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Truyền thống yêu nước và chống giặc ngoại xâm của dân tộc ta thể hiện rõ nhất qua thái độ nào của thế hệ trẻ ngày nay?",
+      "options": [
+        "A. Sẵn sàng lên đường thực hiện nghĩa vụ quân sự bảo vệ Tổ quốc khi đến tuổi.",
+        "B. Thích tranh cãi gay gắt về chính trị trên không gian mạng.",
+        "C. Chỉ quan tâm đến thành công và quyền lợi của riêng cá nhân mình.",
+        "D. Tìm mọi cách để trốn tránh trách nhiệm công dân."
+      ],
+      "answer": 0,
+      "explanation": "Ý thức bảo vệ Tổ quốc, chấp hành luật pháp và sẵn sàng thực hiện nghĩa vụ quân sự là biểu hiện sinh động của lòng yêu nước."
+    },
+    {
+      "id": "gdcd7_tn20",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Việc lập fanpage hoặc làm video clip ngắn giới thiệu về làng nghề gốm sứ truyền thống của địa phương bằng tiếng Anh là hành động:",
+      "options": [
+        "A. Lãng phí thời gian học tập, không mang lại giá trị thiết thực.",
+        "B. Thể hiện tính tự kiêu, thích khoe khoang bản thân.",
+        "C. Chủ động, sáng tạo trong việc quảng bá và phát huy truyền thống quê hương với bạn bè quốc tế.",
+        "D. Xâm phạm bí mật làng nghề địa phương."
+      ],
+      "answer": 2,
+      "explanation": "Tận dụng công nghệ và ngoại ngữ để giới thiệu nét đẹp làng nghề truyền thống là cách gìn giữ và lan tỏa văn hóa đầy sáng tạo."
+    },
+    {
+      "id": "gdcd7_tn21",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Thế nào là quan tâm, cảm thông và chia sẻ?",
+      "options": [
+        "A. Giúp đỡ người khác khi họ hứa sẽ trả ơn xứng đáng cho mình.",
+        "B. Sự chăm sóc bằng tình cảm chân thành; đặt mình vào vị trí của người khác, nhận biết và thấu hiểu cảm xúc của họ; san sẻ, giúp đỡ, trao gửi những điều tốt đẹp.",
+        "C. Cho người khác tiền bạc mà không cần biết cảm xúc hay hoàn cảnh của họ.",
+        "D. Chia sẻ chuyện buồn của người khác lên mạng xã hội để mọi người cùng bàn tán."
+      ],
+      "answer": 1,
+      "explanation": "Quan tâm, cảm thông và chia sẻ là chăm sóc bằng tình cảm chân thành; đặt mình vào vị trí người khác để thấu hiểu và trao gửi điều tốt đẹp."
+    },
+    {
+      "id": "gdcd7_tn22",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Hành động nào sau đây là biểu hiện của sự quan tâm, cảm thông và chia sẻ?",
+      "options": [
+        "A. Giả vờ không biết khi thấy bạn thân đang khóc vì gặp chuyện buồn.",
+        "B. Lắng nghe, động viên, an ủi, nhắn tin gọi điện hỏi thăm khi bạn ốm đau.",
+        "C. Cười nhạo khi thấy bạn trượt ngã trước sân trường.",
+        "D. Đem hoàn cảnh khó khăn của bạn ra làm đề tài trêu đùa."
+      ],
+      "answer": 1,
+      "explanation": "Lắng nghe, động viên, an ủi, hỏi thăm chân thành là biểu hiện ấm áp của sự quan tâm và thấu hiểu."
+    },
+    {
+      "id": "gdcd7_tn23",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Chia sẻ có thể được thực hiện qua những phương diện nào?",
+      "options": [
+        "A. Chỉ có chia sẻ về tiền bạc, vật chất mới có giá trị.",
+        "B. Chỉ có chia sẻ về mặt tinh thần như lời nói suông.",
+        "C. Cả về vật chất (sách vở, quần áo, tiền...) lẫn tinh thần (lắng nghe, an ủi, động viên).",
+        "D. Chỉ chia sẻ khi có sự chứng kiến của thầy cô và bạn bè."
+      ],
+      "answer": 2,
+      "explanation": "Chia sẻ trọn vẹn bao gồm cả sự giúp đỡ về vật chất và sự đồng hành, khích lệ về mặt tinh thần."
+    },
+    {
+      "id": "gdcd7_tn24",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Hành vi nào dưới đây đi ngược lại với đức tính quan tâm, cảm thông và chia sẻ?",
+      "options": [
+        "A. Giúp bạn chép bài khi bạn bị ốm phải nghỉ học.",
+        "B. Thờ ơ, vô cảm, ích kỉ trước khó khăn mất mát của người khác.",
+        "C. Khuyên bạn đừng bi quan khi gặp điểm kém.",
+        "D. Quyên góp ủng hộ đồng bào miền Trung bị ảnh hưởng bão lũ."
+      ],
+      "answer": 1,
+      "explanation": "Thờ ơ, ích kỉ, 'cháy nhà hàng xóm bình chân như vại' là thói xấu đi ngược lại đạo đức truyền thống."
+    },
+    {
+      "id": "gdcd7_tn25",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Đối với người NHẬN được sự quan tâm, cảm thông và chia sẻ, họ sẽ nhận được giá trị gì?",
+      "options": [
+        "A. Trở nên ỷ lại và không muốn tự phấn đấu nữa.",
+        "B. Có thêm động lực vượt qua thử thách, có niềm tin vào tương lai.",
+        "C. Bắt buộc phải đền đáp vật chất gấp đôi cho người giúp đỡ.",
+        "D. Cảm thấy tự ti vì bị người khác thương hại."
+      ],
+      "answer": 1,
+      "explanation": "Người nhận được sự sẻ chia chân thành sẽ có thêm động lực to lớn vượt qua nghịch cảnh và tin yêu vào cuộc sống."
+    },
+    {
+      "id": "gdcd7_tn26",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Đối với người BIẾT quan tâm, cảm thông và chia sẻ, họ sẽ nhận lại điều gì?",
+      "options": [
+        "A. Sự yêu quý, tôn trọng của mọi người; cuộc sống ngập tràn yêu thương, niềm vui và hạnh phúc.",
+        "B. Bị mọi người coi thường vì nhẹ dạ cả tin.",
+        "C. Mất hết thời gian và của cải mà không được gì.",
+        "D. Được thưởng thật nhiều tiền từ nhà trường."
+      ],
+      "answer": 0,
+      "explanation": "Người giàu lòng nhân ái sẽ nhận được sự kính trọng, yêu mến từ cộng đồng, tâm hồn thanh thản và hạnh phúc."
+    },
+    {
+      "id": "gdcd7_tn27",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Trong xã hội, nếu mọi người đều biết quan tâm, cảm thông và chia sẻ thì:",
+      "options": [
+        "A. Xã hội sẽ trở nên lộn xộn vì ai cũng can thiệp vào chuyện người khác.",
+        "B. Mọi người trở nên gần gũi, yêu thương và đoàn kết với nhau hơn, các mối quan hệ bền vững hơn.",
+        "C. Làm giảm năng suất làm việc của cộng đồng.",
+        "D. Chỉ mang lại lợi ích cho người nghèo."
+      ],
+      "answer": 1,
+      "explanation": "Biết quan tâm, sẻ chia giúp gắn kết con người, xây dựng tập thể đoàn kết, nhân văn và bền vững."
+    },
+    {
+      "id": "gdcd7_tn28",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Để rèn luyện lòng quan tâm, cảm thông và chia sẻ, việc làm đầu tiên mỗi ngày là gì?",
+      "options": [
+        "A. Thường xuyên quan sát, chú ý đến những người xung quanh.",
+        "B. Luôn mang thật nhiều tiền để phát cho người khác.",
+        "C. Can thiệp vào mọi câu chuyện riêng tư của bạn bè.",
+        "D. Đăng nhiều bài viết triết lý sống lên trang cá nhân."
+      ],
+      "answer": 0,
+      "explanation": "Cần bắt đầu từ việc quan sát, chú ý để nhận biết khi nào người thân, bạn bè xung quanh cần sự giúp đỡ."
+    },
+    {
+      "id": "gdcd7_tn29",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Thái độ sống nào sau đây hỗ trợ tốt nhất cho việc rèn luyện sự cảm thông và chia sẻ?",
+      "options": [
+        "A. Sống khép kín, đề phòng tất cả mọi người.",
+        "B. Luôn so đo thiệt hơn trong mọi mối quan hệ.",
+        "C. Sống hòa đồng, biết tha thứ, bao dung và sẻ chia buồn vui cùng mọi người.",
+        "D. Chỉ quan tâm đến những người có thể giúp đỡ lại mình."
+      ],
+      "answer": 2,
+      "explanation": "Lối sống hòa đồng, bao dung, biết thứ tha và chia sẻ buồn vui là nền tảng của một trái tim nhân hậu."
+    },
+    {
+      "id": "gdcd7_tn30",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Tình huống: Bạn Hùng học cùng lớp bị gãy chân phải bó bột đi lại khó khăn. Việc làm nào dưới đây thể hiện sự quan tâm đúng đắn?",
+      "options": [
+        "A. Tránh xa vì sợ bạn nhờ vả mất thời gian của mình.",
+        "B. Phân công nhau hỗ trợ bạn xách cặp, dìu bạn lên cầu thang và chép giúp bài học.",
+        "C. Bắt bạn phải tự xoay xở để rèn luyện tính tự lập.",
+        "D. Lấy gậy chống của bạn để chơi đùa giả làm người tàn tật."
+      ],
+      "answer": 1,
+      "explanation": "Hỗ trợ bạn di chuyển, chép bài giúp khi bạn ốm đau là hành động thiết thực của tình bạn trong sáng."
+    },
+    {
+      "id": "gdcd7_tn31",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Tình huống: Khi thấy bác lao công quét sân trường giữa trưa nắng gắt, hành động nào sau đây là phù hợp nhất?",
+      "options": [
+        "A. Vứt rác ngay xuống đất trước mặt bác vì nghĩ đó là việc của bác.",
+        "B. Lại gần mời bác ngụm nước mát và vứt rác đúng nơi quy định để giảm bớt vất vả cho bác.",
+        "C. Đứng chỉ trích bác quét chậm làm bụi bay.",
+        "D. Quay video clip đăng mạng để câu lượt thích."
+      ],
+      "answer": 1,
+      "explanation": "Chào hỏi lễ phép, mời nước và có ý thức giữ vệ sinh là biểu hiện của sự biết ơn và cảm thông với người lao động."
+    },
+    {
+      "id": "gdcd7_tn32",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Tình huống: Lan thấy An có vẻ buồn bã, ngồi một mình ở góc lớp trong giờ ra chơi. Lan nên làm gì?",
+      "options": [
+        "A. Lại gần ngồi cạnh, nhẹ nhàng hỏi han và lắng nghe An tâm sự nếu An sẵn lòng.",
+        "B. Hét to cho cả lớp biết An đang khóc để mọi người đến xem.",
+        "C. Phớt lờ vì nghĩ đó là chuyện riêng tư không nên bận tâm.",
+        "D. Đến chê bai An yếu đuối, hay suy nghĩ tiêu cực."
+      ],
+      "answer": 0,
+      "explanation": "Sự tế nhị, ngồi cạnh lắng nghe chân thành là liều thuốc tinh thần quý giá giúp bạn giải tỏa nỗi buồn."
+    },
+    {
+      "id": "gdcd7_tn33",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Câu tục ngữ nào dưới đây KHÔNG nói về sự quan tâm, đùm bọc, sẻ chia?",
+      "options": [
+        "A. 'Lá lành đùm lá rách'.",
+        "B. 'Thương người như thể thương thân'.",
+        "C. 'Một con ngựa đau cả tàu bỏ cỏ'.",
+        "D. 'Đèn nhà ai nhà nấy rạng'."
+      ],
+      "answer": 3,
+      "explanation": "'Đèn nhà ai nhà nấy rạng' phản ánh lối sống ích kỉ, cô lập, thờ ơ, thiếu sự quan tâm sẻ chia trong cộng đồng."
+    },
+    {
+      "id": "gdcd7_tn34",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Khi muốn an ủi một người bạn vừa trải qua sự mất mát người thân, điều quan trọng nhất là:",
+      "options": [
+        "A. Nói thật nhiều lời khuyên bảo đạo lý dài dòng.",
+        "B. Đặt mình vào nỗi đau của bạn, lắng nghe bằng sự chân thành và chia sẻ nhẹ nhàng.",
+        "C. Tặng quà đắt tiền để bạn nhanh chóng quên đi nỗi buồn.",
+        "D. Bắt bạn phải vui vẻ ngay lập tức để không khí không bị chùng xuống."
+      ],
+      "answer": 1,
+      "explanation": "Cảm thông đòi hỏi sự đặt mình vào vị trí của người khác, tôn trọng cảm xúc và hiện diện chân thành."
+    },
+    {
+      "id": "gdcd7_tn35",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Tình huống: Khi lớp tổ chức quyên góp ủng hộ bạn Bình có hoàn cảnh gia đình hỏa hoạn, Minh không có tiền tiết kiệm nên cảm thấy rất áy náy. Minh có thể làm gì để chia sẻ cùng Bình?",
+      "options": [
+        "A. Đi vay nặng lãi để có tiền đóng góp cho bằng bạn bằng bè.",
+        "B. Quyên góp đồ dùng học tập, sách vở còn tốt và thường xuyên động viên, kèm cặp bạn học bài.",
+        "C. Trốn học vào ngày phát động quyên góp vì xấu hổ.",
+        "D. Xin tiền bố mẹ bằng cách nói dối là đóng tiền học phí."
+      ],
+      "answer": 1,
+      "explanation": "Chia sẻ không đo bằng lượng tiền; sách vở cũ còn dùng tốt cùng tình cảm chân thành, giúp bạn học tập đều vô cùng quý giá."
+    },
+    {
+      "id": "gdcd7_tn36",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Hành vi nào dưới đây vừa thể hiện tự hào truyền thống quê hương, vừa thể hiện tinh thần sẻ chia với cộng đồng?",
+      "options": [
+        "A. Tổ chức bán vé xem văn nghệ truyền thống với giá rất cao để kiếm lời.",
+        "B. Tham gia đội tình nguyện biểu diễn nghệ thuật dân tộc miễn phí phục vụ các cụ già tại viện dưỡng lão.",
+        "C. Đi phượt chụp ảnh phong cảnh quê hương nhưng xả rác bừa bãi.",
+        "D. Khuyên mọi người không nên làm từ thiện ở các vùng quê nghèo."
+      ],
+      "answer": 1,
+      "explanation": "Mang nghệ thuật truyền thống phục vụ người già neo đơn là sự kết hợp tuyệt đẹp giữa giữ gìn bản sắc và sẻ chia tình thương."
+    },
+    {
+      "id": "gdcd7_tn37",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Thấy bạn trong lớp vì hoàn cảnh khó khăn phải vừa học vừa phụ mẹ bán hàng buổi tối, một số bạn xì xào chê bai. Em sẽ làm gì?",
+      "options": [
+        "A. Hùa theo các bạn để không bị cô lập trong nhóm.",
+        "B. Lên tiếng bênh vực bạn, giải thích để các bạn hiểu và khích lệ sự hiếu thảo, chịu khó của bạn.",
+        "C. Mặc kệ vì không phải chuyện của mình.",
+        "D. Nghỉ chơi với bạn vì thấy bạn nghèo."
+      ],
+      "answer": 1,
+      "explanation": "Bênh vực, động viên và lan tỏa tinh thần thấu hiểu, giúp các bạn khác nhận ra giá trị của lao động chân chính là việc nên làm."
+    },
+    {
+      "id": "gdcd7_tn38",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Giúp đỡ người khác trong lúc hoạn nạn nhưng lại đem điều đó ra để kể công, ép người khác phải làm theo ý mình thì hành vi đó:",
+      "options": [
+        "A. Rất xứng đáng vì mình đã bỏ công sức giúp đỡ họ.",
+        "B. Không xuất phát từ sự chân thành, làm tổn thương lòng tự trọng của người nhận.",
+        "C. Là bài học kinh nghiệm cần phát huy trong cuộc sống.",
+        "D. Giúp rèn luyện tính sòng phẳng cho mọi người."
+      ],
+      "answer": 1,
+      "explanation": "Sự chia sẻ đích thực phải bắt nguồn từ trái tim chân thành, không vụ lợi và luôn tôn trọng danh dự người khác."
+    },
+    {
+      "id": "gdcd7_tn39",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Việc tha thứ cho lỗi lầm vô ý của bạn và cùng bạn tìm cách khắc phục hậu quả thể hiện đức tính gì?",
+      "options": [
+        "A. Nhu nhược, dễ bị bắt nạt.",
+        "B. Bao dung, cảm thông và biết quan tâm đến cảm xúc của bạn bè.",
+        "C. Thiếu nguyên tắc và kỷ luật.",
+        "D. Không dám đấu tranh chống lại cái sai."
+      ],
+      "answer": 1,
+      "explanation": "Biết tha thứ, bao dung với lỗi lầm vô ý giúp bạn sửa sai và làm cho tình bạn thêm thấu hiểu, gắn bó."
+    },
+    {
+      "id": "gdcd7_tn40",
+      "subject_part": "Giáo dục công dân",
+      "type": "multiple_choice",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Để khuyến khích mọi người xung quanh cùng lan tỏa tinh thần tương thân tương ái, mỗi học sinh nên:",
+      "options": [
+        "A. Bắt buộc người khác phải đóng góp từ thiện dù họ không có điều kiện.",
+        "B. Luôn là tấm gương tiên phong biết sẻ chia, khích lệ và đồng hành cùng bạn bè làm việc tốt.",
+        "C. Chỉ trích gay gắt những người chưa tham gia hoạt động thiện nguyện.",
+        "D. Chụp ảnh khoe khoang những việc tốt mình làm để nhận nhiều lời khen."
+      ],
+      "answer": 1,
+      "explanation": "Khích lệ, động viên bạn bè bằng chính hành động đẹp của bản thân là cách nhân rộng tình yêu thương hiệu quả nhất."
+    },
+    {
+      "id": "gdcd7_tl01",
+      "subject_part": "Giáo dục công dân",
+      "type": "short_essay",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Thế nào là truyền thống quê hương và tự hào về truyền thống quê hương? Nêu ý nghĩa của truyền thống đối với mỗi người.",
+      "modelAnswer": "- Truyền thống quê hương là những giá trị tốt đẹp, riêng biệt được hình thành, lưu truyền và phát triển qua nhiều thế hệ của một địa phương, vùng miền (ẩm thực, lễ hội, nghệ thuật, trang phục, yêu nước...).\n- Tự hào truyền thống quê hương là sự tự tin, hãnh diện về những giá trị mà người dân quê hương đã sáng tạo ra và được lưu truyền từ thế hệ này sang thế hệ khác.\n- Ý nghĩa: Truyền thống quê hương có vai trò quan trọng trong việc hình thành tư tưởng, đạo đức, lối sống tốt đẹp của mỗi con người.",
+      "keyPoints": [
+        "Định nghĩa truyền thống quê hương: giá trị tốt đẹp, riêng biệt, lưu truyền qua nhiều thế hệ.",
+        "Khái niệm tự hào: tự tin, hãnh diện về các giá trị do cha ông sáng tạo.",
+        "Ý nghĩa: hình thành tư tưởng, đạo đức, lối sống tốt đẹp."
+      ],
+      "explanation": "Ghi nhớ đầy đủ 3 ý: Khái niệm truyền thống, Khái niệm tự hào và Ý nghĩa nền tảng."
+    },
+    {
+      "id": "gdcd7_tl02",
+      "subject_part": "Giáo dục công dân",
+      "type": "short_essay",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Học sinh cần có những việc làm và trách nhiệm gì để giữ gìn và phát huy truyền thống tốt đẹp của quê hương?",
+      "modelAnswer": "- Biểu hiện việc làm: Tìm hiểu và tự hào về truyền thống; Tôn trọng sự đa dạng văn hóa vùng miền; Kính trọng, biết ơn người có công với quê hương đất nước; Tích cực tham gia các hoạt động 'Đền ơn đáp nghĩa' và sinh hoạt văn hóa truyền thống.\n- Trách nhiệm học sinh: Chăm ngoan, học giỏi, rèn luyện đạo đức để góp phần xây dựng quê hương; Biết phê phán, ngăn chặn những hành vi làm tổn hại hoặc làm phai nhạt truyền thống tốt đẹp.",
+      "keyPoints": [
+        "Tôn trọng đa dạng văn hóa vùng miền.",
+        "Biết ơn người có công, tham gia phong trào 'Đền ơn đáp nghĩa'.",
+        "Chăm ngoan, học giỏi, rèn luyện đạo đức.",
+        "Phê phán, ngăn chặn hành vi làm phai nhạt, hủy hoại truyền thống."
+      ],
+      "explanation": "Phân biệt rõ 2 nhóm ý: Biểu hiện việc làm cụ thể và Trách nhiệm của bản thân học sinh."
+    },
+    {
+      "id": "gdcd7_tl03",
+      "subject_part": "Giáo dục công dân",
+      "type": "short_essay",
+      "topic": "Tự hào truyền thống quê hương",
+      "question": "Tình huống: Khi tham quan một ngôi chùa cổ có bia đá hàng trăm năm tuổi, bạn Tuấn lấy chìa khóa khắc tên mình và bạn gái lên bia đá để 'lưu niệm'. Em hãy nhận xét hành vi của Tuấn và nêu cách ứng xử của em lúc đó.",
+      "modelAnswer": "- Nhận xét: Hành vi của Tuấn là hoàn toàn sai trái, thiếu ý thức bảo vệ di sản văn hóa, trực tiếp xâm hại và làm tổn hại đến giá trị di tích truyền thống của quê hương.\n- Cách ứng xử của em: Em sẽ lập tức can ngăn Tuấn, giải thích rõ bia đá là di vật lịch sử quý báu cần được bảo tồn nguyên vẹn. Nếu Tuấn không dừng lại, em sẽ báo ngay cho ban quản lý di tích hoặc thầy cô phụ trách để có biện pháp xử lý kịp thời.",
+      "keyPoints": [
+        "Đánh giá hành vi: Sai trái, phá hoại di tích văn hóa, thiếu ý thức công dân.",
+        "Hành động can ngăn: Giải thích giá trị lịch sử và khuyên bạn dừng lại.",
+        "Biện pháp phối hợp: Báo ban quản lý hoặc thầy cô nếu bạn không nghe."
+      ],
+      "explanation": "Cần thể hiện rõ nhận thức đúng sai và hành động bảo vệ di tích có trách nhiệm."
+    },
+    {
+      "id": "gdcd7_tl04",
+      "subject_part": "Giáo dục công dân",
+      "type": "short_essay",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Thế nào là quan tâm, cảm thông và chia sẻ? Hãy nêu các biểu hiện cụ thể trong cuộc sống hàng ngày.",
+      "modelAnswer": "- Khái niệm: Là sự chăm sóc bằng tình cảm chân thành; đặt mình vào vị trí của người khác, nhận biết và thấu hiểu cảm xúc của họ; san sẻ, giúp đỡ, trao gửi những điều tốt đẹp cho nhau.\n- Biểu hiện cụ thể:\n  + Lắng nghe, động viên, an ủi, nhắn tin, gọi điện hỏi thăm.\n  + Chia sẻ về vật chất và tinh thần với những người gặp khó khăn.\n  + Khích lệ, động viên bạn bè cùng quan tâm, sẻ chia với mọi người.\n  + Phê phán thói ích kỉ, thờ ơ trước khó khăn, mất mát của người khác.",
+      "keyPoints": [
+        "Định nghĩa: Chăm sóc chân thành, đặt mình vào vị trí người khác, thấu hiểu và sẻ chia.",
+        "Hỏi thăm, lắng nghe, an ủi tinh thần.",
+        "Hỗ trợ vật chất khi gặp hoàn cảnh khó khăn.",
+        "Phê phán thói ích kỉ, vô cảm."
+      ],
+      "explanation": "Trình bày đủ khái niệm và 4 biểu hiện then chốt của đức tính này."
+    },
+    {
+      "id": "gdcd7_tl05",
+      "subject_part": "Giáo dục công dân",
+      "type": "short_essay",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Sự quan tâm, cảm thông và chia sẻ mang lại ý nghĩa gì cho người nhận, người cho và toàn xã hội?",
+      "modelAnswer": "- Đối với người nhận: Giúp họ có thêm động lực để vượt qua khó khăn, thử thách và có niềm tin vào tương lai.\n- Đối với người cho (người biết quan tâm chia sẻ): Họ sẽ nhận được sự yêu quý, tôn trọng của mọi người xung quanh, cuộc sống tràn ngập niềm vui, hạnh phúc; các mối quan hệ trở nên tốt đẹp và bền vững hơn.\n- Đối với xã hội: Giúp mọi người trở nên gần gũi, gắn bó, đoàn kết và nhân văn hơn.",
+      "keyPoints": [
+        "Với người nhận: thêm động lực vượt khó, củng cố niềm tin vào tương lai.",
+        "Với người trao gửi: nhận tình yêu quý, cuộc sống hạnh phúc, quan hệ bền vững.",
+        "Với xã hội: đoàn kết, yêu thương, gần gũi."
+      ],
+      "explanation": "Phân tích rành mạch theo 3 khía cạnh: Người nhận - Người cho - Xã hội."
+    },
+    {
+      "id": "gdcd7_tl06",
+      "subject_part": "Giáo dục công dân",
+      "type": "short_essay",
+      "topic": "Quan tâm, cảm thông và chia sẻ",
+      "question": "Em hãy nêu các cách rèn luyện đức tính quan tâm, cảm thông và chia sẻ? Hãy đưa ra một tình huống thực tế em đã từng thực hiện hoặc chứng kiến.",
+      "modelAnswer": "- Cách rèn luyện:\n  + Thường xuyên quan sát, chú ý đến những người xung quanh.\n  + Lắng nghe và đặt câu hỏi thăm hỏi, sẵn sàng giúp đỡ khi ai đó gặp khó khăn.\n  + Sống hòa đồng, biết tha thứ, bao dung và chia sẻ buồn vui cùng mọi người.\n- Tình huống thực tế (Ví dụ): Trong đợt bão lũ vừa qua, em đã cùng các bạn trong lớp đập heo đất tiết kiệm, quyên góp sách vở và đồ ấm gửi tặng các bạn học sinh vùng cao; ngoài ra khi bạn cùng bàn bị ốm phải nghỉ học, em đã chủ động mang vở sang giảng lại bài và chép giúp bài tập cho bạn.",
+      "keyPoints": [
+        "3 cách rèn luyện: Quan sát xung quanh; Lắng nghe thăm hỏi; Sống hòa đồng bao dung tha thứ.",
+        "Liên hệ tình huống thực tế cụ thể, sinh động và chân thực."
+      ],
+      "explanation": "Nêu đủ 3 nguyên tắc rèn luyện trong đề cương kèm ví dụ hành động đẹp trong học đường."
+    }
+  ]
+}

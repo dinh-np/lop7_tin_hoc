@@ -2,6 +2,7 @@
 import { tinHocQuestions } from './tinHocQuestions';
 import { petB1Questions } from './petB1Questions';
 import { lichSuDiaLiQuestions } from './lichSuDiaLiQuestions';
+import { gdcdQuestions } from './gdcdQuestions';
 // When adding new subjects, import here:
 // import { toanQuestions } from './toanQuestions';
 // import { khoaHocTuNhienQuestions } from './khoaHocTuNhienQuestions';
@@ -12,7 +13,7 @@ export const khoaHocTuNhienQuestions = [];
 export const nguVanQuestions = [];
 export const tiengAnhQuestions = []; // School English (not PET)
 // lichSuDiaLiQuestions — imported above from ./lichSuDiaLiQuestions.js
-export const gdcdQuestions = [];
+// gdcdQuestions — imported above from ./gdcdQuestions.js
 export const congNgheQuestions = [];
 export const gdDiaPhuongQuestions = [];
 
