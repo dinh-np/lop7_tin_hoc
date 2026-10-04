@@ -6,10 +6,9 @@ import { gdcdQuestions } from './gdcdQuestions';
 import { khoaHocTuNhienQuestions } from './khoaHocTuNhienQuestions';
 import { nguVanQuestions } from './nguVanQuestions';
 // When adding new subjects, import here:
-// import { toanQuestions } from './toanQuestions';
+import { toanQuestions } from './toanQuestions';
 
 // Placeholder banks for new subjects (to be filled with real questions)
-export const toanQuestions = [];
 // khoaHocTuNhienQuestions — imported above from ./khoaHocTuNhienQuestions.js
 export { nguVanQuestions }; // imported above from ./nguVanQuestions.js
 export const tiengAnhQuestions = []; // School English (not PET)

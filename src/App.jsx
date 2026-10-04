@@ -3,6 +3,7 @@ import SubjectPicker from './components/SubjectPicker';
 import Quiz from './components/Quiz';
 import Exam from './components/Exam';
 import NguVanExam from './components/NguVanExam';
+import ToanExam from './components/ToanExam';
 import Review from './components/Review';
 import { getSubject } from './data/subjects';
 import { hasEssayQuestions } from './data/questionBank';
@@ -129,9 +130,13 @@ function App() {
             {/* Mode content — key theo phần để reset state khi đổi phần */}
             <main>
               {mode === 'practice' && <Quiz key={`quiz-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
-              {mode === 'exam' && (selectedSubject === 'ngu_van'
-                ? <NguVanExam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />
-                : <Exam key={`exam-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />)}
+              {mode === 'exam' && (
+                selectedSubject === 'ngu_van'
+                  ? <NguVanExam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />
+                  : selectedSubject === 'toan'
+                  ? <ToanExam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />
+                  : <Exam key={`exam-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />
+              )}
               {mode === 'review' && <Review key={`review-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
             </main>
           </div>
