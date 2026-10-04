@@ -14,6 +14,9 @@ import {
   orderBy,
   limit,
   serverTimestamp,
+  doc,
+  getDoc,
+  getDocFromServer
 } from 'firebase/firestore';
 
 const FIREBASE_API_KEY       = import.meta.env.VITE_FIREBASE_API_KEY;
@@ -170,3 +173,33 @@ export async function checkFirebaseStatus() {
     return { connected: false, reason: err.message };
   }
 }
+
+/**
+ * Tải đề thi mới nhất từ Firestore (ưu tiên getDocFromServer, fallback IndexedDB)
+ */
+export async function fetchSubjectDataFromFirestore(testId) {
+  const db = getDb();
+  if (!db) return null;
+
+  try {
+    const docRef = doc(db, 'tests', testId);
+    let snapshot;
+    try {
+      // Ưu tiên đọc từ server (bỏ qua cache)
+      snapshot = await getDocFromServer(docRef);
+      console.log('[Firebase] Fetched from SERVER:', testId);
+    } catch (e) {
+      // Offline fallback: đọc từ IndexedDB cache
+      console.warn('[Firebase] Server fetch failed, fallback to cache:', e.message);
+      snapshot = await getDoc(docRef);
+    }
+
+    if (snapshot.exists()) {
+      return snapshot.data();
+    }
+  } catch (err) {
+    console.error('[Firebase] Error fetching subject data:', err);
+  }
+  return null;
+}
+

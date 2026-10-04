@@ -1,4 +1,5 @@
 // Master Question Bank - aggregates all subjects
+import { fetchSubjectDataFromFirestore } from '../lib/firebase';
 import { tinHocQuestions } from './tinHocQuestions';
 import { petB1Questions } from './petB1Questions';
 import { lichSuDiaLiQuestions } from './lichSuDiaLiQuestions';
@@ -37,6 +38,22 @@ export const getQuestionsForSubject = (subjectId, part = 'all') => {
   if (part === 'essay') return list.filter((q) => q.type === 'short_essay');
   if (part === 'mcq') return list.filter((q) => q.type !== 'short_essay');
   return list;
+};
+
+// Đồng bộ dữ liệu mới nhất từ Firestore
+export const syncSubjectData = async (subjectId) => {
+  if (subjectId === 'lich_su_dia_li') {
+    const data = await fetchSubjectDataFromFirestore('ls_dl_7_gki');
+    if (data && data.questions) {
+      questionsBySubject[subjectId] = data.questions.map((q) => ({
+        ...q,
+        subject: subjectId,
+      }));
+      return true;
+    }
+  }
+  // TODO: Hỗ trợ thêm các môn khác nếu cần
+  return false;
 };
 
 // Môn có cả trắc nghiệm lẫn tự luận → hiện 2 tab riêng

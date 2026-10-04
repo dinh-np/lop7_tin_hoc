@@ -6,7 +6,7 @@ import NguVanExam from './components/NguVanExam';
 import ToanExam from './components/ToanExam';
 import Review from './components/Review';
 import { getSubject } from './data/subjects';
-import { hasEssayQuestions } from './data/questionBank';
+import { hasEssayQuestions, syncSubjectData } from './data/questionBank';
 import { enablePersistentStorage } from './lib/storagePersist';
 import './styles/theme.css';
 
@@ -15,6 +15,8 @@ function App() {
   const [mode, setMode] = useState('practice'); // practice | exam | review
   const [partChoice, setPartChoice] = useState('mcq'); // mcq | essay
   const [installPrompt, setInstallPrompt] = useState(null);
+  const [syncing, setSyncing] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
     enablePersistentStorage();
@@ -43,6 +45,19 @@ function App() {
     setSelectedSubject(null);
   };
 
+  const handleSyncData = async () => {
+    if (!selectedSubject) return;
+    setSyncing(true);
+    const success = await syncSubjectData(selectedSubject);
+    setSyncing(false);
+    if (success) {
+      alert("Đã cập nhật dữ liệu mới nhất thành công");
+      setRefreshKey(k => k + 1);
+    } else {
+      alert("Môn này hiện đang dùng dữ liệu gốc, chưa có bản cập nhật mới.");
+    }
+  };
+
   const subjectInfo = selectedSubject ? getSubject(selectedSubject) : null;
   const splitParts = selectedSubject ? hasEssayQuestions(selectedSubject) : false;
   const part = splitParts ? partChoice : 'all';
@@ -61,6 +76,11 @@ function App() {
           </div>
         </div>
         <div className="header-actions">
+          {selectedSubject && (
+            <button className="btn-outline" onClick={handleSyncData} disabled={syncing} style={{ padding: '6px 12px', fontSize: '0.85rem', marginRight: 8 }}>
+              {syncing ? '⏳ Đang tải...' : '🔄 Đồng bộ đề mới'}
+            </button>
+          )}
           {installPrompt && (
             <button className="install-btn" onClick={handleInstall}>
               📲 Cài App
@@ -129,15 +149,15 @@ function App() {
 
             {/* Mode content — key theo phần để reset state khi đổi phần */}
             <main>
-              {mode === 'practice' && <Quiz key={`quiz-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
+              {mode === 'practice' && <Quiz key={`quiz-${selectedSubject}-${part}-${refreshKey}`} subjectId={selectedSubject} part={part} />}
               {mode === 'exam' && (
                 selectedSubject === 'ngu_van'
-                  ? <NguVanExam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />
+                  ? <NguVanExam key={`exam-${selectedSubject}-${refreshKey}`} subjectId={selectedSubject} />
                   : selectedSubject === 'toan'
-                  ? <ToanExam key={`exam-${selectedSubject}`} subjectId={selectedSubject} />
-                  : <Exam key={`exam-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />
+                  ? <ToanExam key={`exam-${selectedSubject}-${refreshKey}`} subjectId={selectedSubject} />
+                  : <Exam key={`exam-${selectedSubject}-${part}-${refreshKey}`} subjectId={selectedSubject} part={part} />
               )}
-              {mode === 'review' && <Review key={`review-${selectedSubject}-${part}`} subjectId={selectedSubject} part={part} />}
+              {mode === 'review' && <Review key={`review-${selectedSubject}-${part}-${refreshKey}`} subjectId={selectedSubject} part={part} />}
             </main>
           </div>
         )}
