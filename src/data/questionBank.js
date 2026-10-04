@@ -43,9 +43,10 @@ export const getQuestionsForSubject = (subjectId, part = 'all') => {
 // Đồng bộ dữ liệu mới nhất từ Firestore
 export const syncSubjectData = async (subjectId) => {
   if (subjectId === 'lich_su_dia_li') {
-    const data = await fetchSubjectDataFromFirestore('ls_dl_7_gki');
-    if (data && data.questions) {
-      questionsBySubject[subjectId] = data.questions.map((q) => ({
+    const questionsFromDb = await fetchSubjectDataFromFirestore('ls_dl_7_gki');
+    if (questionsFromDb && Array.isArray(questionsFromDb) && questionsFromDb.length > 0) {
+      // THAY THẾ HOÀN TOÀN MẢNG TRONG BỘ NHỚ
+      questionsBySubject[subjectId] = questionsFromDb.map((q) => ({
         ...q,
         subject: subjectId,
       }));

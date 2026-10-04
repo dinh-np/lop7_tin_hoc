@@ -195,7 +195,10 @@ export async function fetchSubjectDataFromFirestore(testId) {
     }
 
     if (snapshot.exists()) {
-      return snapshot.data();
+      const data = snapshot.data();
+      if (data.questions && Array.isArray(data.questions) && data.questions.length > 0) {
+        return data.questions;
+      }
     }
   } catch (err) {
     console.error('[Firebase] Error fetching subject data:', err);

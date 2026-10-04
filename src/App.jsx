@@ -28,6 +28,19 @@ function App() {
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
 
+  // Tự động đồng bộ khi mở môn học
+  useEffect(() => {
+    if (selectedSubject) {
+      setSyncing(true);
+      syncSubjectData(selectedSubject).then((success) => {
+        setSyncing(false);
+        if (success) {
+          setRefreshKey((k) => k + 1);
+        }
+      });
+    }
+  }, [selectedSubject]);
+
   const handleInstall = async () => {
     if (!installPrompt) return;
     installPrompt.prompt();
