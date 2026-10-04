@@ -4,13 +4,13 @@ with open(r'e:\SourceCode\so_tay_on_tap\user_data\261004_2_toan.md', 'r', encodi
 
 start = -1
 end = -1
-for i, line in enumerate(lines):
-    if line.startswith('```javascript'):
+for i, l in enumerate(lines):
+    if l.startswith('```javascript'):
         start = i + 1
         break
 if start != -1:
     for i in range(start, len(lines)):
-        if line.startswith('```') or lines[i].startswith('---'):
+        if lines[i].startswith('```') or lines[i].startswith('---'):
             end = i
             break
 
