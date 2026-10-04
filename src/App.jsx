@@ -17,6 +17,7 @@ function App() {
   const [installPrompt, setInstallPrompt] = useState(null);
   const [syncing, setSyncing] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
+  const [toastMsg, setToastMsg] = useState('');
 
   useEffect(() => {
     enablePersistentStorage();
@@ -64,10 +65,12 @@ function App() {
     const success = await syncSubjectData(selectedSubject);
     setSyncing(false);
     if (success) {
-      alert("Đã cập nhật dữ liệu mới nhất thành công");
-      setRefreshKey(k => k + 1);
+      setToastMsg('Đã cập nhật dữ liệu mới nhất thành công');
+      setTimeout(() => setToastMsg(''), 3000);
+      setRefreshKey((k) => k + 1);
     } else {
-      alert("Môn này hiện đang dùng dữ liệu gốc, chưa có bản cập nhật mới.");
+      setToastMsg('Môn này hiện đang dùng dữ liệu gốc, chưa có bản cập nhật mới.');
+      setTimeout(() => setToastMsg(''), 3000);
     }
   };
 
@@ -175,6 +178,13 @@ function App() {
           </div>
         )}
       </div>
+
+      {/* Toast Notification */}
+      {toastMsg && (
+        <div className="toast-notification">
+          {toastMsg}
+        </div>
+      )}
     </div>
   );
 }
