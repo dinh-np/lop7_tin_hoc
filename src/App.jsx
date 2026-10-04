@@ -6,6 +6,7 @@ import NguVanExam from './components/NguVanExam';
 import Review from './components/Review';
 import { getSubject } from './data/subjects';
 import { hasEssayQuestions } from './data/questionBank';
+import { enablePersistentStorage } from './lib/storagePersist';
 import './styles/theme.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const [installPrompt, setInstallPrompt] = useState(null);
 
   useEffect(() => {
+    enablePersistentStorage();
     const handler = (e) => {
       e.preventDefault();
       setInstallPrompt(e);
