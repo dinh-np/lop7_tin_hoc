@@ -26,7 +26,7 @@ Ví dụ cho môn Toán: `src/data/toanQuestions.js`
 ```js
 export const toanQuestions = [
   {
-    id: 'toan_1',           // UNIQUE toàn bộ app, dạng 'monhoc_số'
+    id: 'toan_7_gki_01_1',           // UNIQUE toàn bộ app, dạng 'monhoc_số'
     subject: 'toan',        // PHẢI khớp với id trong subjects.js
     topic: 'Số hữu tỉ',    // Chủ đề (dùng trong dropdown lọc Quiz)
     // type: 'multiple_choice',  // có thể bỏ qua, đây là mặc định
@@ -39,6 +39,7 @@ export const toanQuestions = [
     ],
     answer: 0,              // INDEX 0–3 của đáp án đúng (KHÔNG phải chữ cái)
     explanation: 'Giải thích tại sao đáp án đúng...', // BẮT BUỘC
+    examId: 'toan7_de_01'   // (Dành riêng cho môn có cấu trúc đề thi, VD: Toán, Ngữ Văn)
   },
 ];
 ```
@@ -87,14 +88,14 @@ keyPoints: ['Ý 1', 'Ý 2'],
 
 ## Cách nạp từ file JSON (mẫu đang dùng)
 
-Dữ liệu lớn đặt tại `src/data/subjects/[ten].json`, loader `src/data/[ten]Questions.js` chuẩn hóa:
+Dữ liệu lớn đặt tại `src/data/subjects/[ten].json` hoặc `.js`, loader `src/data/[ten]Questions.js` chuẩn hóa:
 ```js
 import data from './subjects/gdcd7.json';
 export const gdcdQuestions = data.questions.map((q) => ({ ...q, subject: 'gdcd' }));
 ```
-Ngữ văn: JSON là mảng 6 đề → `flatMap` và gắn `topic`, `examId`, `passage` (xem `nguVanQuestions.js`).
+Môn theo đề (Ngữ văn, Toán): JSON/JS là mảng N đề → `flatMap` và gắn `topic`, `examId`, `passage` (xem `nguVanQuestions.js`, `toanQuestions.js`).
 
-Môn có cả trắc nghiệm lẫn tự luận sẽ tự hiện 2 tab Trắc nghiệm / Tự luận (`hasEssayQuestions`).
+Môn có cả trắc nghiệm lẫn tự luận sẽ tự hiện 2 tab Trắc nghiệm / Tự luận (`hasEssayQuestions`). Môn thi theo đề sẽ dùng màn hình `ExamPicker` (như `ToanExam`, `NguVanExam`).
 
 ## Bước 4 – Đăng ký vào questionBank.js
 

@@ -5,6 +5,10 @@ PWA ôn thi đa môn cho học sinh lớp 7. Stack: React 19 + Vite 8 + Firebase
 
 **Cập nhật 2026-10-02**: Migrate hoàn toàn từ Supabase Local → Firebase Firestore. Đã test local + Vercel production.
 **Cập nhật 2026-10-03**: Thêm dữ liệu KHTN, LS&ĐL, GDCD, Ngữ văn (6 đề); tách phần Trắc nghiệm/Tự luận; Split-View + thi theo đề cho Ngữ văn.
+**Cập nhật 2026-10-04**: 
+- Fix lỗi IndexedDB cache trên iOS (sử dụng `navigator.storage.persist()`).
+- Tích hợp môn Toán 7 với 6 đề thi, hiển thị dưới dạng card chọn đề giống Ngữ văn.
+- Cải tiến cơ chế đồng bộ Firestore (`fetchSubjectDataFromFirestore` & `syncSubjectData`), ưu tiên lấy mảng `questions` thay thế mảng tĩnh, tự động đồng bộ khi mở môn. Thêm nút Force Refresh (Đồng bộ đề mới) + Toast notification.
 
 ## Tech Stack
 - **Frontend**: React 19, Vite 8, Vanilla CSS (Be Vietnam Pro font), `react-markdown` + `remark-gfm` (đáp án tự luận)
@@ -22,6 +26,7 @@ src/
 │   ├── Exam.jsx              ← thi thử + Firebase save + AI analysis; props: examId, examTitle, durationMinutes
 │   │                            (có examId → layout compact: topbar sticky + drawer danh sách câu, KHÔNG shuffle)
 │   ├── NguVanExam.jsx        ← Ngữ văn: màn chọn 1 trong 6 đề → render <Exam examId=.../>
+│   ├── ToanExam.jsx          ← Toán: màn chọn 1 trong 6 đề → render <Exam examId=.../>
 │   ├── NguVanExamPicker.css  ← CSS thẻ chọn đề + topbar/drawer/split 39/61 khi thi Ngữ văn
 │   ├── Review.jsx            ← sổ tay câu sai (per-subject localStorage)
 │   ├── QuestionRenderer.jsx  ← multiple_choice / calculation / short_essay (+ hiện keyPoints)
@@ -36,7 +41,8 @@ src/
 │   ├── lichSuDiaLiQuestions.js    ← từ subjects/ls_dl7.json (55 câu)
 │   ├── gdcdQuestions.js           ← từ subjects/gdcd7.json (46 câu)
 │   ├── nguVanQuestions.js         ← từ subjects/nguvan7.json (53 câu tự luận, 6 đề)
-│   └── subjects/             ← file JSON nguồn (gdcd7, khtn7, ls_dl7, nguvan7)
+│   ├── toanQuestions.js           ← từ subjects/toan7.js (102 câu, 6 đề)
+│   └── subjects/             ← file JSON nguồn (gdcd7, khtn7, ls_dl7, nguvan7, toan7)
 ├── lib/
 │   ├── gemini.js             ← diagnoseWrongAnswer(), batchDiagnose()
 │   └── firebase.js           ← saveSubmission(), saveWrongAnswers(), fetchSubmissions()
@@ -64,7 +70,7 @@ user_antigravity/             ← Tài liệu nội bộ cho AI assistant
 | lich_su_dia_li | Lịch sử & Địa lí | 🗺️ | 55 câu (50 TN + 5 TL) |
 | gdcd | GDCD | 🏛️ | 46 câu (40 TN + 6 TL) |
 | ngu_van | Ngữ văn | 📖 | 53 câu tự luận / 6 đề giữa kì I |
-| toan | Toán | 📐 | 0 (placeholder) |
+| toan | Toán | 📐 | 102 câu (72 TN + 30 TL) / 6 đề |
 | tieng_anh | Tiếng Anh | 🇬🇧 | 0 |
 | cong_nghe | Công nghệ | ⚙️ | 0 |
 | gd_dia_phuong | GD địa phương | 🏠 | 0 |
@@ -132,11 +138,13 @@ VITE_FIREBASE_APP_ID=...
 2. Prompt tiếng Việt, thân thiện HS lớp 7, max 120 từ/câu
 3. Model: `gemini-2.0-flash`
 
-## Firebase flow (Offline-First)
+## Firebase flow (Offline-First & Data Sync)
 1. Sau nộp bài: `saveSubmission(data)` → `submissions`
 2. Có câu sai: `saveWrongAnswers(submissionId, wrongs.slice(0,20))` → `wrong_answers`
-3. Offline: Firestore ghi IndexedDB, tự sync khi có mạng
-4. `persistentMultipleTabManager` tránh lỗi `failed-precondition` trên Safari
+3. Tải câu hỏi từ Firebase: Hàm `syncSubjectData(subjectId)` gọi `fetchSubjectDataFromFirestore` sử dụng `getDocFromServer` để ưu tiên Cloud, fallback về IndexedDB cache, ghi đè toàn bộ mảng câu hỏi trên UI.
+4. Offline: Firestore ghi IndexedDB, tự sync khi có mạng
+5. `persistentMultipleTabManager` tránh lỗi `failed-precondition` trên Safari
+6. Apple iOS/WebKit: Dùng `navigator.storage.persist()` để ngăn trình duyệt tự xóa IndexedDB cache khi đầy bộ nhớ.
 
 ## Thi thử
 - **Môn thường**: random 30 câu, 45 phút, sidebar phải (timer + palette) trên tablet/desktop.

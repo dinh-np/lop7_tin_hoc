@@ -106,7 +106,7 @@ console.log(await checkFirebaseStatus());
 // → { connected: true } nếu OK
 ```
 
-## Offline-First hoạt động thế nào
+## Offline-First & Data Sync hoạt động thế nào
 
 ```
 Online:  App → Firestore SDK → IndexedDB cache + Cloud Firestore (sync)
@@ -114,9 +114,15 @@ Offline: App → Firestore SDK → IndexedDB cache (pending writes queue)
          Khi có mạng → SDK tự sync pending writes lên Cloud
 ```
 
-- `persistentLocalCache` → lưu data vào IndexedDB
-- `persistentMultipleTabManager` → tránh lỗi `failed-precondition` trên Safari/iPadOS
-- Service Worker bỏ qua Firebase requests → để SDK tự quản lý offline
+- **Đồng bộ dữ liệu đề thi mới**:
+  Hàm `fetchSubjectDataFromFirestore(testId)` sử dụng `getDocFromServer` để ưu tiên fetch dữ liệu nóng từ Cloud (bỏ qua cache). Nếu không có mạng, fallback về `getDoc` lấy từ IndexedDB.
+  Hàm `syncSubjectData` đắp trực tiếp mảng `questions` từ Firebase vào UI (không merge chắp vá). Tự động chạy khi user chọn môn học hoặc bấm "🔄 Đồng bộ đề mới".
+
+- **Quản lý Cache**:
+  - `persistentLocalCache` → lưu data vào IndexedDB
+  - `persistentMultipleTabManager` → tránh lỗi `failed-precondition` trên Safari/iPadOS
+  - `navigator.storage.persist()` (trong `storagePersist.js`) → ngăn Apple iOS (WebKit) tự ý xóa IndexedDB khi Safari hết dung lượng.
+  - Service Worker bỏ qua Firebase requests → để SDK tự quản lý offline
 
 ## Security Rules gợi ý (Production)
 
