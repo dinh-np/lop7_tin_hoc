@@ -1,0 +1,711 @@
+{
+
+  "test_id": "congnghe_7_hk1",
+
+  "title": "Công nghệ 7 - Ôn tập Kiểm tra Giữa kì 1",
+
+  "subject": "congnghe",
+
+  "grade": 7,
+
+  "term": "HK1_GiuaKy",
+
+  "time_limit_minutes": 45,
+
+  "is_active": true,
+
+  "multiple_choice": [
+
+    {
+
+      "id": "cn7_tn01",
+
+      "question": "Câu 1. Trồng trọt cung cấp những sản phẩm thiết yếu nào cho con người?",
+
+      "options": ["A. Phân bón.", "B. Lương thực.", "C. Thức ăn chăn nuôi.", "D. Máy móc."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Trồng trọt cung cấp lương thực, thực phẩm thiết yếu cho con người."
+
+    },
+
+    {
+
+      "id": "cn7_tn02",
+
+      "question": "Câu 2. Nhóm cây trồng nào dưới đây thuộc nhóm cây lương thực?",
+
+      "options": ["A. Cây hoa hồng và cây hoa cúc.", "B. Cây lúa và cây ngô.", "C. Cây cà phê và cây hồ tiêu.", "D. Cây bắp cải và cây su hào."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Cây lúa và cây ngô thuộc nhóm cây lương thực chính."
+
+    },
+
+    {
+
+      "id": "cn7_tn03",
+
+      "question": "Câu 3. Nhiệm vụ chính của kĩ sư bảo vệ thực vật trong ngành trồng trọt là gì?",
+
+      "options": ["A. Chế tạo các thiết bị tự động.", "B. Tạo ra các giống cây trồng mới.", "C. Thu mua và xuất khẩu nông sản.", "D. Nghiên cứu và phòng trừ tác nhân gây hại cây."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Kĩ sư bảo vệ thực vật chuyên nghiên cứu và phòng trừ các tác nhân gây hại cho cây trồng."
+
+    },
+
+    {
+
+      "id": "cn7_tn04",
+
+      "question": "Câu 4. Công việc chuyên môn chính của kĩ sư chọn giống cây trồng là gì?",
+
+      "options": ["A. Phun thuốc trừ sâu cho đồng ruộng.", "B. Bảo tồn và nghiên cứu chọn tạo giống mới.", "C. Vận chuyển nông sản sau khi thu hoạch.", "D. Vận hành hệ thống nhà màng hiện đại."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Kĩ sư chọn giống cây trồng thực hiện bảo tồn và nghiên cứu chọn tạo ra các giống cây trồng mới."
+
+    },
+
+    {
+
+      "id": "cn7_tn05",
+
+      "question": "Câu 5. Điều kiện tự nhiên nào của Việt Nam là lợi thế lớn giúp phát triển đa dạng nhiều loại cây trồng?",
+
+      "options": ["A. Khí hậu nhiệt đới và địa hình đa dạng.", "B. Có diện tích đồng bằng rộng lớn.", "C. Thời tiết ổn định quanh năm.", "D. Con người cần cù, chăm chỉ."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Khí hậu nhiệt đới ẩm gió mùa cùng địa hình đa dạng giúp phát triển phong phú các loại cây trồng."
+
+    },
+
+    {
+
+      "id": "cn7_tn06",
+
+      "question": "Câu 6. Ưu điểm nổi bật của phương thức trồng trọt ngoài tự nhiên là gì?",
+
+      "options": ["A. Không chịu tác động của thời tiết xấu.", "B. Chi phí xây dựng nhà màng rất thấp.", "C. Không bị ảnh hưởng bởi sâu bệnh hại.", "D. Tiến hành đơn giản, dễ thực hiện diện rộng."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Phương thức ngoài tự nhiên tiến hành đơn giản, dễ áp dụng trên quy mô lớn."
+
+    },
+
+    {
+
+      "id": "cn7_tn07",
+
+      "question": "Câu 7. Hạn chế lớn nhất khi áp dụng phương thức trồng trọt ngoài tự nhiên là gì?",
+
+      "options": ["A. Không thể trồng trên diện tích đất lớn.", "B. Chi phí đầu tư lớn.", "C. Đòi hỏi trình độ kỹ thuật cao.", "D. Dễ bị tác động bởi thời tiết và sâu bệnh."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Trồng trọt ngoài tự nhiên phụ thuộc nhiều vào thời tiết, khí hậu và dễ bị sâu bệnh tấn công."
+
+    },
+
+    {
+
+      "id": "cn7_tn08",
+
+      "question": "Câu 8. Nhược điểm chủ yếu của phương thức trồng trọt trong nhà có mái che là gì?",
+
+      "options": ["A. Chi phí đầu tư lớn và kỹ thuật cao.", "B. Năng suất cây trồng thấp.", "C. Chỉ áp dụng được trên diện tích lớn.", "D. Cây trồng dễ bị sâu bệnh phá hoại."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Chi phí lắp đặt ban đầu cao và đòi hỏi người trồng có trình độ kỹ thuật canh tác cao."
+
+    },
+
+    {
+
+      "id": "cn7_tn09",
+
+      "question": "Câu 9. Loại giống cây trồng nào được ưu tiên sử dụng trong trồng trọt công nghệ cao?",
+
+      "options": ["A. Giống mới cho năng suất cao, chất lượng tốt.", "B. Giống truyền thống có thời gian sinh trưởng dài.", "C. Giống cây hoang dại chưa được thuần hóa.", "D. Giống địa phương chưa qua chọn lọc."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Trồng trọt công nghệ cao ưu tiên giống mới có năng suất, chất lượng cao và khả năng chống chịu tốt."
+
+    },
+
+    {
+
+      "id": "cn7_tn10",
+
+      "question": "Câu 10. Phẩm chất quan trọng hàng đầu cần có ở người làm kĩ sư chọn giống cây trồng là gì?",
+
+      "options": ["A. Cẩn thận, kiên trì và tỉ mỉ.", "B. Có thể lực tốt để lao động nặng.", "C. Thích vận hành các loại máy móc.", "D. Khả năng giao tiếp tốt."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Quá trình chọn tạo giống đòi hỏi sự cẩn thận, kiên trì theo dõi qua nhiều chu kỳ sinh trưởng."
+
+    },
+
+    {
+
+      "id": "cn7_tn11",
+
+      "question": "Câu 11. Thành phần nào của đất trồng giữ vai trò hòa tan các chất dinh dưỡng để rễ cây dễ dàng hấp thụ?",
+
+      "options": ["A. Phần lỏng.", "B. Phần khí.", "C. Phần rắn.", "D. Vi sinh vật."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Phần lỏng (nước trong đất) hòa tan chất dinh dưỡng giúp rễ cây hấp thụ."
+
+    },
+
+    {
+
+      "id": "cn7_tn12",
+
+      "question": "Câu 12. Phần khí của đất trồng cung cấp gì cho cây?",
+
+      "options": ["A. Oxygen.", "B. Nước.", "C. Carbon dioxide.", "D. Chất dinh dưỡng."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Phần khí cung cấp oxygen cho quá trình hô hấp của rễ cây và sinh vật trong đất."
+
+    },
+
+    {
+
+      "id": "cn7_tn13",
+
+      "question": "Câu 13. Thành phần phần rắn của đất trồng có vai trò gì?",
+
+      "options": ["A. Cung cấp khí oxygen cho bộ rễ.", "B. Cung cấp dinh dưỡng và giúp cây đứng vững.", "C. Hòa tan các chất dinh dưỡng trong đất.", "D. Cung cấp nước và làm mát bộ rễ."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Phần rắn giữ cho cây đứng vững và là nguồn cung cấp chất dinh dưỡng chủ yếu."
+
+    },
+
+    {
+
+      "id": "cn7_tn14",
+
+      "question": "Câu 14. Công việc cày đất thường xáo trộn lớp đất mặt ở độ sâu nào?",
+
+      "options": ["A. 5-10 cm.", "B. 20-30 cm.", "C. 40-50 cm.", "D. 60-70 cm."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Độ sâu cày xới lớp đất mặt thông thường là từ 20 đến 30 cm."
+
+    },
+
+    {
+
+      "id": "cn7_tn15",
+
+      "question": "Câu 15. Công việc làm đất nào sau đây có tác dụng trộn đều phân bón và san phẳng mặt ruộng?",
+
+      "options": ["A. Bón lót.", "B. Cày đất.", "C. Bừa đất.", "D. Lên luống."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Bừa đất giúp làm nhỏ đất, trộn đều phân bón và san phẳng mặt ruộng."
+
+    },
+
+    {
+
+      "id": "cn7_tn16",
+
+      "question": "Câu 16. Vì sao phải lên luống khi trồng các cây rau cải?",
+
+      "options": ["A. Thu gom toàn bộ cỏ dại trong đất.", "B. Hòa tan phân bón vào đất.", "C. Xáo trộn lớp đất mặt.", "D. Chống ngập úng và dễ chăm sóc cây."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Lên luống giúp rãnh thoát nước chống ngập úng mùa mưa và thuận tiện chăm sóc."
+
+    },
+
+    {
+
+      "id": "cn7_tn17",
+
+      "question": "Câu 17. Tại sao phải cày đất ở độ sâu từ 20 đến 30 cm trước khi gieo trồng?",
+
+      "options": ["A. Cung cấp trực tiếp oxygen cho rễ cây.", "B. San phẳng mặt ruộng và làm mịn đất.", "C. Tạo rãnh thoát nước chống ngập úng.", "D. Tăng bề dày và chôn vùi cỏ dại."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Tăng bề dày tầng đất canh tác tơi xốp và vùi sâu cỏ dại xuống tầng dưới."
+
+    },
+
+    {
+
+      "id": "cn7_tn18",
+
+      "question": "Câu 18. Loại phân bón nào thích hợp nhất để bón lót vào đất trước khi gieo trồng?",
+
+      "options": ["A. Phân đạm dễ tan.", "B. Phân bón lá.", "C. Phân hữu cơ.", "D. Phân dạng lỏng."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Phân hữu cơ phân giải chậm, ít bị rửa trôi, rất phù hợp để bón lót."
+
+    },
+
+    {
+
+      "id": "cn7_tn19",
+
+      "question": "Câu 19. Công việc làm đất nào giúp bảo vệ cây trồng khỏi tình trạng ngập úng trong mùa mưa?",
+
+      "options": ["A. Lên luống cao.", "B. Bừa mịn bề mặt.", "C. Cày xới đất thật sâu.", "D. Bón phân."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Lên luống cao tạo rãnh thoát nước giúp rễ không bị ngập úng khi mưa to."
+
+    },
+
+    {
+
+      "id": "cn7_tn20",
+
+      "question": "Câu 20. Nếu gieo hạt ngay sau khi cày đất mà bỏ qua công đoạn bừa hoặc đập đất, người trồng trọt sẽ gặp phải bất lợi nào sau đây?",
+
+      "options": ["A. Đất hoàn toàn mất đi phần khí làm hạt bị ngạt không thể nảy mầm.", "B. Độ sâu của tầng đất trồng bị thu hẹp đáng kể.", "C. Toàn bộ lượng phân bón lót sẽ bị bốc hơi vĩnh viễn.", "D. Đất còn nhiều cục to khiến hạt vùi lấp không đều và phân bón không được trộn đều."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Đất chưa bừa đập còn nhiều tảng đất lớn làm hạt rơi không đều, khó tiếp xúc với ẩm và phân bón."
+
+    },
+
+    {
+
+      "id": "cn7_tn21",
+
+      "question": "Câu 21. Tại sao khi bón phân lót, người ta ưu tiên sử dụng phân hữu cơ hoặc phân lân thay vì các loại phân đạm hóa học tan nhanh với lượng lớn?",
+
+      "options": ["A. Các loại phân hóa học tan nhanh làm đất bị nén chặt ngay lập tức không thể cày bừa.", "B. Phân hữu cơ và phân lân có khả năng tan trực tiếp trong phần khí của đất.", "C. Phân hữu cơ và phân lân phân giải chậm, tích lũy sẵn dinh dưỡng cho rễ non mà ít bị rửa trôi.", "D. Phân hữu cơ có tác dụng diệt sạch mọi loại vi sinh vật trong đất."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Phân hữu cơ và lân phân giải từ từ, cung cấp dinh dưỡng bền bỉ và không bị mưa rửa trôi mất."
+
+    },
+
+    {
+
+      "id": "cn7_tn22",
+
+      "question": "Câu 22. Đối với các hạt giống có kích thước nhỏ, người ta thường áp dụng cách gieo nào?",
+
+      "options": ["A. Vùi hạt sâu dưới đất.", "B. Trồng trực tiếp vào chậu lớn.", "C. Nén chặt đất sau khi vùi.", "D. Gieo trực tiếp trên mặt đất ẩm."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Hạt nhỏ gieo trên mặt đất ẩm rồi phủ một lớp mùn hoặc đất mịn mỏng lên trên."
+
+    },
+
+    {
+
+      "id": "cn7_tn23",
+
+      "question": "Câu 23. Phương pháp gieo hạt thường được áp dụng cho cây trồng nào sau đây?",
+
+      "options": ["A. Khoai tây.", "B. Sầu riêng.", "C. Lúa.", "D. Hành tây."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Cây lúa thường được gieo sạ trực tiếp bằng hạt hoặc gieo mạ rồi cấy."
+
+    },
+
+    {
+
+      "id": "cn7_tn24",
+
+      "question": "Câu 24. Dặm cây được thực hiện nhằm mục đích gì?",
+
+      "options": ["A. Diệt trừ sâu bệnh.", "B. Giúp đất tơi xốp.", "C. Bổ sung dinh dưỡng.", "D. Đảm bảo mật độ."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Dặm cây vào chỗ hạt không mọc để đảm bảo đúng mật độ và khoảng cách cây trồng."
+
+    },
+
+    {
+
+      "id": "cn7_tn25",
+
+      "question": "Câu 25. Làm cỏ cho cây trồng có tác dụng chủ yếu là gì?",
+
+      "options": ["A. Giúp gốc cây đứng vững.", "B. Cung cấp thêm chất khoáng.", "C. Giảm cạnh tranh dinh dưỡng.", "D. Tăng độ ẩm cho đất."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Làm cỏ loại trừ thực vật cạnh tranh dinh dưỡng, ánh sáng và nước với cây trồng chính."
+
+    },
+
+    {
+
+      "id": "cn7_tn26",
+
+      "question": "Câu 26. Công việc nào cần thực hiện trước khi tiến hành bón phân thúc?",
+
+      "options": ["A. Làm sạch cỏ dại.", "B. Phun thuốc trừ sâu.", "C. Tỉa bỏ toàn bộ lá.", "D. Tưới ngập vườn."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Phải diệt sạch cỏ dại trước khi bón thúc để cỏ không ăn mất phân của cây."
+
+    },
+
+    {
+
+      "id": "cn7_tn27",
+
+      "question": "Câu 27. Những công việc nào sau đây không thuộc biện pháp phòng trừ sâu, bệnh thủ công?",
+
+      "options": ["A. Dùng tay bắt.", "B. Dùng bẫy đèn.", "C. Ngắt bỏ lá bệnh.", "D. Phun thuốc trừ sâu."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Phun thuốc trừ sâu là biện pháp hóa học."
+
+    },
+
+    {
+
+      "id": "cn7_tn28",
+
+      "question": "Câu 28. Khi phun thuốc hóa học phòng trừ sâu bệnh, người lao động không được làm điều nào sau đây?",
+
+      "options": ["A. Đeo khẩu trang.", "B. Đi ủng cao su.", "C. Phun ngược chiều gió.", "D. Mặc quần áo bảo hộ."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Phun ngược chiều gió khiến bụi hóa chất bay thẳng vào người gây ngộ độc nguy hiểm."
+
+    },
+
+    {
+
+      "id": "cn7_tn29",
+
+      "question": "Câu 29. Sinh vật nào sau đây không được sử dụng trong biện pháp sinh học để diệt sâu bệnh?",
+
+      "options": ["A. Bọ rùa.", "B. Éch.", "C. Ong mắt đỏ.", "D. Chuột đồng."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Chuột đồng là loài gặm nhấm gây hại mùa màng nặng nề."
+
+    },
+
+    {
+
+      "id": "cn7_tn30",
+
+      "question": "Câu 30. Sinh vật nào sau đây được sử dụng trong biện pháp sinh học để diệt sâu bệnh?",
+
+      "options": ["A. Rắn.", "B. Chuột đồng.", "C. Bọ trĩ.", "D. Ruồi vàng."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Rắn bắt chuột trên đồng ruộng, là thiên địch hữu ích."
+
+    },
+
+    {
+
+      "id": "cn7_tn31",
+
+      "question": "Câu 31. Nhược điểm lớn nhất của việc sử dụng thuốc bảo vệ thực vật hóa học là gì?",
+
+      "options": ["A. Hiệu quả chậm.", "B. Khó thực hiện.", "C. Tốn nhiều công sức.", "D. Gây ô nhiễm môi trường."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Hóa chất tồn dư làm ô nhiễm môi trường đất, nước và ảnh hưởng sức khỏe con người."
+
+    },
+
+    {
+
+      "id": "cn7_tn32",
+
+      "question": "Câu 32. Vì sao khi gieo các loại hạt giống kích thước lớn, người ta thường vùi hạt xuống độ sâu gấp 2-3 lần đường kính hạt?",
+
+      "options": ["A. Để hạt không bị côn trùng ăn mất.", "B. Giúp hạt bám đất và giữ ẩm tốt hơn.", "C. Tránh việc hạt tiếp xúc với ánh sáng.", "D. Giúp nén chặt đất chung quanh hạt giống."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Độ sâu thích hợp giúp hạt giữ ẩm tốt, tiếp xúc đất và rễ mầm phát triển ổn định."
+
+    },
+
+    {
+
+      "id": "cn7_tn33",
+
+      "question": "Câu 33. Vì sao phải làm sạch cỏ dại trước khi tiến hành bón phân thúc cho cây trồng?",
+
+      "options": ["A. Ngăn đất bị nén chặt và úng.", "B. Giúp phân bón dễ tan trong nước hơn.", "C. Tăng tốc độ thoát nước của mặt đất.", "D. Tránh sự cạnh tranh dinh dưỡng của cỏ."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Tránh việc cỏ dại hút hết chất dinh dưỡng từ lượng phân vừa bón."
+
+    },
+
+    {
+
+      "id": "cn7_tn34",
+
+      "question": "Câu 34. Việc tiến hành tỉa cây yếu sâu bệnh và dặm cây khỏe vào chỗ hạt không mọc nhằm mục đích chung gì?",
+
+      "options": ["A. Đảm bảo mật độ và khoảng cách phù hợp.", "B. Tăng cường lượng chất dinh dưỡng cho đất.", "C. Tiêu diệt triệt để mầm bệnh gây hại.", "D. Kích thích bộ rễ phát triển sâu hơn."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Đảm bảo mật độ và khoảng cách tối ưu để tất cả cây trồng nhận đủ ánh sáng và dinh dưỡng."
+
+    },
+
+    {
+
+      "id": "cn7_tn35",
+
+      "question": "Câu 35. So với biện pháp hoá học, biện pháp thủ công trong phòng trừ sâu bệnh có ưu điểm nổi bật nào?",
+
+      "options": ["A. Tiết kiệm tối đa công sức lao động.", "B. Không gây ô nhiễm môi trường.", "C. Phù hợp khi sâu bệnh bùng phát mạnh.", "D. Diệt sâu bệnh nhanh trên diện rộng."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Biện pháp thủ công an toàn cho nông sản và hoàn toàn không gây ô nhiễm môi trường."
+
+    },
+
+    {
+
+      "id": "cn7_tn36",
+
+      "question": "Câu 36. Biện pháp sinh học phòng trừ sâu bệnh hại ngày càng được áp dụng rộng rãi nhờ đặc tính nào?",
+
+      "options": ["A. Tiêu diệt triệt để tất cả loài sâu.", "B. Tốn ít thời gian và công sức nhất.", "C. Tác dụng nhanh hơn thuốc hoá học.", "D. Hiệu quả cao, không gây ô nhiễm."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Giúp cân bằng sinh thái, mang lại hiệu quả bền vững và không gây ô nhiễm."
+
+    },
+
+    {
+
+      "id": "cn7_tn37",
+
+      "question": "Câu 37. Khi gieo hạt đậu phộng (hạt to), nếu lấp đất quá sâu và đầm nén đất thật chặt thì hiện tượng nào sau đây dễ xảy ra nhất đối với hạt giống?",
+
+      "options": ["A. Cây mầm sẽ mọc vọt lên nhanh hơn.", "B. Cây sẽ phát triển hệ rễ rất mạnh.", "C. Hạt khó nảy mầm do thiếu không khí.", "D. Sâu bệnh bị tiêu diệt hoàn toàn trong đất."],
+
+      "answer": 2,
+
+      "explanation": "Đáp án C. Đất bị nén chặt làm thiếu oxygen, hạt bị ngạt và dễ thối ủng không thể nảy mầm."
+
+    },
+
+    {
+
+      "id": "cn7_tn38",
+
+      "question": "Câu 38. Sau khi gieo trồng ngô được 2 tuần, phát hiện một số vị trí hạt không mọc và một số chỗ cây mọc quá dày. Thao tác nào giúp đảm bảo mật độ và năng suất ruộng ngô?",
+
+      "options": ["A. Tưới thật nhiều nước vào chỗ hạt chưa mọc.", "B. Tỉa cây chỗ dày, dặm vào chỗ khuyết.", "C. Phun phân bón lá để thúc cây mọc.", "D. Phun thuốc hóa học để diệt sâu phá hạt."],
+
+      "answer": 1,
+
+      "explanation": "Đáp án B. Tỉa thưa bớt cây ở nơi quá dày và đem dặm vào các khoảng trống chưa mọc."
+
+    },
+
+    {
+
+      "id": "cn7_tn39",
+
+      "question": "Câu 39. Mưa lớn kéo dài khiến chậu cây bị đọng nước nhiều ngày, lá cây chuyển sang màu vàng úa. Nguyên nhân gây ra hiện tượng này là gì?",
+
+      "options": ["A. Rễ bị ngập nước lâu ngày, rễ hỏng.", "B. Cây thiếu ánh sáng do trời mưa kéo dài.", "C. Sâu bệnh bùng phát tấn công bộ lá cây.", "D. Cây bị dư thừa chất dinh dưỡng trong đất."],
+
+      "answer": 0,
+
+      "explanation": "Đáp án A. Nước đọng làm rễ thiếu dưỡng khí, bị thối hỏng không hút được nước và khoáng nuôi cây."
+
+    },
+
+    {
+
+      "id": "cn7_tn40",
+
+      "question": "Câu 40. Khi kiểm tra luống rau cải mới trồng, phát hiện một vài con sâu ăn lá nhỏ xuất hiện rải rác. Theo nguyên tắc phòng trừ an toàn, nên xử lý ra sao?",
+
+      "options": ["A. Phun ngay thuốc hóa học nồng độ thật cao.", "B. Tiêu hủy toàn bộ vườn rau để diệt mầm bệnh.", "C. Ngừng tưới nước và không bón phân nữa.", "D. Dùng tay bắt sâu hoặc ngắt bỏ lá bệnh."],
+
+      "answer": 3,
+
+      "explanation": "Đáp án D. Mật độ sâu ít rải rác nên ưu tiên bắt bằng tay hoặc ngắt bỏ lá bị sâu ăn, không cần phun hóa chất."
+
+    }
+
+  ],
+
+  "true_false": [
+
+    {
+
+      "id": "cn7_tf01",
+
+      "passage": "Trong nông nghiệp, đất là “trái tim” của sự sống. Để chuẩn bị cho mùa vụ mới, cày đất là một bước thiết yếu để “đánh thức” và tái tạo lại đất. Để việc cày đất đạt hiệu quả cao, người nông dân cần chú ý đến độ ẩm của đất. Cày khi đất quá khô sẽ tốn nhiều công sức, còn cày khi đất quá ướt lại làm đất bị nén chặt.",
+
+      "items": [
+
+        { "statement": "a) Mục đích của việc cày đất là tái tạo lại đất.", "answer": true },
+
+        { "statement": "b) Sau khi cày, đất sẽ bị nén chặt lại và khó thấm nước hơn.", "answer": false },
+
+        { "statement": "c) Để đất sau khi cày được tơi xốp, người nông dân nên cày khi đất ẩm vừa phải.", "answer": true },
+
+        { "statement": "d) Việc cày đất ngay sau một cơn mưa lớn có thể làm hỏng cấu trúc đất, khiến cây trồng khó phát triển.", "answer": true }
+
+      ]
+
+    },
+
+    {
+
+      "id": "cn7_tf02",
+
+      "passage": "Lên luống là một kĩ thuật canh tác độc đáo, cho thấy sự khéo léo của người nông dân trong việc chủ động điều khiển môi trường đất. Bằng cách tạo ra các dải đất cao và rãnh sâu, người nông dân không chỉ thay đổi bề mặt địa hình mà còn tạo ra một không gian lí tưởng cho cây trồng phát triển.",
+
+      "items": [
+
+        { "statement": "a) Lên luống giúp đất trở nên bằng phẳng hơn.", "answer": false },
+
+        { "statement": "b) Lên luống giúp tăng khả năng hấp thụ chất dinh dưỡng của cây trồng.", "answer": true },
+
+        { "statement": "c) Chiều cao của luống phụ thuộc vào loại cây trồng và đặc điểm của đất.", "answer": true },
+
+        { "statement": "d) Trong mùa khô, việc lên luống cao sẽ giúp cây trồng ở vùng thấp giữ ẩm tốt hơn.", "answer": false }
+
+      ]
+
+    },
+
+    {
+
+      "id": "cn7_tf03",
+
+      "passage": "Bón phân thúc là việc bón phân cho cây trồng trong giai đoạn sinh trưởng và phát triển, nhằm bổ sung dinh dưỡng kịp thời, giúp cây có đủ dinh dưỡng để ra hoa, đậu quả và phát triển mạnh mẽ.",
+
+      "items": [
+
+        { "statement": "a) Bón phân thúc là việc bón phân cho cây trồng trong giai đoạn sinh trưởng và phát triển.", "answer": true },
+
+        { "statement": "b) Đối với cây ăn quả, giai đoạn thu hoạch là lúc thích hợp nhất để bón thúc.", "answer": false },
+
+        { "statement": "c) Khi bón phân thúc, nên bón một lượng lớn vào sát gốc cây để cây hấp thụ nhanh nhất.", "answer": false },
+
+        { "statement": "d) Để tiết kiệm thời gian, có thể kết hợp bón phân thúc và phun thuốc trừ sâu cùng lúc bằng cách hòa chung vào một bình xịt.", "answer": false }
+
+      ]
+
+    },
+
+    {
+
+      "id": "cn7_tf04",
+
+      "passage": "Biện pháp thủ công là việc sử dụng tay, vợt hoặc các dụng cụ đơn giản để bắt, diệt sâu, ngắt lá, cành bị bệnh. Đây là phương pháp phổ biến để phòng trừ dịch hại trên quy mô nhỏ. Một trong những biện pháp thủ công hiệu quả là sử dụng bẫy để bắt côn trùng gây hại.",
+
+      "items": [
+
+        { "statement": "a) Biện pháp thủ công được sử dụng phổ biến để phòng trừ sâu hại cây trồng trên quy mô lớn.", "answer": false },
+
+        { "statement": "b) Biện pháp thủ công giúp giảm thiểu tác động tiêu cực đến môi trường.", "answer": true },
+
+        { "statement": "c) Nhược điểm của việc sử dụng bẫy thủ công là có thể vô tình bắt cả những loài côn trùng có ích.", "answer": true },
+
+        { "statement": "d) Người nông dân nên mua loại bẫy có sử dụng các chất gây hại cho tất cả côn trùng.", "answer": false }
+
+      ]
+
+    }
+
+  ],
+
+  "short_essay": [
+
+    {
+
+      "id": "cn7_tl01",
+
+      "question": "Câu 1. Hãy xác định và phân tích thứ tự ưu tiên khi sử dụng các biện pháp phòng trừ sâu, bệnh hại cây trồng.",
+
+      "modelAnswer": "Thứ tự ưu tiên khi sử dụng các biện pháp phòng trừ sâu, bệnh hại cây trồng:\\n1. Biện pháp canh tác là biện pháp đầu tiên được ưu tiên vì giúp ngăn ngừa sâu bệnh từ gốc. Các biện pháp như luân canh cây trồng, làm đất kĩ, trồng cây đúng thời vụ, vệ sinh đồng ruộng sẽ làm giảm môi trường sinh sống và phát triển của sâu bệnh.\\n2. Biện pháp sinh học sử dụng thiên địch (côn trùng có ích), vi sinh vật hoặc chế phẩm sinh học để tiêu diệt sâu bệnh mà không gây hại cho môi trường và hệ sinh thái.\\n3. Biện pháp thủ công như bắt sâu bằng tay, đặt bẫy, che chắn, cắt tỉa cây bị bệnh để giảm sự lây lan của sâu bệnh.\\n4. Biện pháp hóa học là biện pháp cuối cùng được sử dụng khi các biện pháp trên không mang lại hiệu quả.",
+
+      "keyPoints": [
+
+        "1. Biện pháp canh tác: ưu tiên hàng đầu, ngừa sâu bệnh từ gốc.",
+
+        "2. Biện pháp sinh học: dùng thiên địch, vi sinh vật, an toàn môi trường.",
+
+        "3. Biện pháp thủ công: bắt tay, đặt bẫy, ngắt cành lá bệnh.",
+
+        "4. Biện pháp hóa học: giải pháp cuối cùng khi các cách trên không hiệu quả."
+
+      ]
+
+    },
+
+    {
+
+      "id": "cn7_tl02",
+
+      "question": "Câu 2. Nêu các nguyên tắc phòng trừ sâu bệnh. Vì sao trong công tác phòng, trừ sâu bệnh hại cây trồng cần thực hiện nguyên tắc phòng là chính?",
+
+      "modelAnswer": "* Nguyên tắc phòng trừ:\\n- Phòng là chính.\\n- Trừ sớm khi mới xuất hiện.\\n- Diệt nhanh chóng và triệt để.\\n- Dùng nhiều cách phòng trừ kết hợp.\\n\\n* Cần thực hiện nguyên tắc phòng là chính vì:\\n- Phòng bệnh là nhằm ngăn ngừa sâu bệnh phát triển, xâm nhập và gây hại cho cây trồng nên thực hiện nguyên tắc phòng là chính sẽ tạo điều kiện cho cây trồng sinh trưởng và phát triển tốt, đồng thời giữ được năng suất, chất lượng nông sản và hạn chế sử dụng thuốc bảo vệ thực vật qua đó bảo vệ môi trường, sức khỏe của chính mỗi chúng ta.\\n- Nếu không phòng tốt, để cây trồng bị sâu, bệnh phá hoại thì cây trồng sẽ sinh trưởng và phát triển kém, đồng thời tốn rất nhiều thời gian, công sức và tiền của để diệt trừ sâu, bệnh.",
+
+      "keyPoints": [
+
+        "4 nguyên tắc: Phòng là chính; Trừ sớm khi mới xuất hiện; Diệt nhanh chóng và triệt để; Kết hợp nhiều biện pháp.",
+
+        "Lý do phòng là chính: Ngăn ngừa xâm nhập từ đầu, bảo vệ năng suất, giảm thuốc BVTV, bảo vệ môi trường và sức khỏe.",
+
+        "Hậu quả khi không phòng tốt: Cây còi cọc suy giảm năng suất, tốn nhiều công sức, thời gian và chi phí chữa trị."
+
+      ]
+
+    }
+
+  ]
+
+}

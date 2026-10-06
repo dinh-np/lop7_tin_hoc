@@ -15,7 +15,8 @@ export { nguVanQuestions }; // imported above from ./nguVanQuestions.js
 export const tiengAnhQuestions = []; // School English (not PET)
 // lichSuDiaLiQuestions — imported above from ./lichSuDiaLiQuestions.js
 // gdcdQuestions — imported above from ./gdcdQuestions.js
-export const congNgheQuestions = [];
+import { congNgheQuestions } from './congNgheQuestions';
+export { congNgheQuestions };
 export const gdDiaPhuongQuestions = [];
 
 // Map subject id => question array
@@ -36,7 +37,8 @@ export const questionsBySubject = {
 export const getQuestionsForSubject = (subjectId, part = 'all') => {
   const list = questionsBySubject[subjectId] || [];
   if (part === 'essay') return list.filter((q) => q.type === 'short_essay');
-  if (part === 'mcq') return list.filter((q) => q.type !== 'short_essay');
+  if (part === 'tf') return list.filter((q) => q.type === 'true_false');
+  if (part === 'mcq') return list.filter((q) => q.type !== 'short_essay' && q.type !== 'true_false');
   return list;
 };
 
@@ -53,6 +55,16 @@ export const syncSubjectData = async (subjectId) => {
       return true;
     }
   }
+  if (subjectId === 'cong_nghe') {
+    const questionsFromDb = await fetchSubjectDataFromFirestore('congnghe_7_hk1');
+    if (questionsFromDb && questionsFromDb.multiple_choice) {
+      const mcq = (questionsFromDb.multiple_choice || []).map(q => ({ ...q, type: 'multiple_choice', subject: 'cong_nghe' }));
+      const tf = (questionsFromDb.true_false || []).map(q => ({ ...q, type: 'true_false', subject: 'cong_nghe' }));
+      const essay = (questionsFromDb.short_essay || []).map(q => ({ ...q, type: 'short_essay', subject: 'cong_nghe' }));
+      questionsBySubject[subjectId] = [...mcq, ...tf, ...essay];
+      return true;
+    }
+  }
   // TODO: Hỗ trợ thêm các môn khác nếu cần
   return false;
 };
@@ -60,7 +72,12 @@ export const syncSubjectData = async (subjectId) => {
 // Môn có cả trắc nghiệm lẫn tự luận → hiện 2 tab riêng
 export const hasEssayQuestions = (subjectId) => {
   const list = questionsBySubject[subjectId] || [];
-  return list.some((q) => q.type === 'short_essay') && list.some((q) => q.type !== 'short_essay');
+  return list.some((q) => q.type === 'short_essay');
+};
+
+export const hasTrueFalseQuestions = (subjectId) => {
+  const list = questionsBySubject[subjectId] || [];
+  return list.some((q) => q.type === 'true_false');
 };
 
 // Legacy export – for backward compatibility (old components still use questionBank)

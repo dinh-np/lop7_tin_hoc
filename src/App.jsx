@@ -6,7 +6,7 @@ import NguVanExam from './components/NguVanExam';
 import ToanExam from './components/ToanExam';
 import Review from './components/Review';
 import { getSubject } from './data/subjects';
-import { hasEssayQuestions, syncSubjectData } from './data/questionBank';
+import { hasEssayQuestions, hasTrueFalseQuestions, syncSubjectData } from './data/questionBank';
 import { enablePersistentStorage } from './lib/storagePersist';
 import './styles/theme.css';
 
@@ -146,7 +146,7 @@ function App() {
             </nav>
 
             {/* Tách riêng Trắc nghiệm / Tự luận (chỉ khi môn có cả hai) */}
-            {splitParts && (
+            {(splitParts || hasTrueFalseQuestions(selectedSubject)) && (
               <nav className="nav" style={{ marginBottom: 12 }}>
                 <button
                   className={`nav-btn ${partChoice === 'mcq' ? 'active' : ''}`}
@@ -154,12 +154,22 @@ function App() {
                 >
                   🔘 Phần Trắc nghiệm
                 </button>
-                <button
-                  className={`nav-btn ${partChoice === 'essay' ? 'active' : ''}`}
-                  onClick={() => setPartChoice('essay')}
-                >
-                  ✍️ Phần Tự luận
-                </button>
+                {hasTrueFalseQuestions(selectedSubject) && (
+                  <button
+                    className={`nav-btn ${partChoice === 'tf' ? 'active' : ''}`}
+                    onClick={() => setPartChoice('tf')}
+                  >
+                    ⚖️ Đúng / Sai
+                  </button>
+                )}
+                {splitParts && (
+                  <button
+                    className={`nav-btn ${partChoice === 'essay' ? 'active' : ''}`}
+                    onClick={() => setPartChoice('essay')}
+                  >
+                    ✍️ Phần Tự luận
+                  </button>
+                )}
               </nav>
             )}
 

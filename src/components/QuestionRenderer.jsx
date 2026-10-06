@@ -19,6 +19,10 @@ export default function QuestionRenderer({ question, onAnswer, subjectId }) {
     return <ShortEssayQuestion question={question} onAnswer={onAnswer} subjectId={subjectId} />;
   }
 
+  if (type === 'true_false') {
+    return <TrueFalseQuestion question={question} onAnswer={onAnswer} subjectId={subjectId} />;
+  }
+
   // Default: multiple_choice
   return <MultipleChoiceQuestion question={question} onAnswer={onAnswer} subjectId={subjectId} />;
 }
@@ -256,6 +260,95 @@ export function ShortEssayQuestion({ question, onAnswer, subjectId }) {
         <div style={{ marginTop: 12, padding: '10px 16px', background: 'var(--warning-light)', borderRadius: 'var(--radius)', color: '#92400e', fontWeight: 600 }}>
           📌 Đã đánh dấu vào "Sổ Tay Ôn Lại" để ôn thêm!
         </div>
+      )}
+    </div>
+  );
+}
+
+// ─── True/False ──────────────────────────────────────────────────────────────
+export function TrueFalseQuestion({ question, onAnswer, subjectId }) {
+  const [answers, setAnswers] = useState({}); // { 0: true, 1: false }
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleToggle = (itemIdx, value) => {
+    if (submitted) return;
+    setAnswers(prev => ({ ...prev, [itemIdx]: value }));
+  };
+
+  const handleSubmit = () => {
+    if (submitted) return;
+    setSubmitted(true);
+    // Check if all correct
+    const isAllCorrect = question.items.every((item, idx) => answers[idx] === item.answer);
+    if (!isAllCorrect && subjectId) {
+      const key = `wrongQ_${subjectId}`;
+      const stored = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!stored.includes(question.id)) {
+        localStorage.setItem(key, JSON.stringify([...stored, question.id]));
+      }
+    }
+    if (onAnswer) onAnswer(answers, isAllCorrect);
+  };
+
+  const allAnswered = question.items.every((_, idx) => answers[idx] !== undefined);
+
+  return (
+    <div>
+      {question.passage && (
+        <div className="passage" style={{ marginBottom: 16, padding: 12, background: 'var(--surface-50)', borderRadius: 'var(--radius)' }}>
+          {question.passage}
+        </div>
+      )}
+      
+      <div className="tf-items">
+        {question.items.map((item, idx) => {
+          const isCorrect = answers[idx] === item.answer;
+          let rowStyle = { display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 16, padding: 12, border: '1px solid var(--border)', borderRadius: 'var(--radius)' };
+          if (submitted) {
+            rowStyle.borderColor = isCorrect ? 'var(--success)' : 'var(--danger)';
+            rowStyle.background = isCorrect ? 'var(--success-light)' : 'var(--danger-light)';
+          }
+
+          return (
+            <div key={idx} style={rowStyle}>
+              <div style={{ fontWeight: 500 }}>{item.statement}</div>
+              <div style={{ display: 'flex', gap: 12 }}>
+                <button
+                  className={`btn-outline ${answers[idx] === true ? 'active' : ''}`}
+                  onClick={() => handleToggle(idx, true)}
+                  disabled={submitted}
+                  style={{ flex: 1, padding: 8, background: answers[idx] === true ? 'var(--primary)' : 'transparent', color: answers[idx] === true ? '#fff' : 'inherit' }}
+                >
+                  Đúng
+                </button>
+                <button
+                  className={`btn-outline ${answers[idx] === false ? 'active' : ''}`}
+                  onClick={() => handleToggle(idx, false)}
+                  disabled={submitted}
+                  style={{ flex: 1, padding: 8, background: answers[idx] === false ? 'var(--primary)' : 'transparent', color: answers[idx] === false ? '#fff' : 'inherit' }}
+                >
+                  Sai
+                </button>
+              </div>
+              {submitted && !isCorrect && (
+                <div style={{ color: 'var(--danger)', fontSize: '0.9rem', marginTop: 4 }}>
+                  Đáp án chuẩn: {item.answer ? 'Đúng' : 'Sai'}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {!submitted && (
+        <button
+          className="btn-primary"
+          onClick={handleSubmit}
+          disabled={!allAnswered}
+          style={{ width: '100%', marginTop: 12, padding: 12 }}
+        >
+          Kiểm tra đáp án
+        </button>
       )}
     </div>
   );
