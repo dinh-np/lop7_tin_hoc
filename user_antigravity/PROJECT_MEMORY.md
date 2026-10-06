@@ -9,6 +9,7 @@ PWA ôn thi đa môn cho học sinh lớp 7. Stack: React 19 + Vite 8 + Firebase
 - Fix lỗi IndexedDB cache trên iOS (sử dụng `navigator.storage.persist()`).
 - Tích hợp môn Toán 7 với 6 đề thi, hiển thị dưới dạng card chọn đề giống Ngữ văn.
 - Cải tiến cơ chế đồng bộ Firestore (`fetchSubjectDataFromFirestore` & `syncSubjectData`), ưu tiên lấy mảng `questions` thay thế mảng tĩnh, tự động đồng bộ khi mở môn. Thêm nút Force Refresh (Đồng bộ đề mới) + Toast notification.
+**Cập nhật 2026-10-06**: Tích hợp môn Công nghệ 7 (Giữa kỳ 1) với dữ liệu lấy từ Firestore. Bổ sung hỗ trợ dạng bài Đúng/Sai (`TrueFalseQuestion`) và giao diện chia 3 tab (Trắc nghiệm, Đúng / Sai, Tự luận) trên Dashboard.
 
 ## Tech Stack
 - **Frontend**: React 19, Vite 8, Vanilla CSS (Be Vietnam Pro font), `react-markdown` + `remark-gfm` (đáp án tự luận)
@@ -72,7 +73,7 @@ user_antigravity/             ← Tài liệu nội bộ cho AI assistant
 | ngu_van | Ngữ văn | 📖 | 53 câu tự luận / 6 đề giữa kì I |
 | toan | Toán | 📐 | 102 câu (72 TN + 30 TL) / 6 đề |
 | tieng_anh | Tiếng Anh | 🇬🇧 | 0 |
-| cong_nghe | Công nghệ | ⚙️ | 0 |
+| cong_nghe | Công nghệ | ⚙️ | 46 câu (40 TN + 4 Đ/S + 2 TL) |
 | gd_dia_phuong | GD địa phương | 🏠 | 0 |
 
 ## Cấu trúc câu hỏi chuẩn
@@ -92,6 +93,10 @@ user_antigravity/             ← Tài liệu nội bộ cho AI assistant
 { id: 'essay_1', subject: 'ngu_van', topic: '...', type: 'short_essay',
   question: '...', modelAnswer: '... (markdown)', keyPoints: ['ý 1', 'ý 2'],
   explanation: '...' /* tùy chọn */ }
+
+// Loại 4: Đúng / Sai
+{ id: 'tf_1', subject: 'cong_nghe', type: 'true_false', passage: '...',
+  items: [ { statement: '...', answer: true }, { statement: '...', answer: false } ] }
 ```
 
 ### Ngữ văn (đặc thù)
