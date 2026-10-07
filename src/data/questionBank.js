@@ -12,7 +12,14 @@ import { toanQuestions } from './toanQuestions';
 // Placeholder banks for new subjects (to be filled with real questions)
 // khoaHocTuNhienQuestions — imported above from ./khoaHocTuNhienQuestions.js
 export { nguVanQuestions }; // imported above from ./nguVanQuestions.js
-export const tiengAnhQuestions = []; // School English (not PET)
+export const tiengAnhQuestions = Array.from({ length: 114 }, (_, i) => ({
+  id: `ta7_ph_${i}`,
+  subject: 'tieng_anh',
+  type: 'multiple_choice',
+  question: 'Đang tải dữ liệu từ Firestore, vui lòng đợi...',
+  options: ['...', '...', '...', '...'],
+  answer: 0,
+}));
 // lichSuDiaLiQuestions — imported above from ./lichSuDiaLiQuestions.js
 // gdcdQuestions — imported above from ./gdcdQuestions.js
 import { congNgheQuestions } from './congNgheQuestions';
@@ -44,6 +51,16 @@ export const getQuestionsForSubject = (subjectId, part = 'all') => {
 
 // Đồng bộ dữ liệu mới nhất từ Firestore
 export const syncSubjectData = async (subjectId) => {
+  if (subjectId === 'tieng_anh') {
+    const questionsFromDb = await fetchSubjectDataFromFirestore('tienganh7_gki');
+    if (questionsFromDb && Array.isArray(questionsFromDb) && questionsFromDb.length > 0) {
+      questionsBySubject[subjectId] = questionsFromDb.map((q) => ({
+        ...q,
+        subject: 'tieng_anh',
+      }));
+      return true;
+    }
+  }
   if (subjectId === 'lich_su_dia_li') {
     const questionsFromDb = await fetchSubjectDataFromFirestore('ls_dl_7_gki');
     if (questionsFromDb && Array.isArray(questionsFromDb) && questionsFromDb.length > 0) {
