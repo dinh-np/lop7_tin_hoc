@@ -86,6 +86,50 @@ examId: 'van7_de_01',       // nhóm câu theo đề; Exam lọc theo examId, gi
 keyPoints: ['Ý 1', 'Ý 2'],
 ```
 
+### Loại 4: Đúng / Sai `true_false`
+
+```js
+{
+  id: 'cn7_tf_01',                  // UNIQUE toàn bộ app
+  subject: 'cong_nghe',             // Khớp id môn
+  type: 'true_false',
+  topic: 'Kỹ thuật làm đất',
+  context: 'Đoạn văn bản đọc hiểu / tình huống dẫn đề...', // hoặc passage
+  items: [
+    {
+      key: 'a',
+      statement: 'Nội dung nhận định a...',
+      answer: true,                 // boolean: true hoặc false
+      explanation: 'ĐÚNG: Giải thích chi tiết vì sao nhận định này Đúng...'
+    },
+    {
+      key: 'b',
+      statement: 'Nội dung nhận định b...',
+      answer: false,
+      explanation: 'SAI: Giải thích chi tiết vì sao nhận định này Sai...'
+    },
+    {
+      key: 'c',
+      statement: 'Nội dung nhận định c...',
+      answer: true,
+      explanation: 'ĐÚNG: ...'
+    },
+    {
+      key: 'd',
+      statement: 'Nội dung nhận định d...',
+      answer: true,
+      explanation: 'ĐÚNG: ...'
+    }
+  ]
+}
+```
+
+**Đặc điểm loại Đúng / Sai**:
+- Sử dụng component độc lập: `src/components/TrueFalseQuestion.jsx` + `TrueFalseQuestion.css` (không dùng QuestionRenderer để đảm bảo an toàn cho trắc nghiệm).
+- Giao diện 2 cột responsive (trên ≥768px): bên trái là hộp ngữ cảnh vàng `context`, bên phải là các ý a, b, c, d với 2 nút **Đúng (Đ)** (xanh lục `#22c55e`) và **Sai (S)** (đỏ `#ef4444`).
+- Thang điểm chuẩn Bộ GD&ĐT: đúng 1 ý = 0.1, 2 ý = 0.25, 3 ý = 0.5, 4 ý = 1.0 (tính qua helper `src/lib/trueFalse.js`).
+
+
 ## Cách nạp từ file JSON (mẫu đang dùng)
 
 Dữ liệu lớn đặt tại `src/data/subjects/[ten].json` hoặc `.js`, loader `src/data/[ten]Questions.js` chuẩn hóa:

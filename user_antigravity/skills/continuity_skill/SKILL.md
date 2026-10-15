@@ -36,22 +36,31 @@ Dưới đây là những thông tin ĐÃ BIẾT, không cần hỏi user:
 | Deploy | `git push` lên `main` → Vercel tự deploy |
 | Port dev | 5174 (5173 có thể bị chiếm) |
 
-## Những gì đã hoàn thành (tính đến 03/10/2026)
+## Những gì đã hoàn thành (tính đến 15/10/2026)
 - [x] Tái cấu trúc app thành cổng đa môn (10 môn + PET B1)
-- [x] SubjectPicker, Quiz, Exam, Review — hỗ trợ `subjectId` (+ `part` mcq/essay)
+- [x] SubjectPicker, Quiz, Exam, Review — hỗ trợ `subjectId` (+ `part` mcq/essay/tf)
 - [x] Migrate Supabase → Firebase Firestore (Offline-First)
 - [x] Gemini AI integration (post-exam analysis, chỉ câu TN)
-- [x] Dữ liệu: Tin học (70), PET B1 (20), KHTN (64), LS&ĐL (55), GDCD (46), Ngữ văn (53 câu / 6 đề)
-- [x] Tách Phần Trắc nghiệm / Tự luận; textarea tự giãn; tự đánh giá "Đã nắm / Cần ôn"
+- [x] Dữ liệu hoàn thiện 9/10 môn:
+  - Tin học (70), PET B1 (20), KHTN (64), LS&ĐL (55), GDCD (46), Ngữ văn (53 câu / 6 đề)
+  - Toán (102 câu: 72 TN + 30 TL / 6 đề thi qua `ToanExam`)
+  - Tiếng Anh (114 câu tải qua Firestore SDK `tienganh7_gki`)
+  - Công nghệ (46 câu: 40 TN + 4 Đ/S + 2 TL)
+- [x] Tách Phần Trắc nghiệm / Đúng & Sai / Tự luận trên giao diện Dashboard
+- [x] Nâng cấp toàn diện dạng bài Đúng / Sai (`TrueFalseQuestion.jsx/.css`):
+  - Bố cục 2 cột (≥768px): ngữ cảnh vàng sticky bên trái, các nhận định với nút Đúng (xanh lục) / Sai (đỏ) bên phải.
+  - Phản hồi tức thì trong Luyện tập kèm giải thích "Tại sao Đúng / Sai".
+  - Chấm điểm chuẩn Bộ GD&ĐT (1 ý: 0.1, 2 ý: 0.25, 3 ý: 0.5, 4 ý: 1.0) qua `lib/trueFalse.js`.
+  - Tích hợp mượt mà vào Thi thử (`Exam.jsx`), Sổ tay sai (`Review.jsx`), và lưu an toàn lên Firebase.
 - [x] Ngữ văn: SplitView 2 cột (bài thơ sticky), keyPoints tự chấm
-- [x] Ngữ văn: Thi thử theo từng đề (90', không shuffle), topbar sticky + drawer danh sách câu, split 39/61
+- [x] Ngữ văn / Toán: Thi thử theo từng đề (chọn đề, không shuffle), topbar sticky + drawer danh sách câu
 - [x] theme.css redesign, vercel.json chuẩn hóa, PWA
-- [x] Memory files (PROJECT_MEMORY, context_hub, continuity_skill, project_context)
+- [x] Memory files (PROJECT_MEMORY, context_hub, continuity_skill, project_context, them-cau-hoi)
 
 ## Việc còn lại (TODO)
-- [ ] Thêm câu hỏi cho Toán, Tiếng Anh, Công nghệ, GD địa phương
-- [ ] Ngữ văn: thi thử theo đề chưa lưu submission riêng theo `examId` (Firestore chỉ lưu subject)
-- [ ] Cân nhắc code-split (bundle > 500 kB)
+- [ ] Môn Công nghệ: Tinh chỉnh sync Firestore để tải và bóc tách mảng `questions` hỗn hợp từ Firestore (nhận diện qua `type`), đồng bộ với các môn khác.
+- [ ] Thêm câu hỏi cho GD địa phương (khi có đề cương).
+- [ ] Cân nhắc code-split nếu bundle > 500 kB tiếp tục tăng.
 
 ## Quy tắc ứng xử
 1. **Ngôn ngữ**: Trả lời tiếng Việt với user này

@@ -19,23 +19,27 @@ questionBank.js (index)
   ├── gdcdQuestions.js           → 'gdcd'              (subjects/gdcd7.json)
   ├── nguVanQuestions.js         → 'ngu_van'           (subjects/nguvan7.json, flatten 6 đề,
   │                                  mỗi câu có examId + passage)
-  └── [các môn khác]             → placeholder []
+  ├── toanQuestions.js           → 'toan'              (subjects/toan7.js, 102 câu / 6 đề)
+  ├── tiengAnhQuestions          → 'tieng_anh'         (tải tự động từ Firestore `tienganh7_gki`)
+  ├── congNgheQuestions.js       → 'cong_nghe'         (subjects/congnghe7.json: 40 TN + 4 Đ/S + 2 TL)
+  └── gdDiaPhuongQuestions       → placeholder []
 
-getQuestionsForSubject(subjectId, part='all'|'mcq'|'essay') → Question[]
-hasEssayQuestions(subjectId) → true nếu có cả TN lẫn TL
+getQuestionsForSubject(subjectId, part='all'|'mcq'|'essay'|'tf') → Question[]
+hasEssayQuestions(subjectId) → true nếu có tự luận
+hasTrueFalseQuestions(subjectId) → true nếu có câu đúng/sai
 
 App.jsx
   └── selectedSubject state
       ├── null → <SubjectPicker onSelect={...} />
       └── subjectId
+          ├── tabs: "🔘 Phần Trắc nghiệm" | "⚖️ Đúng / Sai" | "✍️ Phần Tự luận" (nếu môn hỗ trợ)
           ├── <Quiz subjectId part />
-          ├── mode 'exam': subjectId==='ngu_van' ? <NguVanExam/> : <Exam subjectId part />
+          ├── mode 'exam': subjectId==='ngu_van' ? <NguVanExam/> : subjectId==='toan' ? <ToanExam/> : <Exam subjectId part />
           └── <Review subjectId part />
 
-NguVanExam → chọn đề → <Exam examId examTitle durationMinutes />
-
-Quiz / Review / Exam: nội dung làm bài bọc trong <SplitView passage={q.passage}>
-  (không có passage → render như cũ)
+Quiz / Review / Exam:
+  - Câu Đúng/Sai: render bằng <TrueFalseQuestion mode="..." />
+  - Câu Trắc nghiệm / Tự luận: bọc trong <SplitView passage={q.passage}>
 ```
 
 ## localStorage Schema
@@ -94,6 +98,19 @@ data?.candidates?.[0]?.content?.parts?.[0]?.text
 ### `<NguVanExam subjectId />`
 - 6 thẻ chọn đề (tên, thời gian, số câu từ `nguVanTestMeta`)
 - "← Chọn đề khác" có confirm
+
+### `<ToanExam subjectId />`
+- 6 thẻ chọn đề môn Toán lớp 7 Giữa kì 1 (102 câu: 72 TN + 30 TL)
+- Chọn đề để render `<Exam examId=... />`
+
+### `<TrueFalseQuestion question subjectId mode value onChange onComplete showBookmark />`
+- Component độc lập xử lý câu hỏi Đúng / Sai (`type: 'true_false'`).
+- `mode`:
+  - `'practice'`: làm từng ý, hiện phản hồi ngay khi chọn ("Chính xác" / "Chưa đúng") kèm hộp "Tại sao Đúng/Sai", nút "Kiểm tra đáp án" hiện tất cả, nút "Thêm vào Sổ Tay Sai".
+  - `'review'`: dùng trong màn hình Sổ Tay Sai, tự động xóa khỏi localStorage khi HS làm đúng toàn bộ 4 ý.
+  - `'exam'`: dùng trong lúc thi thử, không lộ đáp án, trạng thái điều khiển qua `value` / `onChange`.
+  - `'result'`: màn hình kết quả sau khi nộp bài thi, hiển thị đáp án chuẩn và phân tích từng ý.
+- Tính điểm: Thang điểm Bộ GD&ĐT quy chuẩn cho 4 ý (1 ý = 0.1, 2 ý = 0.25, 3 ý = 0.5, 4 ý = 1.0) qua `scoreTrueFalse()` trong `lib/trueFalse.js`.
 
 ### `<SplitView passage>` / `<PassagePanel passage>`
 - ≥768px: grid 2 cột, bài thơ sticky bên trái

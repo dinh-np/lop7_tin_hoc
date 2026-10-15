@@ -28,15 +28,18 @@ User là **phụ huynh** — muốn giám sát kết quả học của con từ 
 | File | Vai trò |
 |------|---------|
 | `src/data/subjects.js` | Danh sách 10 môn + PET B1 |
-| `src/data/questionBank.js` | Index, `getQuestionsForSubject(id, part)`, `hasEssayQuestions()` |
+| `src/data/questionBank.js` | Index, `getQuestionsForSubject(id, part)`, `hasEssayQuestions()`, `hasTrueFalseQuestions()`, `syncSubjectData()` |
 | `src/data/*Questions.js` | Loader từng môn; một số đọc JSON trong `src/data/subjects/` |
 | `src/data/subjects/nguvan7.json` | 6 đề Ngữ văn (reading_passage + câu hỏi) |
-| `src/lib/firebase.js` | `saveSubmission()`, `saveWrongAnswers()`, `isFirebaseConfigured` |
+| `src/data/subjects/congnghe7.json`| Đề cương Công nghệ 7 (40 TN + 4 Đ/S + 2 TL) |
+| `src/components/TrueFalseQuestion.jsx` | Component độc lập xử lý câu hỏi Đúng / Sai |
+| `src/lib/trueFalse.js` | Helper chuẩn hóa & tính điểm Đúng / Sai theo Bộ GD&ĐT |
+| `src/lib/firebase.js` | `saveSubmission()`, `saveWrongAnswers()`, `isFirebaseConfigured`, `fetchSubjectDataFromFirestore()` |
 | `src/lib/gemini.js` | `diagnoseWrongAnswer()`, `batchDiagnose()` |
-| `src/components/Exam.jsx` | Thi thử (+ chế độ compact theo `examId` cho Ngữ văn) |
-| `src/components/NguVanExam.jsx` | Chọn đề Ngữ văn |
+| `src/components/Exam.jsx` | Thi thử (+ chế độ compact theo `examId` cho Ngữ văn / Toán; hỗ trợ Đúng/Sai) |
+| `src/components/NguVanExam.jsx`, `ToanExam.jsx` | Chọn đề Ngữ văn & Toán |
 | `src/components/SplitView.jsx`, `PassagePanel.*` | Bố cục 2 cột bài thơ / câu hỏi |
-| `src/components/QuestionRenderer.jsx` | Render 3 loại câu hỏi (+ keyPoints) |
+| `src/components/QuestionRenderer.jsx` | Render câu hỏi multiple_choice, calculation, short_essay |
 | `vercel.json` | SPA rewrites + outputDirectory:dist |
 | `GEMINI.md` | Rules tự động load mỗi session |
 
@@ -53,9 +56,9 @@ Chứa `VITE_GEMINI_API_KEY` (dạng `AQ.xxx`) và 6 biến `VITE_FIREBASE_*`. K
 | `lich_su_dia_li` | Lịch sử & Địa lí 🗺️ | ✅ 55 câu |
 | `gdcd` | GDCD 🏛️ | ✅ 46 câu |
 | `ngu_van` | Ngữ văn 📖 | ✅ 53 câu tự luận (6 đề) |
-| `toan` | Toán 📐 | ⏳ placeholder |
-| `tieng_anh` | Tiếng Anh 🇬🇧 | ⏳ placeholder |
-| `cong_nghe` | Công nghệ ⚙️ | ⏳ placeholder |
+| `toan` | Toán 📐 | ✅ 102 câu (72 TN + 30 TL / 6 đề) |
+| `tieng_anh` | Tiếng Anh 🇬🇧 | ✅ 114 câu (sync từ Firestore `tienganh7_gki`) |
+| `cong_nghe` | Công nghệ ⚙️ | ✅ 46 câu (40 TN + 4 Đ/S + 2 TL) |
 | `gd_dia_phuong` | GD địa phương 🏠 | ⏳ placeholder |
 
 ## Luồng hoạt động app
