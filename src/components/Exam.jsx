@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
+import TrueFalseQuestion from './TrueFalseQuestion';
 import SplitView from './SplitView';
+import { scoreTrueFalse } from '../lib/trueFalse';
 import { saveSubmission, saveWrongAnswers, isFirebaseConfigured } from '../lib/firebase';
 import { batchDiagnose, isGeminiConfigured } from '../lib/gemini';
 
@@ -49,22 +51,37 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
     setSubmitted(true);
 
     let correct = 0;
+    let points = 0; // MCQ/tự luận: 1 hoặc 0 — Đúng/Sai: thang 0.1/0.25/0.5/1
     const wrongs = [];
     const wrongIds = [];
 
     examQuestions.forEach((q, idx) => {
+      // Đúng / Sai: xử lý riêng, không đụng logic trắc nghiệm/tự luận
+      if (q.type === 'true_false') {
+        const tf = scoreTrueFalse(q, answers[idx]);
+        points += tf.points;
+        if (tf.allCorrect) {
+          correct += 1;
+        } else {
+          wrongs.push({ question: q, studentAnswer: answers[idx] || null });
+          wrongIds.push(q.id);
+        }
+        return;
+      }
+
       const isEssay = q.type === 'short_essay';
       // Tự luận: đúng khi HS tự đánh giá "đã nắm được"
       const isCorrect = isEssay ? answers[idx] === 'mastered' : answers[idx] === q.answer;
       if (isCorrect) {
         correct += 1;
+        points += 1;
       } else {
         wrongs.push({ question: q, studentAnswer: typeof answers[idx] === 'number' ? answers[idx] : -1 });
         wrongIds.push(q.id);
       }
     });
 
-    const finalScore = examQuestions.length > 0 ? (correct / examQuestions.length) * 10 : 0;
+    const finalScore = examQuestions.length > 0 ? (points / examQuestions.length) * 10 : 0;
     setScore(finalScore);
     setWrongDetails(wrongs);
 
@@ -133,7 +150,7 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
       const keyMap = { '1': 0, 'a': 0, '2': 1, 'b': 1, '3': 2, 'c': 2, '4': 3, 'd': 3 };
       const key = e.key.toLowerCase();
 
-      if (key in keyMap && examQuestions[currentIdx] && examQuestions[currentIdx].type !== 'short_essay') {
+      if (key in keyMap && examQuestions[currentIdx] && examQuestions[currentIdx].type !== 'short_essay' && examQuestions[currentIdx].type !== 'true_false') {
         e.preventDefault();
         setAnswers((prev) => ({ ...prev, [currentIdx]: keyMap[key] }));
       } else if (key === 'arrowleft' || key === 'arrowup') {
@@ -238,6 +255,10 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
                   <span style={{ fontWeight: 700, color: 'var(--danger)' }}>Câu sai #{idx + 1}</span>
                   <span className="tag topic">{question.topic}</span>
                 </div>
+                {question.type === 'true_false' ? (
+                  <TrueFalseQuestion question={question} subjectId={subjectId} mode="result" value={studentAnswer || {}} />
+                ) : (
+                <>
                 <p style={{ fontWeight: 600, marginBottom: 8, fontSize: '0.95rem' }}>{question.question}</p>
                 {Array.isArray(question.options) ? (
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 10 }}>
@@ -256,6 +277,8 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
                 <div className="explanation">
                   <strong>Giải thích:</strong> {question.explanation}
                 </div>
+                </>
+                )}
 
                 {isGeminiConfigured && Array.isArray(question.options) && (
                   <div className="ai-panel">
@@ -420,13 +443,22 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
           <span className="tag topic">{currentQuestion.topic}</span>
         </div>
 
-        <SplitView passage={currentQuestion.passage}>
-        <p className="question-text">{currentQuestion.question}</p>
+        <SplitView passage={currentQuestion.type === 'true_false' ? null : currentQuestion.passage}>
+        {currentQuestion.type !== 'true_false' && <p className="question-text">{currentQuestion.question}</p>}
         {currentQuestion.image && (
           <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
         )}
 
-        {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
+        {currentQuestion.type === 'true_false' ? (
+          <TrueFalseQuestion
+            key={currentQuestion.id}
+            question={currentQuestion}
+            subjectId={subjectId}
+            mode="exam"
+            value={answers[currentIdx]}
+            onChange={(val) => setAnswers((prev) => ({ ...prev, [currentIdx]: val }))}
+          />
+        ) : currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
           <ShortEssayQuestion
             key={currentQuestion.id}
             question={currentQuestion}
@@ -453,7 +485,7 @@ export default function Exam({ subjectId, part = 'all', examId = null, examTitle
         )}
 
         {/* Keyboard hint (desktop only) */}
-        <div className="kbd-hint">
+        <div className="kbd-hint" style={currentQuestion.type === 'true_false' ? { display: 'none' } : undefined}>
           <span>Phím tắt:</span>
           {['A','B','C','D'].map((k) => <kbd key={k} className="kbd">{k}</kbd>)}
           <span style={{ marginLeft: 8 }}>hoặc</span>

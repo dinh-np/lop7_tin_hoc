@@ -10,6 +10,8 @@ PWA ôn thi đa môn cho học sinh lớp 7. Stack: React 19 + Vite 8 + Firebase
 - Tích hợp môn Toán 7 với 6 đề thi, hiển thị dưới dạng card chọn đề giống Ngữ văn.
 - Cải tiến cơ chế đồng bộ Firestore (`fetchSubjectDataFromFirestore` & `syncSubjectData`), ưu tiên lấy mảng `questions` thay thế mảng tĩnh, tự động đồng bộ khi mở môn. Thêm nút Force Refresh (Đồng bộ đề mới) + Toast notification.
 **Cập nhật 2026-10-06**: Tích hợp môn Công nghệ 7 (Giữa kỳ 1) với dữ liệu lấy từ Firestore. Bổ sung hỗ trợ dạng bài Đúng/Sai (`TrueFalseQuestion`) và giao diện chia 3 tab (Trắc nghiệm, Đúng / Sai, Tự luận) trên Dashboard.
+**Cập nhật 2026-10-07**: Kích hoạt môn Tiếng Anh 7 (Giữa kỳ 1) trên Dashboard. Sử dụng data placeholder để kích hoạt UI "Sẵn sàng" ban đầu (114 câu), sau đó tự động tải mảng `questions` thực tế từ Firestore (`tienganh7_gki`) qua hàm `syncSubjectData` khi người dùng chọn môn.
+**Cập nhật 2026-10-15**: Nâng cấp dạng Đúng/Sai. Fix lỗi tab "Đúng / Sai" hiện textarea tự luận (Quiz/Exam/Review rơi vào nhánh "không có options"). Tạo component riêng `TrueFalseQuestion.jsx/.css` + helper `lib/trueFalse.js`; cập nhật 4 câu Đ/S Công nghệ (`cn7_tf_01..04`, có `topic`, `context`, `key`, `explanation` từng ý).
 
 ## Tech Stack
 - **Frontend**: React 19, Vite 8, Vanilla CSS (Be Vietnam Pro font), `react-markdown` + `remark-gfm` (đáp án tự luận)
@@ -72,7 +74,7 @@ user_antigravity/             ← Tài liệu nội bộ cho AI assistant
 | gdcd | GDCD | 🏛️ | 46 câu (40 TN + 6 TL) |
 | ngu_van | Ngữ văn | 📖 | 53 câu tự luận / 6 đề giữa kì I |
 | toan | Toán | 📐 | 102 câu (72 TN + 30 TL) / 6 đề |
-| tieng_anh | Tiếng Anh | 🇬🇧 | 0 |
+| tieng_anh | Tiếng Anh | 🇬🇧 | 114 câu (tải từ Firestore) |
 | cong_nghe | Công nghệ | ⚙️ | 46 câu (40 TN + 4 Đ/S + 2 TL) |
 | gd_dia_phuong | GD địa phương | 🏠 | 0 |
 
@@ -94,10 +96,19 @@ user_antigravity/             ← Tài liệu nội bộ cho AI assistant
   question: '...', modelAnswer: '... (markdown)', keyPoints: ['ý 1', 'ý 2'],
   explanation: '...' /* tùy chọn */ }
 
-// Loại 4: Đúng / Sai
-{ id: 'tf_1', subject: 'cong_nghe', type: 'true_false', passage: '...',
-  items: [ { statement: '...', answer: true }, { statement: '...', answer: false } ] }
+// Loại 4: Đúng / Sai  (render bằng components/TrueFalseQuestion.jsx — KHÔNG dùng QuestionRenderer)
+{ id: 'cn7_tf_01', subject: 'cong_nghe', type: 'true_false', topic: '...',
+  context: '... (ngữ cảnh, hộp vàng bên trái; field cũ `passage` vẫn được hỗ trợ)',
+  items: [ { key: 'a', statement: '...', answer: true, explanation: 'ĐÚNG: ...' }, ... ] }
 ```
+
+### Đúng / Sai (đặc thù)
+- `TrueFalseQuestion` props: `question, subjectId, mode ('practice'|'review'|'exam'|'result'), value, onChange, onComplete, showBookmark`.
+- Luyện tập: chọn ý nào → hiện kết quả + hộp "Tại sao Đúng/Sai" ngay; nút "Kiểm tra đáp án" hiện tất cả; sai ≥1 ý → nút "📌 Thêm vào Sổ Tay Sai" (không tự thêm).
+- Thi thử: answers[idx] = `{a:true,b:false,...}`; chấm theo thang Bộ GD (1 ý 0.1, 2 ý 0.25, 3 ý 0.5, 4 ý 1 điểm câu) qua `scoreTrueFalse()`; MCQ/tự luận vẫn 1/0.
+- Sổ tay sai: làm đúng cả 4 ý → tự gỡ khỏi `wrongQ_${subjectId}`.
+- `syncSubjectData('cong_nghe')` chỉ dùng Firestore nếu doc có dạng `{multiple_choice,true_false,short_essay}`; hiện `fetchSubjectDataFromFirestore` chỉ trả `questions[]` nên Công nghệ dùng JSON local `congnghe7.json`.
+- **TODO (user đồng ý để sau)**: tinh chỉnh sync Công nghệ để nhận mảng `questions` hỗn hợp từ Firestore (phân loại theo field `type`), đồng bộ cách làm với các môn khác.
 
 ### Ngữ văn (đặc thù)
 JSON nguồn `src/data/subjects/nguvan7.json` = mảng 6 đề:

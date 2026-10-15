@@ -118,10 +118,15 @@ export async function saveWrongAnswers(submissionId, wrongItems) {
         submission_id: submissionId,
         test_id: item.testId || item.question?.examId || null,
         question_id: item.question.id,
-        question_text: item.question.question,
-        question_topic: item.question.topic,
-        student_answer: item.studentAnswer,
-        correct_answer: item.question.answer ?? null,
+        question_type: item.question.type || 'multiple_choice',
+        question_text: item.question.question ?? item.question.context ?? item.question.passage ?? '',
+        question_topic: item.question.topic ?? null,
+        student_answer: item.studentAnswer ?? null,
+        correct_answer:
+          item.question.answer ??
+          (Array.isArray(item.question.items)
+            ? Object.fromEntries(item.question.items.map((it, i) => [it.key || 'abcdef'[i], it.answer]))
+            : null),
         explanation: item.question.explanation || '',
         error_reason_type: null,
         ai_diagnostic: null,

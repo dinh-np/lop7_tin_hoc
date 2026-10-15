@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
+import TrueFalseQuestion from './TrueFalseQuestion';
 import SplitView from './SplitView';
 
 export default function Review({ subjectId, part = 'all' }) {
@@ -34,7 +35,7 @@ export default function Review({ subjectId, part = 'all' }) {
   };
 
   const nextQuestion = () => {
-    if (selectedAnswer !== null && selectedAnswer === currentQuestion.answer) {
+    if (selectedAnswer !== null && (selectedAnswer === currentQuestion.answer || selectedAnswer === 'tf_ok')) {
       const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
       setIncorrectIds(stored);
       if (currentIdx >= stored.length) {
@@ -55,7 +56,7 @@ export default function Review({ subjectId, part = 'all' }) {
     }
   };
 
-  if (incorrectIds.length === 0) {
+  if (incorrectIds.length === 0 || reviewQuestions.length === 0) {
     return (
       <div className="card empty-state">
         <div className="empty-icon">🌟</div>
@@ -72,6 +73,7 @@ export default function Review({ subjectId, part = 'all' }) {
   if (!currentQuestion) return null;
 
   const progress = ((currentIdx + 1) / reviewQuestions.length) * 100;
+  const isTrueFalse = currentQuestion.type === 'true_false';
 
   return (
     <div className="card">
@@ -99,13 +101,28 @@ export default function Review({ subjectId, part = 'all' }) {
         <span className="tag topic">{currentQuestion.topic}</span>
       </div>
 
-      <SplitView passage={currentQuestion.passage}>
-      <p className="question-text">{currentQuestion.question}</p>
+      <SplitView passage={isTrueFalse ? null : currentQuestion.passage}>
+      {!isTrueFalse && <p className="question-text">{currentQuestion.question}</p>}
       {currentQuestion.image && (
         <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
       )}
 
-      {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
+      {isTrueFalse ? (
+        <TrueFalseQuestion
+          key={currentQuestion.id}
+          question={currentQuestion}
+          subjectId={subjectId}
+          mode="review"
+          showBookmark={false}
+          onComplete={(allCorrect) => {
+            setSelectedAnswer(allCorrect ? 'tf_ok' : 'tf_wrong');
+            if (allCorrect) {
+              const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
+              localStorage.setItem(storageKey, JSON.stringify(stored.filter((id) => id !== currentQuestion.id)));
+            }
+          }}
+        />
+      ) : currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
         <ShortEssayQuestion
           key={currentQuestion.id}
           question={currentQuestion}
@@ -148,7 +165,7 @@ export default function Review({ subjectId, part = 'all' }) {
 
       <div style={{ marginTop: 20, textAlign: 'right' }}>
         <button className="btn-primary" onClick={nextQuestion} disabled={selectedAnswer === null}>
-          {selectedAnswer === currentQuestion.answer ? '✅ Đã hiểu, sang câu tiếp' : '⏭ Ôn lại sau'}
+          {selectedAnswer === currentQuestion.answer || selectedAnswer === 'tf_ok' ? '✅ Đã hiểu, sang câu tiếp' : '⏭ Ôn lại sau'}
         </button>
       </div>
       </SplitView>

@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { getQuestionsForSubject } from '../data/questionBank';
 import { ShortEssayQuestion } from './QuestionRenderer';
+import TrueFalseQuestion from './TrueFalseQuestion';
 import SplitView from './SplitView';
 
 export default function Quiz({ subjectId, part = 'all' }) {
@@ -67,6 +68,7 @@ export default function Quiz({ subjectId, part = 'all' }) {
   if (!currentQuestion) return null;
 
   const progress = ((currentIdx + 1) / filteredQuestions.length) * 100;
+  const isTrueFalse = currentQuestion.type === 'true_false';
 
   return (
     <div className="card">
@@ -98,15 +100,17 @@ export default function Quiz({ subjectId, part = 'all' }) {
         )}
       </div>
 
-      <SplitView passage={currentQuestion.passage}>
+      <SplitView passage={isTrueFalse ? null : currentQuestion.passage}>
       {/* Question */}
-      <p className="question-text">{currentQuestion.question}</p>
+      {!isTrueFalse && <p className="question-text">{currentQuestion.question}</p>}
       {currentQuestion.image && (
         <img src={currentQuestion.image} alt="Hình minh họa" className="question-img" />
       )}
 
       {/* Options */}
-      {currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
+      {isTrueFalse ? (
+        <TrueFalseQuestion key={currentQuestion.id} question={currentQuestion} subjectId={subjectId} mode="practice" />
+      ) : currentQuestion.type === 'short_essay' || !Array.isArray(currentQuestion.options) ? (
         <ShortEssayQuestion key={currentQuestion.id} question={currentQuestion} subjectId={subjectId} />
       ) : (
       <div className="options-list">
